@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPBCE 內部分析報告</title>
+  <style>
+    body { margin: 0; font-family: "Noto Sans TC","Microsoft JhengHei",sans-serif; background: #f7f3eb; color: #102132; line-height: 1.7; }
+    .page { width: min(1180px, calc(100vw - 40px)); margin: 24px auto 48px; }
+    .hero { background: linear-gradient(135deg, #0f766e, #1f2937); color: white; border-radius: 28px; padding: 28px 30px; box-shadow: 0 24px 70px rgba(0,0,0,.16); }
+    .hero h1 { font-size: 52px; line-height: 1.05; margin: 16px 0 10px; }
+    .hero p { font-size: 18px; max-width: 960px; margin: 0; }
+    .pills { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pill { padding: 8px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.08); }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 18px; }
+    .card { grid-column: span 12; background: #fffdfa; border: 1px solid #d9cfc0; border-radius: 24px; padding: 24px 26px; box-shadow: 0 14px 34px rgba(15,23,42,.06); }
+    .span6 { grid-column: span 6; }
+    .lead { font-size: 18px; color: #5b6b79; }
+    h2 { margin: 0 0 10px; font-size: 31px; }
+    h3 { margin: 0 0 10px; font-size: 22px; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px; }
+    .metric { background: #fbf7ef; border: 1px solid #d9cfc0; border-radius: 18px; padding: 16px; }
+    .metric .k { font-size: 13px; color: #5b6b79; text-transform: uppercase; letter-spacing: .08em; }
+    .metric .v { font-size: 29px; font-weight: 700; margin-top: 6px; }
+    .callout { background: #e6f2f0; border-left: 5px solid #0f766e; border-radius: 18px; padding: 15px 16px; margin: 12px 0; }
+    .warn { background: #fff0e8; border-left-color: #d97706; }
+    .table { width: 100%; border-collapse: collapse; font-size: 14px; border: 1px solid #d9cfc0; border-radius: 16px; overflow: hidden; }
+    .table th, .table td { padding: 11px 13px; border-bottom: 1px solid #e6ded1; vertical-align: top; text-align: left; }
+    .table th { background: #efe7da; }
+    .table tr:last-child td { border-bottom: 0; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .chart { background: #f8fafc; border: 1px solid #dbe5f0; border-radius: 20px; padding: 16px; margin-top: 14px; }
+    code { background: #f2ede4; padding: 2px 6px; border-radius: 8px; }
+    ul { margin: 8px 0 0; padding-left: 22px; }
+    .small { color: #5b6b79; font-size: 13px; }
+    @media (max-width: 980px) {
+      .span6 { grid-column: span 12; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .two { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="pills">
+        <div class="pill">SPBCE 內部分析報告（中文）</div>
+        <div class="pill">生成時間：2026-03-18 20:36:19</div>
+        <div class="pill">目前建議主線：DeepSeek direct + heuristic fallback</div>
+      </div>
+      <h1>Survey Prior + Behavior Calibration Engine</h1>
+      <p>這份文件是根據 repo 內實際存在的文檔、audit、benchmark 與 inference 工件整理出的完整中文內部報告。重點是把資料來源、用途、反汙染設計、各階段 benchmark 結果、以及目前可用版本說清楚，而不是只給一個摘要結論。</p>
+      <div class="metrics">
+        <div class="metric"><div class="k">目前主模型</div><div class="v">DeepSeek</div></div>
+        <div class="metric"><div class="k">fallback</div><div class="v">Heuristic</div></div>
+        <div class="metric"><div class="k">v3 DeepSeek JS</div><div class="v">0.0245</div></div>
+        <div class="metric"><div class="k">v3 JSON 合規率</div><div class="v">99.2%</div></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>1. 執行摘要</h2>
+        <p class="lead">截至目前，最有商業價值、也最適合進入 MVP 的主線已不是 persona baseline，也不是 combiner，而是 <strong>DeepSeek direct probability prediction</strong>，搭配 <strong>heuristic fallback</strong>。</p>
+        <div class="callout"><strong>主結論：</strong>frozen v3_250 上，DeepSeek direct 相比 heuristic 在整體指標與多數切片都更好，且 strict JSON 合規率高、invalid rate 低、成本可控，因此足以作為現階段 MVP 主模型。</div>
+        <div class="callout warn"><strong>誠實邊界：</strong>目前可以說的是「在 GSS 類 survey-distribution 預測任務上，DeepSeek direct 已是最佳單一路線」；不能說「AI 已全面優於人類 survey 做真實商業 outcome 預測」，因為公開 behavior proxy benchmark 目前不支持這個主張。</div>
+        <ul>
+          <li>prompt-only persona 已被明顯淘汰，不再是主線。</li>
+          <li>正式 benchmark 只能建立在 frozen manifests 與 anti-leakage audit 之上。</li>
+          <li>hybrid / combiner 沒有穩定超過 pure DeepSeek direct，應降級為支線研究。</li>
+          <li>產品工程上的正確架構是 <code>deepseek_direct -> heuristic fallback</code>。</li>
+        </ul>
+      </article>
+
+      <article class="card span6">
+        <h2>2. 資料來源與用途</h2>
+        <table class='table'><thead><tr><th>資料來源</th><th>類型</th><th>目前用途</th><th>限制</th></tr></thead><tbody><tr><td>Anthropic llm_global_opinions</td><td>公開 survey prior bootstrap</td><td>最早期 end-to-end toy pipeline、schema / split / benchmark 流程驗證</td><td>題數少、不是產品問卷資料、不可直接外推</td></tr><tr><td>GSS microdata</td><td>公開微觀調查資料</td><td>主 survey prior 訓練與 formal v1 / v2 / v3 benchmark</td><td>題型仍有限，與商業 concept test 不同</td></tr><tr><td>GSS behavior proxy</td><td>公開 paired proxy</td><td>behavior benchmark pipeline 與 human-only / AI-only / hybrid 比較</td><td>不是 CTR / CVR / 購買 / 採用等真實商業 outcome</td></tr><tr><td>未來客戶私有 paired data</td><td>私有 survey + outcome</td><td>行為校準主戰場</td><td>目前 repo 尚無真實私有資料</td></tr></tbody></table>
+      </article>
+
+      <article class="card span6">
+        <h2>3. Schema 與用途定義</h2>
+        <p class="lead">這個系統從一開始就沒有把 synthetic personas 當 ground truth，而是把「校準後的答案分布」當成後端真實物件。</p>
+        <ul>
+          <li><strong>Canonical survey record：</strong>包含 <code>question_text</code>、<code>options</code>、<code>population_text</code>、<code>population_struct</code>、<code>observed_distribution</code>、<code>sample_size</code> 等欄位。</li>
+          <li><strong>Paired behavior record：</strong>包含 stimulus / questionnaire、human survey distribution、actual outcome、context features，供 behavior validity 任務使用。</li>
+          <li><strong>核心原則：</strong>synthetic respondents 只是展示層；distribution prediction 才是核心真值。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>4. 如何確保訓練與評估數據無汙染</h2>
+        <p class="lead">這個 repo 曾經真的踩過 leakage / lookahead bias 的坑，所以現在的 anti-leakage 機制不是口號，而是修過一輪之後的結果。</p>
+        <table class='table'><thead><tr><th>Audit</th><th>狀態</th><th>說明</th></tr></thead><tbody><tr><td>old debug 6-slice audit</td><td>n/a</td><td>證明早期 6 筆 slice 只能當 dev/debug</td></tr><tr><td>formal50 audit</td><td>pass</td><td>formal50 可作為 frozen benchmark v1</td></tr><tr><td>v2 audit</td><td>pass</td><td>v2_100 是比 formal50 更寬的 frozen benchmark</td></tr><tr><td>v3 audit</td><td>pass</td><td>v3_250 是目前最依賴的 DeepSeek-only 正式驗證</td></tr></tbody></table>
+        <div class="two">
+          <div>
+            <h3>歷史上已確認的問題</h3>
+            <ul>
+              <li>早期的 <code>group_aware + max_records=6</code> 會把同 question、同 population、不同年份切到 train / test，存在 confirmed lookahead bias。</li>
+              <li>few-shot exemplar 曾依 test 題目動態檢索，因此不能宣稱是乾淨的 unseen-question 評估。</li>
+              <li>這 6 筆後來被反覆拿來調 parser / prompt / benchmark，已正式降級為 dev/debug set。</li>
+            </ul>
+          </div>
+          <div>
+            <h3>現在的正式控制方式</h3>
+            <ul>
+              <li>正式 benchmark 一律使用 frozen manifest，不再用「filter 後取前 N 筆」。</li>
+              <li>benchmark 開跑前先做 anti-leakage audit；若 overlap / blacklist / manifest mismatch 不通過就 fail fast。</li>
+              <li>正式 scoring 只吃 final text；thinking / fallback 不混入正式分數。</li>
+              <li>strict JSON 不合法就記 invalid，不允許靠 gold 或模糊規則修補。</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>5. 各階段 benchmark 總覽</h2>
+        <table class='table'><thead><tr><th>階段</th><th>主要 benchmark</th><th>Heuristic JS</th><th>DeepSeek JS</th><th>重要結論</th></tr></thead><tbody><tr><td>formal50</td><td>凍結 50 筆</td><td>0.0340</td><td>0.0532</td><td>heuristic 仍然更強，DeepSeek 是最佳 LLM</td></tr><tr><td>v2_100</td><td>凍結 100 筆</td><td>0.0661</td><td>0.0239</td><td>DeepSeek 首次穩定超過 heuristic</td></tr><tr><td>v3_250</td><td>凍結 250 筆</td><td>0.0711</td><td>0.0245</td><td>DeepSeek 在多數 slice 上持續超過 heuristic</td></tr></tbody></table>
+        <div class='chart'><h3>正式 holdout 進展：Heuristic vs DeepSeek direct（JS divergence，越低越好）</h3><svg viewBox='0 0 940 300'><line x1='44' y1='260' x2='896' y2='260' stroke='#94a3b8' stroke-width='1.5'/><rect x='44' y='159.56353697330712' width='128' height='100.43646302669286' rx='10' fill='#94a3b8'/><text x='108.0' y='151.56353697330712' text-anchor='middle' font-size='14'>0.0340</text><text x='108.0' y='282' text-anchor='middle' font-size='11'>v1-Heuristic</text><rect x='188' y='103.036656257261' width='128' height='156.963343742739' rx='10' fill='#0f766e'/><text x='252.0' y='95.036656257261' text-anchor='middle' font-size='14'>0.0532</text><text x='252.0' y='282' text-anchor='middle' font-size='11'>v1-DeepSeek</text><rect x='332' y='64.85479493095457' width='128' height='195.14520506904543' rx='10' fill='#94a3b8'/><text x='396.0' y='56.85479493095457' text-anchor='middle' font-size='14'>0.0661</text><text x='396.0' y='282' text-anchor='middle' font-size='11'>v2-Heuristic</text><rect x='476' y='189.45159833607437' width='128' height='70.54840166392563' rx='10' fill='#0f766e'/><text x='540.0' y='181.45159833607437' text-anchor='middle' font-size='14'>0.0239</text><text x='540.0' y='282' text-anchor='middle' font-size='11'>v2-DeepSeek</text><rect x='620' y='50.0' width='128' height='210.0' rx='10' fill='#94a3b8'/><text x='684.0' y='42.0' text-anchor='middle' font-size='14'>0.0711</text><text x='684.0' y='282' text-anchor='middle' font-size='11'>v3-Heuristic</text><rect x='764' y='187.745200109562' width='128' height='72.25479989043798' rx='10' fill='#0f766e'/><text x='828.0' y='179.745200109562' text-anchor='middle' font-size='14'>0.0245</text><text x='828.0' y='282' text-anchor='middle' font-size='11'>v3-DeepSeek</text></svg></div>
+      </article>
+
+      <article class="card">
+        <h2>6. 完整 benchmark 對照表</h2>
+        <p class="lead">這一節不省略正式 benchmark，直接把目前最關鍵的 formal50 / v2 / v3 結果放在一起。</p>
+        <table class='table'><thead><tr><th>Benchmark</th><th>Predictor</th><th>JS</th><th>MAE</th><th>RMSE</th><th>Top-1</th><th>JSON</th><th>Invalid</th><th>Cost USD</th><th>Avg latency ms</th></tr></thead><tbody><tr><td>formal50</td><td>heuristic</td><td>0.0340</td><td>0.1412</td><td>0.1560</td><td>0.440</td><td>0.0%</td><td>0.0%</td><td>$0.0000</td><td>0.0</td></tr><tr><td>formal50</td><td>DeepSeek direct</td><td>0.0532</td><td>0.1564</td><td>0.1755</td><td>0.560</td><td>100.0%</td><td>0.0%</td><td>$0.0248</td><td>1603.4</td></tr><tr><td>formal50</td><td>OpenAI direct</td><td>0.0672</td><td>0.1836</td><td>0.2067</td><td>0.460</td><td>100.0%</td><td>0.0%</td><td>$0.3242</td><td>1187.4</td></tr><tr><td>v2_100</td><td>heuristic</td><td>0.0661</td><td>0.1087</td><td>0.1299</td><td>0.280</td><td>0.0%</td><td>0.0%</td><td>$0.0000</td><td>0.0</td></tr><tr><td>v2_100</td><td>DeepSeek direct</td><td>0.0239</td><td>0.0516</td><td>0.0622</td><td>0.650</td><td>100.0%</td><td>0.0%</td><td>$0.0729</td><td>3430.2</td></tr><tr><td>v2_100</td><td>learned combiner v1</td><td>0.0246</td><td>0.0532</td><td>0.0639</td><td>0.630</td><td>100.0%</td><td>0.0%</td><td>$0.0729</td><td>3430.2</td></tr><tr><td>v3_250</td><td>heuristic</td><td>0.0711</td><td>0.1149</td><td>0.1368</td><td>0.320</td><td>0.0%</td><td>0.0%</td><td>$0.0000</td><td>0.0</td></tr><tr><td>v3_250</td><td>DeepSeek direct</td><td>0.0245</td><td>0.0525</td><td>0.0631</td><td>0.696</td><td>99.2%</td><td>0.8%</td><td>$0.1823</td><td>3346.3</td></tr></tbody></table>
+      </article>
+
+      <article class="card">
+        <h2>7. 供應商對照與主線淘汰過程</h2>
+        <ul>
+          <li><strong>MiniMax：</strong>final text 覆蓋率差，無法作為主線。</li>
+          <li><strong>OpenAI gpt-5.1：</strong>路徑穩定，但 formal50 上 JS 劣於 DeepSeek，且成本明顯更高。</li>
+          <li><strong>DeepSeek deepseek-chat：</strong>成本低、strict JSON 表現穩、在 v2 / v3 上最佳。</li>
+        </ul>
+        <div class='chart'><h3>formal50 供應商對照：LLM direct 路線（JS divergence）</h3><svg viewBox='0 0 940 240'><line x1='44' y1='200' x2='896' y2='200' stroke='#94a3b8' stroke-width='1.5'/><rect x='44' y='81.38502012661701' width='418' height='118.61497987338299' rx='10' fill='#0f766e'/><text x='253.0' y='73.38502012661701' text-anchor='middle' font-size='14'>0.0532</text><text x='253.0' y='222' text-anchor='middle' font-size='11'>DeepSeek-direct</text><rect x='478' y='50.0' width='418' height='150.0' rx='10' fill='#2563eb'/><text x='687.0' y='42.0' text-anchor='middle' font-size='14'>0.0672</text><text x='687.0' y='222' text-anchor='middle' font-size='11'>OpenAI-direct</text></svg></div>
+      </article>
+
+      <article class="card">
+        <h2>8. Hybrid / combiner 研究的結果與停止理由</h2>
+        <ul>
+          <li>hand-crafted weighted hybrid、confidence-gated hybrid、mixture / switching hybrid 都沒有穩定超過 heuristic。</li>
+          <li>learned combiner v1 雖然在某些 train/dev 設定下優於手工 hybrid，但在 frozen v2 上仍未穩定超過 pure DeepSeek direct。</li>
+          <li>一旦 v3 證明 pure DeepSeek direct 已在更廣切片上站穩，combiner 的邊際價值就顯著下降。</li>
+        </ul>
+        <div class="callout warn"><strong>決策：</strong>combiner / hybrid 應降級為非主線研究，不再佔用目前主要工程資源。</div>
+      </article>
+
+      <article class="card">
+        <h2>9. Behavior benchmark：目前能說與不能說的事</h2>
+        <table class='table'><thead><tr><th>資料切法</th><th>模型</th><th>MAE</th><th>RMSE</th><th>R²</th><th>解讀</th></tr></thead><tbody><tr><td>Group-aware</td><td>human-only</td><td>0.0662</td><td>0.0832</td><td>0.5964</td><td>公開 proxy 上最佳</td></tr><tr><td>Group-aware</td><td>ai-only</td><td>0.0739</td><td>0.0890</td><td>0.5377</td><td>劣於 human-only</td></tr><tr><td>Group-aware</td><td>hybrid</td><td>0.0691</td><td>0.0859</td><td>0.5690</td><td>未超過 human-only</td></tr><tr><td>Temporal</td><td>human-only</td><td>0.0255</td><td>0.0351</td><td>0.8396</td><td>仍然最佳</td></tr><tr><td>Temporal</td><td>ai-only</td><td>0.0417</td><td>0.0497</td><td>0.6778</td><td>仍劣於 human-only</td></tr><tr><td>Temporal</td><td>hybrid</td><td>0.0284</td><td>0.0371</td><td>0.8210</td><td>接近但未超過 human-only</td></tr></tbody></table>
+        <div class="callout">這段的商業意義是：行為校準層目前只能先做成可插拔介面，等未來有客戶的 survey + CTR / CVR / 購買 / 採用等私有 paired data，再進入真正的 behavior validity 主戰場。</div>
+      </article>
+
+      <article class="card">
+        <h2>10. frozen v3：目前最可信的正式證據</h2>
+        <table class='table'><thead><tr><th>指標</th><th>Heuristic</th><th>DeepSeek direct</th><th>差值（DeepSeek - Heuristic）</th></tr></thead><tbody><tr><td>JS divergence</td><td>0.0711</td><td>0.0245</td><td>-0.0466</td></tr><tr><td>Probability MAE</td><td>0.1149</td><td>0.0525</td><td>-0.0624</td></tr><tr><td>Probability RMSE</td><td>0.1368</td><td>0.0631</td><td>-0.0737</td></tr><tr><td>Top-1 accuracy</td><td>0.320</td><td>0.696</td><td>0.376</td></tr><tr><td>Fallback rate</td><td>0.0%</td><td>0.8%</td><td>0.8%</td></tr><tr><td>Invalid rate</td><td>0.0%</td><td>0.8%</td><td>0.8%</td></tr><tr><td>JSON compliance</td><td>0.0%</td><td>99.2%</td><td>99.2%</td></tr><tr><td>Estimated cost</td><td>$0.0000</td><td>$0.1823</td><td>$0.1823</td></tr><tr><td>Avg latency / request</td><td>0.0 ms</td><td>3346.3 ms</td><td>3346.3 ms</td></tr></tbody></table>
+      </article>
+
+      <article class="card">
+        <h2>11. v3 切片分析</h2>
+        <table class='table'><thead><tr><th>切片維度</th><th>範例</th><th>Heuristic 表現</th><th>DeepSeek 表現</th><th>重點結論</th></tr></thead><tbody><tr><td>question_id</td><td>partyid / polviews / natcrime</td><td>三個 slice 都較弱</td><td>三個 slice 全部較強</td><td>不是只在單一題型有用</td></tr><tr><td>year bucket</td><td>1970s ~ 2020s</td><td>六個 bucket 全部較弱</td><td>六個 bucket 全部較強</td><td>優勢不是時代偏差</td></tr><tr><td>option count</td><td>3 選項 / 7 選項</td><td>兩種都較弱</td><td>兩種都較強</td><td>對長選項題與短選項題都有優勢</td></tr><tr><td>fallback / JSON</td><td>2 筆 JSON failure</td><td>最終由 heuristic 接手</td><td>248/250 正常使用 DeepSeek</td><td>失敗率低，fallback 機制有用</td></tr></tbody></table>
+        <div class='chart'><h3>v3 切片：依 question_id 的 JS divergence</h3><svg viewBox='0 0 940 320'><line x1='44' y1='280' x2='896' y2='280' stroke='#94a3b8' stroke-width='1.5'/><rect x='44' y='181.3306036033477' width='128' height='98.66939639665232' rx='10' fill='#94a3b8'/><text x='108.0' y='173.3306036033477' text-anchor='middle' font-size='14'>0.0416</text><text x='108.0' y='302' text-anchor='middle' font-size='11'>partyid-H</text><rect x='188' y='202.23527397686223' width='128' height='77.76472602313775' rx='10' fill='#0f766e'/><text x='252.0' y='194.23527397686223' text-anchor='middle' font-size='14'>0.0328</text><text x='252.0' y='302' text-anchor='middle' font-size='11'>partyid-D</text><rect x='332' y='71.79802862185738' width='128' height='208.20197137814262' rx='10' fill='#94a3b8'/><text x='396.0' y='63.798028621857384' text-anchor='middle' font-size='14'>0.0879</text><text x='396.0' y='302' text-anchor='middle' font-size='11'>polviews-H</text><rect x='476' y='225.1740716027' width='128' height='54.8259283973' rx='10' fill='#0f766e'/><text x='540.0' y='217.1740716027' text-anchor='middle' font-size='14'>0.0231</text><text x='540.0' y='302' text-anchor='middle' font-size='11'>polviews-D</text><rect x='620' y='50.0' width='128' height='230.0' rx='10' fill='#94a3b8'/><text x='684.0' y='42.0' text-anchor='middle' font-size='14'>0.0971</text><text x='684.0' y='302' text-anchor='middle' font-size='11'>natcrime-H</text><rect x='764' y='252.43310112629007' width='128' height='27.56689887370992' rx='10' fill='#0f766e'/><text x='828.0' y='244.43310112629007' text-anchor='middle' font-size='14'>0.0116</text><text x='828.0' y='302' text-anchor='middle' font-size='11'>natcrime-D</text></svg></div>
+        <div class='chart'><h3>v3 切片：依年代 bucket 的 JS divergence</h3><svg viewBox='0 0 940 340'><line x1='44' y1='300' x2='896' y2='300' stroke='#94a3b8' stroke-width='1.5'/><rect x='44' y='50.0' width='56' height='250.0' rx='10' fill='#94a3b8'/><text x='72.0' y='42.0' text-anchor='middle' font-size='14'>0.0862</text><text x='72.0' y='322' text-anchor='middle' font-size='11'>1980s-H</text><rect x='116' y='212.81176528496178' width='56' height='87.18823471503823' rx='10' fill='#0f766e'/><text x='144.0' y='204.81176528496178' text-anchor='middle' font-size='14'>0.0301</text><text x='144.0' y='322' text-anchor='middle' font-size='11'>1980s-D</text><rect x='188' y='56.50848975262747' width='56' height='243.49151024737253' rx='10' fill='#94a3b8'/><text x='216.0' y='48.50848975262747' text-anchor='middle' font-size='14'>0.0840</text><text x='216.0' y='322' text-anchor='middle' font-size='11'>1970s-H</text><rect x='260' y='215.27287548495414' width='56' height='84.72712451504586' rx='10' fill='#0f766e'/><text x='288.0' y='207.27287548495414' text-anchor='middle' font-size='14'>0.0292</text><text x='288.0' y='322' text-anchor='middle' font-size='11'>1970s-D</text><rect x='332' y='97.79599703628472' width='56' height='202.20400296371528' rx='10' fill='#94a3b8'/><text x='360.0' y='89.79599703628472' text-anchor='middle' font-size='14'>0.0697</text><text x='360.0' y='322' text-anchor='middle' font-size='11'>1990s-H</text><rect x='404' y='230.02474317465578' width='56' height='69.97525682534422' rx='10' fill='#0f766e'/><text x='432.0' y='222.02474317465578' text-anchor='middle' font-size='14'>0.0241</text><text x='432.0' y='322' text-anchor='middle' font-size='11'>1990s-D</text><rect x='476' y='119.56898728606214' width='56' height='180.43101271393786' rx='10' fill='#94a3b8'/><text x='504.0' y='111.56898728606214' text-anchor='middle' font-size='14'>0.0622</text><text x='504.0' y='322' text-anchor='middle' font-size='11'>2000s-H</text><rect x='548' y='234.04779661320927' width='56' height='65.95220338679073' rx='10' fill='#0f766e'/><text x='576.0' y='226.04779661320927' text-anchor='middle' font-size='14'>0.0227</text><text x='576.0' y='322' text-anchor='middle' font-size='11'>2000s-D</text><rect x='620' y='130.4274151861311' width='56' height='169.5725848138689' rx='10' fill='#94a3b8'/><text x='648.0' y='122.4274151861311' text-anchor='middle' font-size='14'>0.0585</text><text x='648.0' y='322' text-anchor='middle' font-size='11'>2010s-H</text><rect x='692' y='251.89870768376102' width='56' height='48.10129231623898' rx='10' fill='#0f766e'/><text x='720.0' y='243.89870768376102' text-anchor='middle' font-size='14'>0.0166</text><text x='720.0' y='322' text-anchor='middle' font-size='11'>2010s-D</text><rect x='764' y='122.36058512705932' width='56' height='177.63941487294068' rx='10' fill='#94a3b8'/><text x='792.0' y='114.36058512705932' text-anchor='middle' font-size='14'>0.0613</text><text x='792.0' y='322' text-anchor='middle' font-size='11'>2020s-H</text><rect x='836' y='235.0769398664769' width='56' height='64.92306013352312' rx='10' fill='#0f766e'/><text x='864.0' y='227.0769398664769' text-anchor='middle' font-size='14'>0.0224</text><text x='864.0' y='322' text-anchor='middle' font-size='11'>2020s-D</text></svg></div>
+      </article>
+
+      <article class="card">
+        <h2>12. 目前可用版本：MVP inference 路徑</h2>
+        <table class='table'><thead><tr><th>面向</th><th>目前狀態</th></tr></thead><tbody><tr><td>預設策略</td><td><code>deepseek_direct</code></td></tr><tr><td>fallback 策略</td><td><code>heuristic</code></td></tr><tr><td>fallback 條件</td><td>JSON schema 驗證失敗、invalid output、timeout、provider error、空輸出、parser failure</td></tr><tr><td>正式記錄欄位</td><td>requested strategy、actual strategy used、fallback happened、fallback reason、cost / latency summary</td></tr><tr><td>介面</td><td>Python callable API、CLI、最小 FastAPI endpoint</td></tr></tbody></table>
+        <div class="callout">這個設計的核心不是「永不失敗」，而是即使 LLM 失敗，也能明確地、可追蹤地退回 heuristic，且不污染正式 scoring。</div>
+      </article>
+
+      <article class="card">
+        <h2>13. 最終產品判斷</h2>
+        <div class="callout"><strong>主模型建議：</strong>把 <code>deepseek_direct</code> 視為正式 MVP 主模型，<code>heuristic</code> 作為產品可靠性 fallback。</div>
+        <ul>
+          <li>不要再把主要時間投入 MiniMax、persona baseline、或 combiner / hybrid 調參。</li>
+          <li>若要把產品往前推，下一步應該是 auth、rate limiting、persistent logging、monitoring、request tracing、cost dashboard、API docs。</li>
+          <li>behavior calibration 路線維持可插拔，等待真實客戶 paired data。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>14. 目前仍然存在的風險與限制</h2>
+        <ul>
+          <li>正式證據主要來自 GSS，因此對商業 concept test / campaign questionnaire / pre-launch 問卷的外推能力仍待驗證。</li>
+          <li>behavior validity 只在公開 proxy 上做過，不能支持真實商業 outcome superiority claim。</li>
+          <li>v3 雖然更廣，但 held-out question 類型仍有限。</li>
+          <li>DeepSeek 成本低，但 latency 仍偏高；若要進一步產品化，營運與監控層必須補齊。</li>
+        </ul>
+        <p class="small">本版用可重跑腳本與 UTF-8 重新生成，避免 shell codepage 把中文寫成問號。</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
