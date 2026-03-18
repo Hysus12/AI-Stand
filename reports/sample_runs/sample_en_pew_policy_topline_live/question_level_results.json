@@ -1,0 +1,123 @@
+[
+  {
+    "question_id": "q35j_student_loans",
+    "question_text": "Reduce federal funding for college student loan programs.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.09721069411338307,
+    "score_range": 0.22833333333333333,
+    "dominant_option": "Disapprove",
+    "mean_confidence": 0.7061111111111111,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q35a_low_income_programs",
+    "question_text": "Reduce federal funding for programs that help lower income Americans.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0906116492391297,
+    "score_range": 0.23333333333333334,
+    "dominant_option": "Disapprove",
+    "mean_confidence": 0.7127777777777778,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q35n_scientific_research",
+    "question_text": "Reduce federal funding for scientific research.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.08472249488287542,
+    "score_range": 0.22958333333333342,
+    "dominant_option": "Disapprove",
+    "mean_confidence": 0.6869444444444445,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q35g_medicare_high_income",
+    "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.083399935598583,
+    "score_range": 0.22500000000000003,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.6511111111111112,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q35c_education_cuts",
+    "question_text": "Reduce federal funding for education.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.08319908165800319,
+    "score_range": 0.20625,
+    "dominant_option": "Disapprove",
+    "mean_confidence": 0.7188888888888889,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q35f_investment_income_tax",
+    "question_text": "Raise the tax rate on investment income.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.07956279456602512,
+    "score_range": 0.255,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.6919444444444445,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q35b_social_security_age",
+    "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.07137206062733208,
+    "score_range": 0.2341666666666668,
+    "dominant_option": "Disapprove",
+    "mean_confidence": 0.6536111111111111,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q35m_high_income_tax",
+    "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.059342936245918625,
+    "score_range": 0.2300000000000001,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.6894444444444445,
+    "stability_label": "stable"
+  },
+  {
+    "question_id": "q35d_mortgage_deduction",
+    "question_text": "Limit tax deductions for interest paid on home mortgages.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.050561656767317414,
+    "score_range": 0.20000000000000007,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.6161111111111112,
+    "stability_label": "stable"
+  },
+  {
+    "question_id": "q35h_defense_cuts",
+    "question_text": "Reduce military defense spending.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.012722757539991225,
+    "score_range": 0.10958333333333325,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.6763888888888889,
+    "stability_label": "stable"
+  },
+  {
+    "question_id": "q35k_corporate_deductions",
+    "question_text": "Limit tax deductions for large corporations.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.002074123059655517,
+    "score_range": 0.03583333333333327,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.7225,
+    "stability_label": "stable"
+  }
+]

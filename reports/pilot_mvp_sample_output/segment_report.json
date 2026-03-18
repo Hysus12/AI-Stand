@@ -1,0 +1,2790 @@
+[
+  {
+    "segment_id": "startup_ops",
+    "segment_name": "Startup ops leads",
+    "demographic_description": "Operations leads at startups with 5-40 employees in Asia.",
+    "psychographic_description": "Time-constrained generalists who value speed and reliability.",
+    "behavioral_description": "Already use multiple collaboration tools and want fewer manual follow-ups.",
+    "variant_results": [
+      {
+        "variant_id": "v_pro",
+        "variant_name": "Pro monthly",
+        "variant_description": "Core AI notes, action-item extraction, and workspace search.",
+        "question_results": [
+          {
+            "question_id": "q_interest",
+            "question_text": "How likely would you be to try this product in the next 30 days?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.46,
+              "Somewhat likely": 0.3,
+              "Not very likely": 0.16,
+              "Not at all likely": 0.08
+            },
+            "top_option": "Very likely",
+            "confidence": 0.46,
+            "uncertainty": 0.54,
+            "normalized_score": 0.7133333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "interest",
+              "intent"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.4,
+              "scoring_direction": "positive_high",
+              "theme": "adoption",
+              "top1_margin": 0.16000000000000003,
+              "entropy_normalized": 0.8754752556529718,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.46,
+                  "uncertainty": 0.54,
+                  "entropy_normalized": 0.8754752556529718,
+                  "top1_margin": 0.16000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_value",
+            "question_text": "How valuable would this product feel for your current workflow?",
+            "question_type": "likert",
+            "options": [
+              "Extremely valuable",
+              "Somewhat valuable",
+              "Slightly valuable",
+              "Not valuable"
+            ],
+            "distribution": {
+              "Extremely valuable": 0.46,
+              "Somewhat valuable": 0.3,
+              "Slightly valuable": 0.16,
+              "Not valuable": 0.08
+            },
+            "top_option": "Extremely valuable",
+            "confidence": 0.46,
+            "uncertainty": 0.54,
+            "normalized_score": 0.7133333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "value"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.3,
+              "scoring_direction": "positive_high",
+              "theme": "value",
+              "top1_margin": 0.16000000000000003,
+              "entropy_normalized": 0.8754752556529718,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.46,
+                  "uncertainty": 0.54,
+                  "entropy_normalized": 0.8754752556529718,
+                  "top1_margin": 0.16000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_price",
+            "question_text": "How acceptable does this price feel for your team?",
+            "question_type": "ordinal",
+            "options": [
+              "Very acceptable",
+              "Acceptable",
+              "Borderline",
+              "Too expensive"
+            ],
+            "distribution": {
+              "Very acceptable": 0.46,
+              "Acceptable": 0.3,
+              "Borderline": 0.16,
+              "Too expensive": 0.08
+            },
+            "top_option": "Very acceptable",
+            "confidence": 0.46,
+            "uncertainty": 0.54,
+            "normalized_score": 0.7133333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "pricing"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "pricing",
+              "top1_margin": 0.16000000000000003,
+              "entropy_normalized": 0.8754752556529718,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.46,
+                  "uncertainty": 0.54,
+                  "entropy_normalized": 0.8754752556529718,
+                  "top1_margin": 0.16000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_switch",
+            "question_text": "Would this be strong enough to replace your current meeting-note workflow?",
+            "question_type": "single_choice",
+            "options": [
+              "Yes, likely",
+              "Maybe with some proof",
+              "No, not enough"
+            ],
+            "distribution": {
+              "Yes, likely": 0.5,
+              "Maybe with some proof": 0.3260869565217391,
+              "No, not enough": 0.17391304347826086
+            },
+            "top_option": "Yes, likely",
+            "confidence": 0.5,
+            "uncertainty": 0.5,
+            "normalized_score": 0.6630434782608695,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "replacement"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "replacement",
+              "top1_margin": 0.17391304347826092,
+              "entropy_normalized": 0.9249782144002039,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.5,
+                  "uncertainty": 0.5,
+                  "entropy_normalized": 0.9249782144002039,
+                  "top1_margin": 0.17391304347826092
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_setup",
+            "question_text": "How easy would onboarding feel?",
+            "question_type": "likert",
+            "options": [
+              "Very easy",
+              "Somewhat easy",
+              "Somewhat hard",
+              "Very hard"
+            ],
+            "distribution": {
+              "Very easy": 0.46,
+              "Somewhat easy": 0.3,
+              "Somewhat hard": 0.16,
+              "Very hard": 0.08
+            },
+            "top_option": "Very easy",
+            "confidence": 0.46,
+            "uncertainty": 0.54,
+            "normalized_score": 0.7133333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "ux",
+              "setup"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "onboarding",
+              "top1_margin": 0.16000000000000003,
+              "entropy_normalized": 0.8754752556529718,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.46,
+                  "uncertainty": 0.54,
+                  "entropy_normalized": 0.8754752556529718,
+                  "top1_margin": 0.16000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_trust",
+            "question_text": "How comfortable would you be sharing client or internal calls with this tool?",
+            "question_type": "likert",
+            "options": [
+              "Very comfortable",
+              "Mostly comfortable",
+              "Somewhat uncomfortable",
+              "Very uncomfortable"
+            ],
+            "distribution": {
+              "Very comfortable": 0.46,
+              "Mostly comfortable": 0.3,
+              "Somewhat uncomfortable": 0.16,
+              "Very uncomfortable": 0.08
+            },
+            "top_option": "Very comfortable",
+            "confidence": 0.46,
+            "uncertainty": 0.54,
+            "normalized_score": 0.7133333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "trust",
+              "privacy"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.1,
+              "scoring_direction": "positive_high",
+              "theme": "trust",
+              "top1_margin": 0.16000000000000003,
+              "entropy_normalized": 0.8754752556529718,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.46,
+                  "uncertainty": 0.54,
+                  "entropy_normalized": 0.8754752556529718,
+                  "top1_margin": 0.16000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_share",
+            "question_text": "How likely would you be to share generated notes with teammates after meetings?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.46,
+              "Somewhat likely": 0.3,
+              "Not very likely": 0.16,
+              "Not at all likely": 0.08
+            },
+            "top_option": "Very likely",
+            "confidence": 0.46,
+            "uncertainty": 0.54,
+            "normalized_score": 0.7133333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "collaboration"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "workflow",
+              "top1_margin": 0.16000000000000003,
+              "entropy_normalized": 0.8754752556529718,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.46,
+                  "uncertainty": 0.54,
+                  "entropy_normalized": 0.8754752556529718,
+                  "top1_margin": 0.16000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_priority",
+            "question_text": "Which reason would most likely make you pay attention to this product first?",
+            "question_type": "ordinal",
+            "options": [
+              "Saves time after meetings",
+              "Keeps action items organized",
+              "Helps with client visibility",
+              "None of these feels compelling"
+            ],
+            "distribution": {
+              "Saves time after meetings": 0.46,
+              "Keeps action items organized": 0.3,
+              "Helps with client visibility": 0.16,
+              "None of these feels compelling": 0.08
+            },
+            "top_option": "Saves time after meetings",
+            "confidence": 0.46,
+            "uncertainty": 0.54,
+            "normalized_score": 0.7133333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "message_priority"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 0.9,
+              "scoring_direction": "positive_high",
+              "theme": "messaging",
+              "top1_margin": 0.16000000000000003,
+              "entropy_normalized": 0.8754752556529718,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.46,
+                  "uncertainty": 0.54,
+                  "entropy_normalized": 0.8754752556529718,
+                  "top1_margin": 0.16000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          }
+        ],
+        "aggregate_signals": {
+          "weighted_score": 0.7067017040930085,
+          "mean_confidence": 0.465,
+          "mean_uncertainty": 0.535,
+          "fallback_rate": 0.0,
+          "invalid_rate": 0.0,
+          "mean_top_option_margin": 0.16173913043478264,
+          "question_count": 8
+        },
+        "diagnostics": {
+          "question_count": 8,
+          "fallback_rate": 0.0
+        }
+      },
+      {
+        "variant_id": "v_team",
+        "variant_name": "Team monthly",
+        "variant_description": "Adds shared workspaces, CRM export, and client-ready recap templates.",
+        "question_results": [
+          {
+            "question_id": "q_interest",
+            "question_text": "How likely would you be to try this product in the next 30 days?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.38,
+              "Somewhat likely": 0.31,
+              "Not very likely": 0.19,
+              "Not at all likely": 0.12
+            },
+            "top_option": "Very likely",
+            "confidence": 0.38,
+            "uncertainty": 0.62,
+            "normalized_score": 0.65,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "interest",
+              "intent"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.4,
+              "scoring_direction": "positive_high",
+              "theme": "adoption",
+              "top1_margin": 0.07,
+              "entropy_normalized": 0.9382705754027054,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.38,
+                  "uncertainty": 0.62,
+                  "entropy_normalized": 0.9382705754027054,
+                  "top1_margin": 0.07
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_value",
+            "question_text": "How valuable would this product feel for your current workflow?",
+            "question_type": "likert",
+            "options": [
+              "Extremely valuable",
+              "Somewhat valuable",
+              "Slightly valuable",
+              "Not valuable"
+            ],
+            "distribution": {
+              "Extremely valuable": 0.38,
+              "Somewhat valuable": 0.31,
+              "Slightly valuable": 0.19,
+              "Not valuable": 0.12
+            },
+            "top_option": "Extremely valuable",
+            "confidence": 0.38,
+            "uncertainty": 0.62,
+            "normalized_score": 0.65,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "value"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.3,
+              "scoring_direction": "positive_high",
+              "theme": "value",
+              "top1_margin": 0.07,
+              "entropy_normalized": 0.9382705754027054,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.38,
+                  "uncertainty": 0.62,
+                  "entropy_normalized": 0.9382705754027054,
+                  "top1_margin": 0.07
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_price",
+            "question_text": "How acceptable does this price feel for your team?",
+            "question_type": "ordinal",
+            "options": [
+              "Very acceptable",
+              "Acceptable",
+              "Borderline",
+              "Too expensive"
+            ],
+            "distribution": {
+              "Very acceptable": 0.38,
+              "Acceptable": 0.31,
+              "Borderline": 0.19,
+              "Too expensive": 0.12
+            },
+            "top_option": "Very acceptable",
+            "confidence": 0.38,
+            "uncertainty": 0.62,
+            "normalized_score": 0.65,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "pricing"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "pricing",
+              "top1_margin": 0.07,
+              "entropy_normalized": 0.9382705754027054,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.38,
+                  "uncertainty": 0.62,
+                  "entropy_normalized": 0.9382705754027054,
+                  "top1_margin": 0.07
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_switch",
+            "question_text": "Would this be strong enough to replace your current meeting-note workflow?",
+            "question_type": "single_choice",
+            "options": [
+              "Yes, likely",
+              "Maybe with some proof",
+              "No, not enough"
+            ],
+            "distribution": {
+              "Yes, likely": 0.4318181818181818,
+              "Maybe with some proof": 0.3522727272727273,
+              "No, not enough": 0.2159090909090909
+            },
+            "top_option": "Yes, likely",
+            "confidence": 0.4318181818181818,
+            "uncertainty": 0.5681818181818181,
+            "normalized_score": 0.6079545454545454,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "replacement"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "replacement",
+              "top1_margin": 0.07954545454545453,
+              "entropy_normalized": 0.9658819608616213,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.4318181818181818,
+                  "uncertainty": 0.5681818181818181,
+                  "entropy_normalized": 0.9658819608616213,
+                  "top1_margin": 0.07954545454545453
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_setup",
+            "question_text": "How easy would onboarding feel?",
+            "question_type": "likert",
+            "options": [
+              "Very easy",
+              "Somewhat easy",
+              "Somewhat hard",
+              "Very hard"
+            ],
+            "distribution": {
+              "Very easy": 0.38,
+              "Somewhat easy": 0.31,
+              "Somewhat hard": 0.19,
+              "Very hard": 0.12
+            },
+            "top_option": "Very easy",
+            "confidence": 0.38,
+            "uncertainty": 0.62,
+            "normalized_score": 0.65,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "ux",
+              "setup"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "onboarding",
+              "top1_margin": 0.07,
+              "entropy_normalized": 0.9382705754027054,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.38,
+                  "uncertainty": 0.62,
+                  "entropy_normalized": 0.9382705754027054,
+                  "top1_margin": 0.07
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_trust",
+            "question_text": "How comfortable would you be sharing client or internal calls with this tool?",
+            "question_type": "likert",
+            "options": [
+              "Very comfortable",
+              "Mostly comfortable",
+              "Somewhat uncomfortable",
+              "Very uncomfortable"
+            ],
+            "distribution": {
+              "Very comfortable": 0.38,
+              "Mostly comfortable": 0.31,
+              "Somewhat uncomfortable": 0.19,
+              "Very uncomfortable": 0.12
+            },
+            "top_option": "Very comfortable",
+            "confidence": 0.38,
+            "uncertainty": 0.62,
+            "normalized_score": 0.65,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "trust",
+              "privacy"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.1,
+              "scoring_direction": "positive_high",
+              "theme": "trust",
+              "top1_margin": 0.07,
+              "entropy_normalized": 0.9382705754027054,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.38,
+                  "uncertainty": 0.62,
+                  "entropy_normalized": 0.9382705754027054,
+                  "top1_margin": 0.07
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_share",
+            "question_text": "How likely would you be to share generated notes with teammates after meetings?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.38,
+              "Somewhat likely": 0.31,
+              "Not very likely": 0.19,
+              "Not at all likely": 0.12
+            },
+            "top_option": "Very likely",
+            "confidence": 0.38,
+            "uncertainty": 0.62,
+            "normalized_score": 0.65,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "collaboration"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "workflow",
+              "top1_margin": 0.07,
+              "entropy_normalized": 0.9382705754027054,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.38,
+                  "uncertainty": 0.62,
+                  "entropy_normalized": 0.9382705754027054,
+                  "top1_margin": 0.07
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_priority",
+            "question_text": "Which reason would most likely make you pay attention to this product first?",
+            "question_type": "ordinal",
+            "options": [
+              "Saves time after meetings",
+              "Keeps action items organized",
+              "Helps with client visibility",
+              "None of these feels compelling"
+            ],
+            "distribution": {
+              "Saves time after meetings": 0.38,
+              "Keeps action items organized": 0.31,
+              "Helps with client visibility": 0.19,
+              "None of these feels compelling": 0.12
+            },
+            "top_option": "Saves time after meetings",
+            "confidence": 0.38,
+            "uncertainty": 0.62,
+            "normalized_score": 0.65,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "message_priority"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 0.9,
+              "scoring_direction": "positive_high",
+              "theme": "messaging",
+              "top1_margin": 0.07,
+              "entropy_normalized": 0.9382705754027054,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.38,
+                  "uncertainty": 0.62,
+                  "entropy_normalized": 0.9382705754027054,
+                  "top1_margin": 0.07
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          }
+        ],
+        "aggregate_signals": {
+          "weighted_score": 0.6444555444555445,
+          "mean_confidence": 0.3864772727272727,
+          "mean_uncertainty": 0.6135227272727273,
+          "fallback_rate": 0.0,
+          "invalid_rate": 0.0,
+          "mean_top_option_margin": 0.07119318181818182,
+          "question_count": 8
+        },
+        "diagnostics": {
+          "question_count": 8,
+          "fallback_rate": 0.0
+        }
+      }
+    ],
+    "aggregate_signals": {
+      "weighted_score": 0.6755786242742765,
+      "mean_confidence": 0.4257386363636364,
+      "mean_uncertainty": 0.5742613636363636,
+      "fallback_rate": 0.0,
+      "invalid_rate": 0.0,
+      "mean_top_option_margin": 0.11646615612648223,
+      "question_count": 16
+    },
+    "diagnostics": {
+      "variant_count": 2,
+      "estimated_weight": 0.55
+    }
+  },
+  {
+    "segment_id": "agency_founders",
+    "segment_name": "Small agency founders",
+    "demographic_description": "Founders of 3-20 person agencies managing client calls every week.",
+    "psychographic_description": "Highly cost sensitive, skeptical of complex setup, focused on client delivery.",
+    "behavioral_description": "Need better note handoff after client calls but avoid enterprise software overhead.",
+    "variant_results": [
+      {
+        "variant_id": "v_pro",
+        "variant_name": "Pro monthly",
+        "variant_description": "Core AI notes, action-item extraction, and workspace search.",
+        "question_results": [
+          {
+            "question_id": "q_interest",
+            "question_text": "How likely would you be to try this product in the next 30 days?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.27,
+              "Somewhat likely": 0.33,
+              "Not very likely": 0.24,
+              "Not at all likely": 0.16
+            },
+            "top_option": "Somewhat likely",
+            "confidence": 0.33,
+            "uncertainty": 0.6699999999999999,
+            "normalized_score": 0.5700000000000001,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "interest",
+              "intent"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.4,
+              "scoring_direction": "positive_high",
+              "theme": "adoption",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9774977523146107,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.33,
+                  "uncertainty": 0.6699999999999999,
+                  "entropy_normalized": 0.9774977523146107,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_value",
+            "question_text": "How valuable would this product feel for your current workflow?",
+            "question_type": "likert",
+            "options": [
+              "Extremely valuable",
+              "Somewhat valuable",
+              "Slightly valuable",
+              "Not valuable"
+            ],
+            "distribution": {
+              "Extremely valuable": 0.27,
+              "Somewhat valuable": 0.33,
+              "Slightly valuable": 0.24,
+              "Not valuable": 0.16
+            },
+            "top_option": "Somewhat valuable",
+            "confidence": 0.33,
+            "uncertainty": 0.6699999999999999,
+            "normalized_score": 0.5700000000000001,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "value"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.3,
+              "scoring_direction": "positive_high",
+              "theme": "value",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9774977523146107,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.33,
+                  "uncertainty": 0.6699999999999999,
+                  "entropy_normalized": 0.9774977523146107,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_price",
+            "question_text": "How acceptable does this price feel for your team?",
+            "question_type": "ordinal",
+            "options": [
+              "Very acceptable",
+              "Acceptable",
+              "Borderline",
+              "Too expensive"
+            ],
+            "distribution": {
+              "Very acceptable": 0.27,
+              "Acceptable": 0.33,
+              "Borderline": 0.24,
+              "Too expensive": 0.16
+            },
+            "top_option": "Acceptable",
+            "confidence": 0.33,
+            "uncertainty": 0.6699999999999999,
+            "normalized_score": 0.5700000000000001,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "pricing"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "pricing",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9774977523146107,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.33,
+                  "uncertainty": 0.6699999999999999,
+                  "entropy_normalized": 0.9774977523146107,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_switch",
+            "question_text": "Would this be strong enough to replace your current meeting-note workflow?",
+            "question_type": "single_choice",
+            "options": [
+              "Yes, likely",
+              "Maybe with some proof",
+              "No, not enough"
+            ],
+            "distribution": {
+              "Yes, likely": 0.3214285714285714,
+              "Maybe with some proof": 0.39285714285714285,
+              "No, not enough": 0.2857142857142857
+            },
+            "top_option": "Maybe with some proof",
+            "confidence": 0.39285714285714285,
+            "uncertainty": 0.6071428571428572,
+            "normalized_score": 0.5178571428571428,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "replacement"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "replacement",
+              "top1_margin": 0.07142857142857145,
+              "entropy_normalized": 0.9919762630614621,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.39285714285714285,
+                  "uncertainty": 0.6071428571428572,
+                  "entropy_normalized": 0.9919762630614621,
+                  "top1_margin": 0.07142857142857145
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_setup",
+            "question_text": "How easy would onboarding feel?",
+            "question_type": "likert",
+            "options": [
+              "Very easy",
+              "Somewhat easy",
+              "Somewhat hard",
+              "Very hard"
+            ],
+            "distribution": {
+              "Very easy": 0.27,
+              "Somewhat easy": 0.33,
+              "Somewhat hard": 0.24,
+              "Very hard": 0.16
+            },
+            "top_option": "Somewhat easy",
+            "confidence": 0.33,
+            "uncertainty": 0.6699999999999999,
+            "normalized_score": 0.5700000000000001,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "ux",
+              "setup"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "onboarding",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9774977523146107,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.33,
+                  "uncertainty": 0.6699999999999999,
+                  "entropy_normalized": 0.9774977523146107,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_trust",
+            "question_text": "How comfortable would you be sharing client or internal calls with this tool?",
+            "question_type": "likert",
+            "options": [
+              "Very comfortable",
+              "Mostly comfortable",
+              "Somewhat uncomfortable",
+              "Very uncomfortable"
+            ],
+            "distribution": {
+              "Very comfortable": 0.3235294117647059,
+              "Mostly comfortable": 0.3235294117647059,
+              "Somewhat uncomfortable": 0.1764705882352941,
+              "Very uncomfortable": 0.1764705882352941
+            },
+            "top_option": "Very comfortable",
+            "confidence": 0.3235294117647059,
+            "uncertainty": 0.6764705882352942,
+            "normalized_score": 0.5980392156862746,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "heuristic",
+            "fallback_happened": true,
+            "fallback_reason": "timeout",
+            "tags": [
+              "trust",
+              "privacy"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.1,
+              "scoring_direction": "positive_high",
+              "theme": "trust",
+              "top1_margin": 0.0,
+              "entropy_normalized": 0.9683336909387813,
+              "cost_latency_summary": {
+                "total_input_tokens": 0,
+                "total_output_tokens": 0,
+                "estimated_api_cost_usd": 0.0,
+                "total_latency_ms": 0.0,
+                "average_latency_ms_per_request": 0.0,
+                "request_count": 2,
+                "retry_count": 1
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": null,
+                "actual_model_name": null,
+                "requested_model_name": "deepseek-chat",
+                "generation_config": null,
+                "output_type": "heuristic",
+                "confidence_summary": {
+                  "top1_probability": 0.3235294117647059,
+                  "uncertainty": 0.6764705882352942,
+                  "entropy_normalized": 0.9683336909387813,
+                  "top1_margin": 0.0
+                },
+                "json_compliance_rate": 0.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 0.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "heuristic",
+                  "fallback_happened": true,
+                  "fallback_reason": "timeout",
+                  "retry_count": 1
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_share",
+            "question_text": "How likely would you be to share generated notes with teammates after meetings?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.27,
+              "Somewhat likely": 0.33,
+              "Not very likely": 0.24,
+              "Not at all likely": 0.16
+            },
+            "top_option": "Somewhat likely",
+            "confidence": 0.33,
+            "uncertainty": 0.6699999999999999,
+            "normalized_score": 0.5700000000000001,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "collaboration"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "workflow",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9774977523146107,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.33,
+                  "uncertainty": 0.6699999999999999,
+                  "entropy_normalized": 0.9774977523146107,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_priority",
+            "question_text": "Which reason would most likely make you pay attention to this product first?",
+            "question_type": "ordinal",
+            "options": [
+              "Saves time after meetings",
+              "Keeps action items organized",
+              "Helps with client visibility",
+              "None of these feels compelling"
+            ],
+            "distribution": {
+              "Saves time after meetings": 0.27,
+              "Keeps action items organized": 0.33,
+              "Helps with client visibility": 0.24,
+              "None of these feels compelling": 0.16
+            },
+            "top_option": "Keeps action items organized",
+            "confidence": 0.33,
+            "uncertainty": 0.6699999999999999,
+            "normalized_score": 0.5700000000000001,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "message_priority"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 0.9,
+              "scoring_direction": "positive_high",
+              "theme": "messaging",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9774977523146107,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.33,
+                  "uncertainty": 0.6699999999999999,
+                  "entropy_normalized": 0.9774977523146107,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          }
+        ],
+        "aggregate_signals": {
+          "weighted_score": 0.5665133745806015,
+          "mean_confidence": 0.3370483193277311,
+          "mean_uncertainty": 0.6629516806722688,
+          "fallback_rate": 0.125,
+          "invalid_rate": 0.0,
+          "mean_top_option_margin": 0.05392857142857143,
+          "question_count": 8
+        },
+        "diagnostics": {
+          "question_count": 8,
+          "fallback_rate": 0.125
+        }
+      },
+      {
+        "variant_id": "v_team",
+        "variant_name": "Team monthly",
+        "variant_description": "Adds shared workspaces, CRM export, and client-ready recap templates.",
+        "question_results": [
+          {
+            "question_id": "q_interest",
+            "question_text": "How likely would you be to try this product in the next 30 days?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.18,
+              "Somewhat likely": 0.34,
+              "Not very likely": 0.28,
+              "Not at all likely": 0.2
+            },
+            "top_option": "Somewhat likely",
+            "confidence": 0.34,
+            "uncertainty": 0.6599999999999999,
+            "normalized_score": 0.5,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "interest",
+              "intent"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.4,
+              "scoring_direction": "positive_high",
+              "theme": "adoption",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9765436631681959,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.34,
+                  "uncertainty": 0.6599999999999999,
+                  "entropy_normalized": 0.9765436631681959,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_value",
+            "question_text": "How valuable would this product feel for your current workflow?",
+            "question_type": "likert",
+            "options": [
+              "Extremely valuable",
+              "Somewhat valuable",
+              "Slightly valuable",
+              "Not valuable"
+            ],
+            "distribution": {
+              "Extremely valuable": 0.18,
+              "Somewhat valuable": 0.34,
+              "Slightly valuable": 0.28,
+              "Not valuable": 0.2
+            },
+            "top_option": "Somewhat valuable",
+            "confidence": 0.34,
+            "uncertainty": 0.6599999999999999,
+            "normalized_score": 0.5,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "value"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.3,
+              "scoring_direction": "positive_high",
+              "theme": "value",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9765436631681959,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.34,
+                  "uncertainty": 0.6599999999999999,
+                  "entropy_normalized": 0.9765436631681959,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_price",
+            "question_text": "How acceptable does this price feel for your team?",
+            "question_type": "ordinal",
+            "options": [
+              "Very acceptable",
+              "Acceptable",
+              "Borderline",
+              "Too expensive"
+            ],
+            "distribution": {
+              "Very acceptable": 0.18,
+              "Acceptable": 0.34,
+              "Borderline": 0.28,
+              "Too expensive": 0.2
+            },
+            "top_option": "Acceptable",
+            "confidence": 0.34,
+            "uncertainty": 0.6599999999999999,
+            "normalized_score": 0.5,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "pricing"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "pricing",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9765436631681959,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.34,
+                  "uncertainty": 0.6599999999999999,
+                  "entropy_normalized": 0.9765436631681959,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_switch",
+            "question_text": "Would this be strong enough to replace your current meeting-note workflow?",
+            "question_type": "single_choice",
+            "options": [
+              "Yes, likely",
+              "Maybe with some proof",
+              "No, not enough"
+            ],
+            "distribution": {
+              "Yes, likely": 0.22499999999999998,
+              "Maybe with some proof": 0.425,
+              "No, not enough": 0.35000000000000003
+            },
+            "top_option": "Maybe with some proof",
+            "confidence": 0.425,
+            "uncertainty": 0.575,
+            "normalized_score": 0.4375,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "replacement"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.2,
+              "scoring_direction": "positive_high",
+              "theme": "replacement",
+              "top1_margin": 0.07499999999999996,
+              "entropy_normalized": 0.9709687381317009,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.425,
+                  "uncertainty": 0.575,
+                  "entropy_normalized": 0.9709687381317009,
+                  "top1_margin": 0.07499999999999996
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_setup",
+            "question_text": "How easy would onboarding feel?",
+            "question_type": "likert",
+            "options": [
+              "Very easy",
+              "Somewhat easy",
+              "Somewhat hard",
+              "Very hard"
+            ],
+            "distribution": {
+              "Very easy": 0.18,
+              "Somewhat easy": 0.34,
+              "Somewhat hard": 0.28,
+              "Very hard": 0.2
+            },
+            "top_option": "Somewhat easy",
+            "confidence": 0.34,
+            "uncertainty": 0.6599999999999999,
+            "normalized_score": 0.5,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "ux",
+              "setup"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "onboarding",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9765436631681959,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.34,
+                  "uncertainty": 0.6599999999999999,
+                  "entropy_normalized": 0.9765436631681959,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_trust",
+            "question_text": "How comfortable would you be sharing client or internal calls with this tool?",
+            "question_type": "likert",
+            "options": [
+              "Very comfortable",
+              "Mostly comfortable",
+              "Somewhat uncomfortable",
+              "Very uncomfortable"
+            ],
+            "distribution": {
+              "Very comfortable": 0.3235294117647059,
+              "Mostly comfortable": 0.3235294117647059,
+              "Somewhat uncomfortable": 0.1764705882352941,
+              "Very uncomfortable": 0.1764705882352941
+            },
+            "top_option": "Very comfortable",
+            "confidence": 0.3235294117647059,
+            "uncertainty": 0.6764705882352942,
+            "normalized_score": 0.5980392156862746,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "heuristic",
+            "fallback_happened": true,
+            "fallback_reason": "timeout",
+            "tags": [
+              "trust",
+              "privacy"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.1,
+              "scoring_direction": "positive_high",
+              "theme": "trust",
+              "top1_margin": 0.0,
+              "entropy_normalized": 0.9683336909387813,
+              "cost_latency_summary": {
+                "total_input_tokens": 0,
+                "total_output_tokens": 0,
+                "estimated_api_cost_usd": 0.0,
+                "total_latency_ms": 0.0,
+                "average_latency_ms_per_request": 0.0,
+                "request_count": 2,
+                "retry_count": 1
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": null,
+                "actual_model_name": null,
+                "requested_model_name": "deepseek-chat",
+                "generation_config": null,
+                "output_type": "heuristic",
+                "confidence_summary": {
+                  "top1_probability": 0.3235294117647059,
+                  "uncertainty": 0.6764705882352942,
+                  "entropy_normalized": 0.9683336909387813,
+                  "top1_margin": 0.0
+                },
+                "json_compliance_rate": 0.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 0.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "heuristic",
+                  "fallback_happened": true,
+                  "fallback_reason": "timeout",
+                  "retry_count": 1
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_share",
+            "question_text": "How likely would you be to share generated notes with teammates after meetings?",
+            "question_type": "likert",
+            "options": [
+              "Very likely",
+              "Somewhat likely",
+              "Not very likely",
+              "Not at all likely"
+            ],
+            "distribution": {
+              "Very likely": 0.18,
+              "Somewhat likely": 0.34,
+              "Not very likely": 0.28,
+              "Not at all likely": 0.2
+            },
+            "top_option": "Somewhat likely",
+            "confidence": 0.34,
+            "uncertainty": 0.6599999999999999,
+            "normalized_score": 0.5,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "collaboration"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "workflow",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9765436631681959,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.34,
+                  "uncertainty": 0.6599999999999999,
+                  "entropy_normalized": 0.9765436631681959,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q_priority",
+            "question_text": "Which reason would most likely make you pay attention to this product first?",
+            "question_type": "ordinal",
+            "options": [
+              "Saves time after meetings",
+              "Keeps action items organized",
+              "Helps with client visibility",
+              "None of these feels compelling"
+            ],
+            "distribution": {
+              "Saves time after meetings": 0.18,
+              "Keeps action items organized": 0.34,
+              "Helps with client visibility": 0.28,
+              "None of these feels compelling": 0.2
+            },
+            "top_option": "Keeps action items organized",
+            "confidence": 0.34,
+            "uncertainty": 0.6599999999999999,
+            "normalized_score": 0.5,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "message_priority"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 0.9,
+              "scoring_direction": "positive_high",
+              "theme": "messaging",
+              "top1_margin": 0.06,
+              "entropy_normalized": 0.9765436631681959,
+              "cost_latency_summary": {
+                "total_input_tokens": 120,
+                "total_output_tokens": 35,
+                "estimated_api_cost_usd": 0.0012,
+                "total_latency_ms": 120.0,
+                "average_latency_ms_per_request": 120.0,
+                "request_count": 1,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.34,
+                  "uncertainty": 0.6599999999999999,
+                  "entropy_normalized": 0.9765436631681959,
+                  "top1_margin": 0.06
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          }
+        ],
+        "aggregate_signals": {
+          "weighted_score": 0.5036091359620771,
+          "mean_confidence": 0.34856617647058824,
+          "mean_uncertainty": 0.6514338235294117,
+          "fallback_rate": 0.125,
+          "invalid_rate": 0.0,
+          "mean_top_option_margin": 0.05437499999999999,
+          "question_count": 8
+        },
+        "diagnostics": {
+          "question_count": 8,
+          "fallback_rate": 0.125
+        }
+      }
+    ],
+    "aggregate_signals": {
+      "weighted_score": 0.5350612552713394,
+      "mean_confidence": 0.3428072478991597,
+      "mean_uncertainty": 0.6571927521008403,
+      "fallback_rate": 0.125,
+      "invalid_rate": 0.0,
+      "mean_top_option_margin": 0.05415178571428571,
+      "question_count": 16
+    },
+    "diagnostics": {
+      "variant_count": 2,
+      "estimated_weight": 0.45
+    }
+  }
+]

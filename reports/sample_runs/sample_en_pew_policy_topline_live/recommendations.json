@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Prioritize Social program defenders",
+    "rationale": "Social program defenders has the strongest aggregate score (0.611) with mean confidence 0.784.",
+    "priority": "high"
+  },
+  {
+    "title": "Use q35j_student_loans as a segmentation lever",
+    "rationale": "Reduce federal funding for college student loan programs. shows the largest cross-segment divergence (avg JS 0.097).",
+    "priority": "medium"
+  }
+]

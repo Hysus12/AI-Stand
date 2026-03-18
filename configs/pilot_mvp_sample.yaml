@@ -1,0 +1,119 @@
+project_id: pilot_nimbusnotes_q1
+product_name: NimbusNotes
+product_brief: >
+  NimbusNotes is an AI meeting assistant for early-stage teams. It records calls,
+  produces structured summaries, highlights action items, and shares searchable notes.
+category: productivity software
+category_hints:
+  - AI meeting notes
+  - collaboration
+  - B2B SaaS
+target_segments:
+  - segment_id: startup_ops
+    segment_name: Startup ops leads
+    demographic_description: Operations leads at startups with 5-40 employees in Asia.
+    psychographic_description: Time-constrained generalists who value speed and reliability.
+    behavioral_description: Already use multiple collaboration tools and want fewer manual follow-ups.
+    population_struct:
+      region: Asia
+      occupation: operations
+    estimated_weight: 0.55
+  - segment_id: agency_founders
+    segment_name: Small agency founders
+    demographic_description: Founders of 3-20 person agencies managing client calls every week.
+    psychographic_description: Highly cost sensitive, skeptical of complex setup, focused on client delivery.
+    behavioral_description: Need better note handoff after client calls but avoid enterprise software overhead.
+    population_struct:
+      region: Asia
+      occupation: founder
+    estimated_weight: 0.45
+survey_questions:
+  - question_id: q_interest
+    question_text: How likely would you be to try this product in the next 30 days?
+    question_type: likert
+    options: ["Very likely", "Somewhat likely", "Not very likely", "Not at all likely"]
+    tags: ["interest", "intent"]
+    theme: adoption
+    scoring_direction: positive_high
+    decision_weight: 1.4
+  - question_id: q_value
+    question_text: How valuable would this product feel for your current workflow?
+    question_type: likert
+    options: ["Extremely valuable", "Somewhat valuable", "Slightly valuable", "Not valuable"]
+    tags: ["value"]
+    theme: value
+    scoring_direction: positive_high
+    decision_weight: 1.3
+  - question_id: q_price
+    question_text: How acceptable does this price feel for your team?
+    question_type: ordinal
+    options: ["Very acceptable", "Acceptable", "Borderline", "Too expensive"]
+    tags: ["pricing"]
+    theme: pricing
+    scoring_direction: positive_high
+    decision_weight: 1.2
+  - question_id: q_switch
+    question_text: Would this be strong enough to replace your current meeting-note workflow?
+    question_type: single_choice
+    options: ["Yes, likely", "Maybe with some proof", "No, not enough"]
+    tags: ["replacement"]
+    theme: replacement
+    scoring_direction: positive_high
+    decision_weight: 1.2
+  - question_id: q_setup
+    question_text: How easy would onboarding feel?
+    question_type: likert
+    options: ["Very easy", "Somewhat easy", "Somewhat hard", "Very hard"]
+    tags: ["ux", "setup"]
+    theme: onboarding
+    scoring_direction: positive_high
+    decision_weight: 1.0
+  - question_id: q_trust
+    question_text: How comfortable would you be sharing client or internal calls with this tool?
+    question_type: likert
+    options: ["Very comfortable", "Mostly comfortable", "Somewhat uncomfortable", "Very uncomfortable"]
+    tags: ["trust", "privacy"]
+    theme: trust
+    scoring_direction: positive_high
+    decision_weight: 1.1
+  - question_id: q_share
+    question_text: How likely would you be to share generated notes with teammates after meetings?
+    question_type: likert
+    options: ["Very likely", "Somewhat likely", "Not very likely", "Not at all likely"]
+    tags: ["collaboration"]
+    theme: workflow
+    scoring_direction: positive_high
+    decision_weight: 1.0
+  - question_id: q_priority
+    question_text: Which reason would most likely make you pay attention to this product first?
+    question_type: ordinal
+    options:
+      - Saves time after meetings
+      - Keeps action items organized
+      - Helps with client visibility
+      - None of these feels compelling
+    tags: ["message_priority"]
+    theme: messaging
+    scoring_direction: positive_high
+    decision_weight: 0.9
+variants:
+  - variant_id: v_pro
+    variant_name: Pro monthly
+    variant_description: Core AI notes, action-item extraction, and workspace search.
+    price: 24.0
+    message: Faster post-meeting execution for small teams.
+    feature: AI notes plus action items
+  - variant_id: v_team
+    variant_name: Team monthly
+    variant_description: Adds shared workspaces, CRM export, and client-ready recap templates.
+    price: 39.0
+    message: Shared meeting intelligence for client-facing teams.
+    feature: AI notes plus shared workspace and exports
+generation_settings:
+  synthetic_respondent_count: 300
+  random_seed: 42
+  latent_profile_strength: 0.9
+inference_settings:
+  primary_strategy: deepseek_direct
+  fallback_strategy: heuristic
+  max_retry_attempts: 1

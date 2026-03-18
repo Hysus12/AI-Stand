@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import json
 import re
+from collections import Counter
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -229,6 +230,7 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
         total_output_tokens = 0
         total_estimated_cost_usd = 0.0
         request_latencies_ms: list[float] = []
+        usage_source_counter: Counter[str] = Counter()
 
         for offset, template_name in enumerate(templates):
             prompt = self._build_probability_prompt(request, template_name=template_name)
@@ -250,6 +252,7 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
                 total_output_tokens += int(output.get("output_tokens") or 0)
                 total_estimated_cost_usd += float(output.get("estimated_cost_usd") or 0.0)
                 request_latencies_ms.append(float(output.get("latency_ms") or 0.0))
+                usage_source_counter[str(output.get("usage_source") or "missing")] += 1
                 if final_text_present:
                     final_text_present_count += 1
                 if used_thinking_fallback:
@@ -366,6 +369,12 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
             "total_output_tokens": total_output_tokens,
             "estimated_api_cost_usd": total_estimated_cost_usd,
             "request_latencies_ms": request_latencies_ms,
+            "total_sample_attempts": total_samples,
+            "final_text_present_count": final_text_present_count,
+            "invalid_output_count": invalid_output_count,
+            "json_compliance_count": json_compliance_count,
+            "parser_failure_count": parser_failure_count,
+            "usage_source_breakdown": dict(sorted(usage_source_counter.items())),
             "generation_config": self.generation_config(),
             "scorable": mean_distribution is not None,
         }

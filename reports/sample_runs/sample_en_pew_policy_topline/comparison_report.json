@@ -1,0 +1,297 @@
+{
+  "project_id": "sample_en_pew_policy_topline",
+  "reference_project_id": "sample_en_pew_policy_topline",
+  "source": {
+    "report_title": "Deep Divisions over Debt Reduction Proposals",
+    "report_url": "https://www.pewresearch.org/politics/2012/10/12/deep-divisions-over-debt-reduction-proposals/",
+    "topline_title": "Early October 2012 Political Survey Topline",
+    "topline_url": "https://www.pewresearch.org/wp-content/uploads/sites/4/legacy-questionnaires/10-12-12-Topline-for-Release.pdf",
+    "notes": [
+      "Reference values are exact topline percentages from Pew Research Center, Oct. 4-7, 2012.",
+      "The AI comparison keeps the same three-way answer space: Approve, Disapprove, Don't know."
+    ]
+  },
+  "summary": {
+    "matched_question_count": 11,
+    "unmatched_project_questions": [],
+    "unmatched_reference_questions": [],
+    "mean_js_divergence": 0.04635429202270482,
+    "mean_probability_mae": 0.14608797421631645,
+    "closest_questions": [
+      "q35d_mortgage_deduction",
+      "q35k_corporate_deductions",
+      "q35f_investment_income_tax"
+    ],
+    "largest_gap_questions": [
+      "q35c_education_cuts",
+      "q35j_student_loans",
+      "q35b_social_security_age"
+    ]
+  },
+  "question_comparisons": [
+    {
+      "question_id": "q35d_mortgage_deduction",
+      "question_text": "Limit tax deductions for interest paid on home mortgages.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.47,
+        "Disapprove": 0.44,
+        "Don't know": 0.09
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": -0.03862745098039211,
+        "Disapprove": -0.10666666666666663,
+        "Don't know": 0.1452941176470588
+      },
+      "probability_mae": 0.09686274509803917,
+      "js_divergence": 0.020915710061404257,
+      "top_option_match": true,
+      "notes": null
+    },
+    {
+      "question_id": "q35k_corporate_deductions",
+      "question_text": "Limit tax deductions for large corporations.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.58,
+        "Disapprove": 0.34,
+        "Don't know": 0.08
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": -0.1486274509803921,
+        "Disapprove": -0.006666666666666654,
+        "Don't know": 0.1552941176470588
+      },
+      "probability_mae": 0.10352941176470586,
+      "js_divergence": 0.025478482534432332,
+      "top_option_match": true,
+      "notes": null
+    },
+    {
+      "question_id": "q35f_investment_income_tax",
+      "question_text": "Raise the tax rate on investment income.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.44,
+        "Disapprove": 0.49,
+        "Don't know": 0.07
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": -0.008627450980392137,
+        "Disapprove": -0.15666666666666662,
+        "Don't know": 0.16529411764705879
+      },
+      "probability_mae": 0.11019607843137251,
+      "js_divergence": 0.031139403839631246,
+      "top_option_match": false,
+      "notes": null
+    },
+    {
+      "question_id": "q35n_scientific_research",
+      "question_text": "Reduce federal funding for scientific research.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.38,
+        "Disapprove": 0.54,
+        "Don't know": 0.08
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": 0.05137254901960786,
+        "Disapprove": -0.20666666666666667,
+        "Don't know": 0.1552941176470588
+      },
+      "probability_mae": 0.13777777777777778,
+      "js_divergence": 0.03313864970007445,
+      "top_option_match": false,
+      "notes": null
+    },
+    {
+      "question_id": "q35a_low_income_programs",
+      "question_text": "Reduce federal funding for programs that help lower income Americans.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.43434343434343436,
+        "Disapprove": 0.5050505050505051,
+        "Don't know": 0.06060606060606061
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": -0.0029708853238265,
+        "Disapprove": -0.1717171717171717,
+        "Don't know": 0.17468805704099818
+      },
+      "probability_mae": 0.11645870469399881,
+      "js_divergence": 0.036396661386620496,
+      "top_option_match": false,
+      "notes": null
+    },
+    {
+      "question_id": "q35m_high_income_tax",
+      "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.6464646464646465,
+        "Disapprove": 0.29292929292929293,
+        "Don't know": 0.06060606060606061
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": -0.21509209744503865,
+        "Disapprove": 0.04040404040404044,
+        "Don't know": 0.17468805704099818
+      },
+      "probability_mae": 0.14339473163002578,
+      "js_divergence": 0.03899423769859128,
+      "top_option_match": true,
+      "notes": null
+    },
+    {
+      "question_id": "q35g_medicare_high_income",
+      "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.49,
+        "Disapprove": 0.47,
+        "Don't know": 0.04
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": -0.058627450980392126,
+        "Disapprove": -0.1366666666666666,
+        "Don't know": 0.19529411764705878
+      },
+      "probability_mae": 0.13019607843137251,
+      "js_divergence": 0.045133638869420414,
+      "top_option_match": true,
+      "notes": null
+    },
+    {
+      "question_id": "q35h_defense_cuts",
+      "question_text": "Reduce military defense spending.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.4,
+        "Disapprove": 0.56,
+        "Don't know": 0.04
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": 0.03137254901960784,
+        "Disapprove": -0.22666666666666668,
+        "Don't know": 0.19529411764705878
+      },
+      "probability_mae": 0.1511111111111111,
+      "js_divergence": 0.05319196862847671,
+      "top_option_match": false,
+      "notes": null
+    },
+    {
+      "question_id": "q35b_social_security_age",
+      "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.41,
+        "Disapprove": 0.56,
+        "Don't know": 0.03
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": 0.02137254901960789,
+        "Disapprove": -0.22666666666666668,
+        "Don't know": 0.2052941176470588
+      },
+      "probability_mae": 0.1511111111111111,
+      "js_divergence": 0.05980357590367151,
+      "top_option_match": false,
+      "notes": null
+    },
+    {
+      "question_id": "q35j_student_loans",
+      "question_text": "Reduce federal funding for college student loan programs.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.3434343434343435,
+        "Disapprove": 0.6161616161616161,
+        "Don't know": 0.04040404040404041
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": 0.08793820558526438,
+        "Disapprove": -0.28282828282828276,
+        "Don't know": 0.19489007724301838
+      },
+      "probability_mae": 0.1885521885521885,
+      "js_divergence": 0.061995953908617576,
+      "top_option_match": false,
+      "notes": null
+    },
+    {
+      "question_id": "q35c_education_cuts",
+      "question_text": "Reduce federal funding for education.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.22,
+        "Disapprove": 0.75,
+        "Don't know": 0.03
+      },
+      "ai_distribution": {
+        "Approve": 0.43137254901960786,
+        "Disapprove": 0.33333333333333337,
+        "Don't know": 0.2352941176470588
+      },
+      "option_differences": {
+        "Approve": 0.21137254901960786,
+        "Disapprove": -0.41666666666666663,
+        "Don't know": 0.2052941176470588
+      },
+      "probability_mae": 0.27777777777777773,
+      "js_divergence": 0.10370892971881282,
+      "top_option_match": false,
+      "notes": null
+    }
+  ]
+}

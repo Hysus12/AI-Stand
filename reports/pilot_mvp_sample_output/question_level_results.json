@@ -1,0 +1,178 @@
+[
+  {
+    "question_id": "q_interest",
+    "question_text": "How likely would you be to try this product in the next 30 days?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.02799250881483396,
+    "score_range": 0.15000000000000002,
+    "dominant_option": "Very likely",
+    "mean_confidence": 0.36,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_value",
+    "question_text": "How valuable would this product feel for your current workflow?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.02799250881483396,
+    "score_range": 0.15000000000000002,
+    "dominant_option": "Extremely valuable",
+    "mean_confidence": 0.36,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_price",
+    "question_text": "How acceptable does this price feel for your team?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.02799250881483396,
+    "score_range": 0.15000000000000002,
+    "dominant_option": "Very acceptable",
+    "mean_confidence": 0.36,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_setup",
+    "question_text": "How easy would onboarding feel?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.02799250881483396,
+    "score_range": 0.15000000000000002,
+    "dominant_option": "Very easy",
+    "mean_confidence": 0.36,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_share",
+    "question_text": "How likely would you be to share generated notes with teammates after meetings?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.02799250881483396,
+    "score_range": 0.15000000000000002,
+    "dominant_option": "Very likely",
+    "mean_confidence": 0.36,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_priority",
+    "question_text": "Which reason would most likely make you pay attention to this product first?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.02799250881483396,
+    "score_range": 0.15000000000000002,
+    "dominant_option": "Saves time after meetings",
+    "mean_confidence": 0.36,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_switch",
+    "question_text": "Would this be strong enough to replace your current meeting-note workflow?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.02628387676703843,
+    "score_range": 0.17045454545454541,
+    "dominant_option": "Yes, likely",
+    "mean_confidence": 0.4284090909090909,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_interest",
+    "question_text": "How likely would you be to try this product in the next 30 days?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.023686865124589566,
+    "score_range": 0.1433333333333333,
+    "dominant_option": "Very likely",
+    "mean_confidence": 0.395,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_value",
+    "question_text": "How valuable would this product feel for your current workflow?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.023686865124589566,
+    "score_range": 0.1433333333333333,
+    "dominant_option": "Extremely valuable",
+    "mean_confidence": 0.395,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_price",
+    "question_text": "How acceptable does this price feel for your team?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.023686865124589566,
+    "score_range": 0.1433333333333333,
+    "dominant_option": "Very acceptable",
+    "mean_confidence": 0.395,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_setup",
+    "question_text": "How easy would onboarding feel?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.023686865124589566,
+    "score_range": 0.1433333333333333,
+    "dominant_option": "Very easy",
+    "mean_confidence": 0.395,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_share",
+    "question_text": "How likely would you be to share generated notes with teammates after meetings?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.023686865124589566,
+    "score_range": 0.1433333333333333,
+    "dominant_option": "Very likely",
+    "mean_confidence": 0.395,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_priority",
+    "question_text": "Which reason would most likely make you pay attention to this product first?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.023686865124589566,
+    "score_range": 0.1433333333333333,
+    "dominant_option": "Saves time after meetings",
+    "mean_confidence": 0.395,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_switch",
+    "question_text": "Would this be strong enough to replace your current meeting-note workflow?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.018202815637722677,
+    "score_range": 0.14518633540372672,
+    "dominant_option": "Yes, likely",
+    "mean_confidence": 0.4464285714285714,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_trust",
+    "question_text": "How comfortable would you be sharing client or internal calls with this tool?",
+    "variant_id": "v_pro",
+    "variant_name": "Pro monthly",
+    "average_pairwise_js": 0.01569531273369748,
+    "score_range": 0.11529411764705877,
+    "dominant_option": "Very comfortable",
+    "mean_confidence": 0.39176470588235296,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q_trust",
+    "question_text": "How comfortable would you be sharing client or internal calls with this tool?",
+    "variant_id": "v_team",
+    "variant_name": "Team monthly",
+    "average_pairwise_js": 0.004037122097666429,
+    "score_range": 0.05196078431372542,
+    "dominant_option": "Very comfortable",
+    "mean_confidence": 0.351764705882353,
+    "stability_label": "unstable"
+  }
+]

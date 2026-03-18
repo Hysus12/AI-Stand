@@ -1,0 +1,125 @@
+{
+  "project_id": "sample_en_pew_policy_topline",
+  "source": {
+    "report_title": "Deep Divisions over Debt Reduction Proposals",
+    "report_url": "https://www.pewresearch.org/politics/2012/10/12/deep-divisions-over-debt-reduction-proposals/",
+    "topline_title": "Early October 2012 Political Survey Topline",
+    "topline_url": "https://www.pewresearch.org/wp-content/uploads/sites/4/legacy-questionnaires/10-12-12-Topline-for-Release.pdf",
+    "notes": [
+      "Reference values are exact topline percentages from Pew Research Center, Oct. 4-7, 2012.",
+      "The AI comparison keeps the same three-way answer space: Approve, Disapprove, Don't know."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "q35a_low_income_programs",
+      "question_text": "Reduce federal funding for programs that help lower income Americans.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.43,
+        "Disapprove": 0.5,
+        "Don't know": 0.06
+      }
+    },
+    {
+      "question_id": "q35b_social_security_age",
+      "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.41,
+        "Disapprove": 0.56,
+        "Don't know": 0.03
+      }
+    },
+    {
+      "question_id": "q35c_education_cuts",
+      "question_text": "Reduce federal funding for education.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.22,
+        "Disapprove": 0.75,
+        "Don't know": 0.03
+      }
+    },
+    {
+      "question_id": "q35d_mortgage_deduction",
+      "question_text": "Limit tax deductions for interest paid on home mortgages.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.47,
+        "Disapprove": 0.44,
+        "Don't know": 0.09
+      }
+    },
+    {
+      "question_id": "q35f_investment_income_tax",
+      "question_text": "Raise the tax rate on investment income.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.44,
+        "Disapprove": 0.49,
+        "Don't know": 0.07
+      }
+    },
+    {
+      "question_id": "q35g_medicare_high_income",
+      "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.49,
+        "Disapprove": 0.47,
+        "Don't know": 0.04
+      }
+    },
+    {
+      "question_id": "q35h_defense_cuts",
+      "question_text": "Reduce military defense spending.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.4,
+        "Disapprove": 0.56,
+        "Don't know": 0.04
+      }
+    },
+    {
+      "question_id": "q35j_student_loans",
+      "question_text": "Reduce federal funding for college student loan programs.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.34,
+        "Disapprove": 0.61,
+        "Don't know": 0.04
+      }
+    },
+    {
+      "question_id": "q35k_corporate_deductions",
+      "question_text": "Limit tax deductions for large corporations.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.58,
+        "Disapprove": 0.34,
+        "Don't know": 0.08
+      }
+    },
+    {
+      "question_id": "q35m_high_income_tax",
+      "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.64,
+        "Disapprove": 0.29,
+        "Don't know": 0.06
+      }
+    },
+    {
+      "question_id": "q35n_scientific_research",
+      "question_text": "Reduce federal funding for scientific research.",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "Approve": 0.38,
+        "Disapprove": 0.54,
+        "Don't know": 0.08
+      }
+    }
+  ]
+}

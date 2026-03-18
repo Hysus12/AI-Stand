@@ -1,0 +1,90 @@
+[
+  {
+    "question_id": "q09_democracy_problem",
+    "question_text": "下面哪一個最像是我國民主制度最嚴重的問題？",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.04610477926421341,
+    "score_range": null,
+    "dominant_option": "有太多政二代",
+    "mean_confidence": 0.33333333333333337,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q15b_effectiveness",
+    "question_text": "哪一種候選人比較能做事？",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.04528298121642921,
+    "score_range": 0.2916666666666665,
+    "dominant_option": "不具有政治家庭背景的人",
+    "mean_confidence": 0.6458333333333333,
+    "stability_label": "stable"
+  },
+  {
+    "question_id": "q15c_resources",
+    "question_text": "哪一種候選人比較能為地方爭取得到較多資源？",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.03950797866753836,
+    "score_range": 0.27916666666666656,
+    "dominant_option": "不具有政治家庭背景的人",
+    "mean_confidence": 0.6395833333333333,
+    "stability_label": "stable"
+  },
+  {
+    "question_id": "q11_personal_impression",
+    "question_text": "如果您聽到一個新的候選人來自政治家庭，您對他的觀感是好、不好，還是沒差？",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.021104881334141335,
+    "score_range": 0.0,
+    "dominant_option": "不好",
+    "mean_confidence": 0.475,
+    "stability_label": "watch"
+  },
+  {
+    "question_id": "q14_democratic_expression",
+    "question_text": "政治家庭出身的候選人透過選舉贏得席位，也是民主的一種表現。",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.01326530796073963,
+    "score_range": 0.09444444444444455,
+    "dominant_option": "非常不同意",
+    "mean_confidence": 0.35416666666666674,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q12_public_impression",
+    "question_text": "您覺得一般選民對來自政治家庭的新候選人，觀感是好、不好，還是沒差？",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.010178179405901263,
+    "score_range": 0.03541666666666654,
+    "dominant_option": "不好",
+    "mean_confidence": 0.44375000000000003,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q13_unfair_advantage",
+    "question_text": "政治家庭出身的候選人在選舉上更有優勢，這是不公平的。",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.009074510817497387,
+    "score_range": 0.0722222222222223,
+    "dominant_option": "有點同意",
+    "mean_confidence": 0.3458333333333334,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q15a_corruption",
+    "question_text": "哪一種候選人比較可能會有貪污行為？",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.004832736356909267,
+    "score_range": 0.09166666666666673,
+    "dominant_option": "具有政治家庭背景的人",
+    "mean_confidence": 0.6791666666666666,
+    "stability_label": "stable"
+  }
+]

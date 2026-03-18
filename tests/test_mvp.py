@@ -9,6 +9,7 @@ from spbce.inference.mvp import MvpInferenceEngine
 def test_mvp_defaults_to_deepseek_direct_with_heuristic_fallback(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
+    monkeypatch.setattr(MvpInferenceEngine, "_deepseek_provider_available", lambda self: True)
     engine = MvpInferenceEngine()
 
     def failing_sample_distribution(*args: object, **kwargs: object) -> dict[str, object]:
@@ -36,6 +37,7 @@ def test_mvp_defaults_to_deepseek_direct_with_heuristic_fallback(
 def test_mvp_direct_success_path_preserves_deepseek_strategy(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
+    monkeypatch.setattr(MvpInferenceEngine, "_deepseek_provider_available", lambda self: True)
     engine = MvpInferenceEngine()
 
     def successful_sample_distribution(*args: object, **kwargs: object) -> dict[str, object]:

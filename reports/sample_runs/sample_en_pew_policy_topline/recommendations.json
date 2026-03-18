@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Prioritize Fiscal hawks",
+    "rationale": "Fiscal hawks has the strongest aggregate score (0.491) with mean confidence 0.431.",
+    "priority": "high"
+  },
+  {
+    "title": "Use q35a_low_income_programs as a segmentation lever",
+    "rationale": "Reduce federal funding for programs that help lower income Americans. shows the largest cross-segment divergence (avg JS 0.000).",
+    "priority": "medium"
+  },
+  {
+    "title": "Track route reliability in pilot delivery",
+    "rationale": "Fallbacks were triggered in 100.0% of question predictions, so project logs and retry monitoring should stay on.",
+    "priority": "medium"
+  },
+  {
+    "title": "Treat close calls as validation candidates",
+    "rationale": "Higher-uncertainty or unstable questions should be converted into focused follow-up tests before committing large spend.",
+    "priority": "medium"
+  }
+]

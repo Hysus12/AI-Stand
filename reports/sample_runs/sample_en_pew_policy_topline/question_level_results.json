@@ -1,0 +1,123 @@
+[
+  {
+    "question_id": "q35a_low_income_programs",
+    "question_text": "Reduce federal funding for programs that help lower income Americans.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35b_social_security_age",
+    "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35c_education_cuts",
+    "question_text": "Reduce federal funding for education.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35d_mortgage_deduction",
+    "question_text": "Limit tax deductions for interest paid on home mortgages.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35f_investment_income_tax",
+    "question_text": "Raise the tax rate on investment income.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35g_medicare_high_income",
+    "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35h_defense_cuts",
+    "question_text": "Reduce military defense spending.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35j_student_loans",
+    "question_text": "Reduce federal funding for college student loan programs.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35k_corporate_deductions",
+    "question_text": "Limit tax deductions for large corporations.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35m_high_income_tax",
+    "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  },
+  {
+    "question_id": "q35n_scientific_research",
+    "question_text": "Reduce federal funding for scientific research.",
+    "variant_id": null,
+    "variant_name": "base",
+    "average_pairwise_js": 0.0,
+    "score_range": 0.0,
+    "dominant_option": "Approve",
+    "mean_confidence": 0.4313725490196078,
+    "stability_label": "unstable"
+  }
+]

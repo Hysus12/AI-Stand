@@ -1,0 +1,1426 @@
+[
+  {
+    "segment_id": "reform_youth",
+    "segment_name": "改革導向青年選民",
+    "demographic_description": "20-39 歲、都市、高教育程度、較重視程序正義與公平競爭。",
+    "psychographic_description": "對政治世襲、權力繼承與特權結構較敏感。",
+    "behavioral_description": "偏好議題導向與改革語言，傾向質疑傳統地方派系政治。",
+    "variant_results": [
+      {
+        "variant_id": null,
+        "variant_name": "base",
+        "variant_description": null,
+        "question_results": [
+          {
+            "question_id": "q09_democracy_problem",
+            "question_text": "下面哪一個最像是我國民主制度最嚴重的問題？",
+            "question_type": "single_choice",
+            "options": [
+              "街頭抗議太多",
+              "政治人物不太關心一般民眾的需求",
+              "新聞政治報導不公正",
+              "有太多政二代",
+              "貪腐問題",
+              "宗教團體對政治的影響力太大",
+              "政黨對立太嚴重"
+            ],
+            "distribution": {
+              "街頭抗議太多": 0.0275,
+              "政治人物不太關心一般民眾的需求": 0.155,
+              "新聞政治報導不公正": 0.08416666666666668,
+              "有太多政二代": 0.4166666666666668,
+              "貪腐問題": 0.14000000000000004,
+              "宗教團體對政治的影響力太大": 0.03666666666666669,
+              "政黨對立太嚴重": 0.14000000000000004
+            },
+            "top_option": "有太多政二代",
+            "confidence": 0.4166666666666668,
+            "uncertainty": 0.5833333333333333,
+            "normalized_score": null,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "democracy",
+              "problem_ranking"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "neutral",
+              "theme": "democratic attitudes",
+              "top1_margin": 0.2616666666666668,
+              "entropy_normalized": 0.8389951914700876,
+              "cost_latency_summary": {
+                "total_input_tokens": 3960,
+                "total_output_tokens": 1140,
+                "estimated_api_cost_usd": 0.0015875999999999996,
+                "total_latency_ms": 49761.11970003694,
+                "average_latency_ms_per_request": 4146.759975003079,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.4166666666666668,
+                  "uncertainty": 0.5833333333333333,
+                  "entropy_normalized": 0.8389951914700876,
+                  "top1_margin": 0.2616666666666668
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q11_personal_impression",
+            "question_text": "如果您聽到一個新的候選人來自政治家庭，您對他的觀感是好、不好，還是沒差？",
+            "question_type": "ordinal",
+            "options": [
+              "好",
+              "不好",
+              "沒差"
+            ],
+            "distribution": {
+              "好": 0.15,
+              "不好": 0.5499999999999999,
+              "沒差": 0.3
+            },
+            "top_option": "不好",
+            "confidence": 0.5499999999999999,
+            "uncertainty": 0.45000000000000007,
+            "normalized_score": 0.575,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "political_family",
+              "candidate_impression"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "political family",
+              "top1_margin": 0.24999999999999994,
+              "entropy_normalized": 0.8870920155351287,
+              "cost_latency_summary": {
+                "total_input_tokens": 3624,
+                "total_output_tokens": 255,
+                "estimated_api_cost_usd": 0.00112182,
+                "total_latency_ms": 26441.859397105873,
+                "average_latency_ms_per_request": 2203.488283092156,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.5499999999999999,
+                  "uncertainty": 0.45000000000000007,
+                  "entropy_normalized": 0.8870920155351287,
+                  "top1_margin": 0.24999999999999994
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q12_public_impression",
+            "question_text": "您覺得一般選民對來自政治家庭的新候選人，觀感是好、不好，還是沒差？",
+            "question_type": "ordinal",
+            "options": [
+              "好",
+              "不好",
+              "沒差"
+            ],
+            "distribution": {
+              "好": 0.21666666666666667,
+              "不好": 0.4875000000000001,
+              "沒差": 0.29583333333333334
+            },
+            "top_option": "不好",
+            "confidence": 0.4875000000000001,
+            "uncertainty": 0.5125,
+            "normalized_score": 0.5395833333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "political_family",
+              "public_perception"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "political family",
+              "top1_margin": 0.19166666666666676,
+              "entropy_normalized": 0.9484087682475891,
+              "cost_latency_summary": {
+                "total_input_tokens": 3612,
+                "total_output_tokens": 260,
+                "estimated_api_cost_usd": 0.00112056,
+                "total_latency_ms": 24128.456502221525,
+                "average_latency_ms_per_request": 2010.7047085184604,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.4875000000000001,
+                  "uncertainty": 0.5125,
+                  "entropy_normalized": 0.9484087682475891,
+                  "top1_margin": 0.19166666666666676
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q13_unfair_advantage",
+            "question_text": "政治家庭出身的候選人在選舉上更有優勢，這是不公平的。",
+            "question_type": "likert",
+            "options": [
+              "非常不同意",
+              "有點不同意",
+              "有點同意",
+              "非常同意"
+            ],
+            "distribution": {
+              "非常不同意": 0.14999999999999997,
+              "有點不同意": 0.25,
+              "有點同意": 0.35000000000000003,
+              "非常同意": 0.25
+            },
+            "top_option": "有點同意",
+            "confidence": 0.35000000000000003,
+            "uncertainty": 0.6499999999999999,
+            "normalized_score": 0.5666666666666668,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "fairness",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "fairness",
+              "top1_margin": 0.10000000000000003,
+              "entropy_normalized": 0.9703227248076731,
+              "cost_latency_summary": {
+                "total_input_tokens": 3576,
+                "total_output_tokens": 361,
+                "estimated_api_cost_usd": 0.0011529,
+                "total_latency_ms": 27647.05039933324,
+                "average_latency_ms_per_request": 2303.920866611103,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.35000000000000003,
+                  "uncertainty": 0.6499999999999999,
+                  "entropy_normalized": 0.9703227248076731,
+                  "top1_margin": 0.10000000000000003
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q14_democratic_expression",
+            "question_text": "政治家庭出身的候選人透過選舉贏得席位，也是民主的一種表現。",
+            "question_type": "likert",
+            "options": [
+              "非常不同意",
+              "有點不同意",
+              "有點同意",
+              "非常同意"
+            ],
+            "distribution": {
+              "非常不同意": 0.35000000000000003,
+              "有點不同意": 0.3,
+              "有點同意": 0.25000000000000006,
+              "非常同意": 0.10000000000000002
+            },
+            "top_option": "非常不同意",
+            "confidence": 0.35000000000000003,
+            "uncertainty": 0.6499999999999999,
+            "normalized_score": 0.6333333333333334,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "democracy",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "democracy",
+              "top1_margin": 0.050000000000000044,
+              "entropy_normalized": 0.9416915491145067,
+              "cost_latency_summary": {
+                "total_input_tokens": 3600,
+                "total_output_tokens": 348,
+                "estimated_api_cost_usd": 0.00115416,
+                "total_latency_ms": 28426.901099272072,
+                "average_latency_ms_per_request": 2368.9084249393395,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.35000000000000003,
+                  "uncertainty": 0.6499999999999999,
+                  "entropy_normalized": 0.9416915491145067,
+                  "top1_margin": 0.050000000000000044
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q15a_corruption",
+            "question_text": "哪一種候選人比較可能會有貪污行為？",
+            "question_type": "single_choice",
+            "options": [
+              "具有政治家庭背景的人",
+              "不具有政治家庭背景的人"
+            ],
+            "distribution": {
+              "具有政治家庭背景的人": 0.725,
+              "不具有政治家庭背景的人": 0.27499999999999997
+            },
+            "top_option": "具有政治家庭背景的人",
+            "confidence": 0.725,
+            "uncertainty": 0.275,
+            "normalized_score": 0.27499999999999997,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "corruption",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "corruption risk",
+              "top1_margin": 0.45,
+              "entropy_normalized": 0.8485481782946158,
+              "cost_latency_summary": {
+                "total_input_tokens": 3492,
+                "total_output_tokens": 280,
+                "estimated_api_cost_usd": 0.00109536,
+                "total_latency_ms": 26641.73779822886,
+                "average_latency_ms_per_request": 2220.144816519072,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.725,
+                  "uncertainty": 0.275,
+                  "entropy_normalized": 0.8485481782946158,
+                  "top1_margin": 0.45
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q15b_effectiveness",
+            "question_text": "哪一種候選人比較能做事？",
+            "question_type": "single_choice",
+            "options": [
+              "具有政治家庭背景的人",
+              "不具有政治家庭背景的人"
+            ],
+            "distribution": {
+              "具有政治家庭背景的人": 0.25,
+              "不具有政治家庭背景的人": 0.75
+            },
+            "top_option": "不具有政治家庭背景的人",
+            "confidence": 0.75,
+            "uncertainty": 0.25,
+            "normalized_score": 0.25,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "effectiveness",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "efficacy",
+              "top1_margin": 0.5,
+              "entropy_normalized": 0.8112781244591328,
+              "cost_latency_summary": {
+                "total_input_tokens": 3444,
+                "total_output_tokens": 280,
+                "estimated_api_cost_usd": 0.00108192,
+                "total_latency_ms": 27305.35059981048,
+                "average_latency_ms_per_request": 2275.44588331754,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.75,
+                  "uncertainty": 0.25,
+                  "entropy_normalized": 0.8112781244591328,
+                  "top1_margin": 0.5
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q15c_resources",
+            "question_text": "哪一種候選人比較能為地方爭取得到較多資源？",
+            "question_type": "single_choice",
+            "options": [
+              "具有政治家庭背景的人",
+              "不具有政治家庭背景的人"
+            ],
+            "distribution": {
+              "具有政治家庭背景的人": 0.35,
+              "不具有政治家庭背景的人": 0.65
+            },
+            "top_option": "不具有政治家庭背景的人",
+            "confidence": 0.65,
+            "uncertainty": 0.35,
+            "normalized_score": 0.35,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "resources",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "local resources",
+              "top1_margin": 0.30000000000000004,
+              "entropy_normalized": 0.9340680553754911,
+              "cost_latency_summary": {
+                "total_input_tokens": 3540,
+                "total_output_tokens": 280,
+                "estimated_api_cost_usd": 0.0011088000000000003,
+                "total_latency_ms": 26991.08149856329,
+                "average_latency_ms_per_request": 2249.256791546941,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.65,
+                  "uncertainty": 0.35,
+                  "entropy_normalized": 0.9340680553754911,
+                  "top1_margin": 0.30000000000000004
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          }
+        ],
+        "aggregate_signals": {
+          "weighted_score": 0.45565476190476195,
+          "mean_confidence": 0.5348958333333333,
+          "mean_uncertainty": 0.46510416666666665,
+          "fallback_rate": 0.0,
+          "invalid_rate": 0.0,
+          "mean_top_option_margin": 0.2629166666666667,
+          "question_count": 8
+        },
+        "diagnostics": {
+          "question_count": 8,
+          "fallback_rate": 0.0
+        }
+      }
+    ],
+    "aggregate_signals": {
+      "weighted_score": 0.45565476190476195,
+      "mean_confidence": 0.5348958333333333,
+      "mean_uncertainty": 0.46510416666666665,
+      "fallback_rate": 0.0,
+      "invalid_rate": 0.0,
+      "mean_top_option_margin": 0.2629166666666667,
+      "question_count": 8
+    },
+    "diagnostics": {
+      "variant_count": 1,
+      "estimated_weight": 0.48
+    }
+  },
+  {
+    "segment_id": "local_pragmatists",
+    "segment_name": "地方務實型選民",
+    "demographic_description": "40 歲以上、較看重人脈、地方服務與實際資源爭取。",
+    "psychographic_description": "對政治家庭現象未必喜歡，但較容易以能否做事來評估候選人。",
+    "behavioral_description": "對地方服務、熟悉度與資源動員相對重視。",
+    "variant_results": [
+      {
+        "variant_id": null,
+        "variant_name": "base",
+        "variant_description": null,
+        "question_results": [
+          {
+            "question_id": "q09_democracy_problem",
+            "question_text": "下面哪一個最像是我國民主制度最嚴重的問題？",
+            "question_type": "single_choice",
+            "options": [
+              "街頭抗議太多",
+              "政治人物不太關心一般民眾的需求",
+              "新聞政治報導不公正",
+              "有太多政二代",
+              "貪腐問題",
+              "宗教團體對政治的影響力太大",
+              "政黨對立太嚴重"
+            ],
+            "distribution": {
+              "街頭抗議太多": 0.049999999999999996,
+              "政治人物不太關心一般民眾的需求": 0.25,
+              "新聞政治報導不公正": 0.09999999999999999,
+              "有太多政二代": 0.14999999999999997,
+              "貪腐問題": 0.19999999999999998,
+              "宗教團體對政治的影響力太大": 0.049999999999999996,
+              "政黨對立太嚴重": 0.19999999999999998
+            },
+            "top_option": "政治人物不太關心一般民眾的需求",
+            "confidence": 0.25,
+            "uncertainty": 0.75,
+            "normalized_score": null,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "democracy",
+              "problem_ranking"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "neutral",
+              "theme": "democratic attitudes",
+              "top1_margin": 0.05000000000000002,
+              "entropy_normalized": 0.9274572572209747,
+              "cost_latency_summary": {
+                "total_input_tokens": 3900,
+                "total_output_tokens": 1052,
+                "estimated_api_cost_usd": 0.00153384,
+                "total_latency_ms": 50194.896697066724,
+                "average_latency_ms_per_request": 4182.908058088894,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.25,
+                  "uncertainty": 0.75,
+                  "entropy_normalized": 0.9274572572209747,
+                  "top1_margin": 0.05000000000000002
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q11_personal_impression",
+            "question_text": "如果您聽到一個新的候選人來自政治家庭，您對他的觀感是好、不好，還是沒差？",
+            "question_type": "ordinal",
+            "options": [
+              "好",
+              "不好",
+              "沒差"
+            ],
+            "distribution": {
+              "好": 0.25,
+              "不好": 0.35000000000000003,
+              "沒差": 0.39999999999999997
+            },
+            "top_option": "沒差",
+            "confidence": 0.39999999999999997,
+            "uncertainty": 0.6000000000000001,
+            "normalized_score": 0.575,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "political_family",
+              "candidate_impression"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "political family",
+              "top1_margin": 0.04999999999999993,
+              "entropy_normalized": 0.9835386311891132,
+              "cost_latency_summary": {
+                "total_input_tokens": 3564,
+                "total_output_tokens": 240,
+                "estimated_api_cost_usd": 0.0010987200000000003,
+                "total_latency_ms": 26550.228498876095,
+                "average_latency_ms_per_request": 2212.519041573008,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.39999999999999997,
+                  "uncertainty": 0.6000000000000001,
+                  "entropy_normalized": 0.9835386311891132,
+                  "top1_margin": 0.04999999999999993
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q12_public_impression",
+            "question_text": "您覺得一般選民對來自政治家庭的新候選人，觀感是好、不好，還是沒差？",
+            "question_type": "ordinal",
+            "options": [
+              "好",
+              "不好",
+              "沒差"
+            ],
+            "distribution": {
+              "好": 0.25,
+              "不好": 0.35000000000000003,
+              "沒差": 0.39999999999999997
+            },
+            "top_option": "沒差",
+            "confidence": 0.39999999999999997,
+            "uncertainty": 0.6000000000000001,
+            "normalized_score": 0.575,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "political_family",
+              "public_perception"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "political family",
+              "top1_margin": 0.04999999999999993,
+              "entropy_normalized": 0.9835386311891132,
+              "cost_latency_summary": {
+                "total_input_tokens": 3552,
+                "total_output_tokens": 240,
+                "estimated_api_cost_usd": 0.00109536,
+                "total_latency_ms": 23410.560199059546,
+                "average_latency_ms_per_request": 1950.8800165882956,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.39999999999999997,
+                  "uncertainty": 0.6000000000000001,
+                  "entropy_normalized": 0.9835386311891132,
+                  "top1_margin": 0.04999999999999993
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q13_unfair_advantage",
+            "question_text": "政治家庭出身的候選人在選舉上更有優勢，這是不公平的。",
+            "question_type": "likert",
+            "options": [
+              "非常不同意",
+              "有點不同意",
+              "有點同意",
+              "非常同意"
+            ],
+            "distribution": {
+              "非常不同意": 0.16666666666666663,
+              "有點不同意": 0.34166666666666673,
+              "有點同意": 0.3333333333333333,
+              "非常同意": 0.1583333333333333
+            },
+            "top_option": "有點不同意",
+            "confidence": 0.34166666666666673,
+            "uncertainty": 0.6583333333333332,
+            "normalized_score": 0.49444444444444446,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "fairness",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "fairness",
+              "top1_margin": 0.008333333333333415,
+              "entropy_normalized": 0.9547538784792122,
+              "cost_latency_summary": {
+                "total_input_tokens": 3516,
+                "total_output_tokens": 400,
+                "estimated_api_cost_usd": 0.00115248,
+                "total_latency_ms": 27910.123000852764,
+                "average_latency_ms_per_request": 2325.843583404397,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.34166666666666673,
+                  "uncertainty": 0.6583333333333332,
+                  "entropy_normalized": 0.9547538784792122,
+                  "top1_margin": 0.008333333333333415
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q14_democratic_expression",
+            "question_text": "政治家庭出身的候選人透過選舉贏得席位，也是民主的一種表現。",
+            "question_type": "likert",
+            "options": [
+              "非常不同意",
+              "有點不同意",
+              "有點同意",
+              "非常同意"
+            ],
+            "distribution": {
+              "非常不同意": 0.21666666666666665,
+              "有點不同意": 0.30416666666666664,
+              "有點同意": 0.3583333333333334,
+              "非常同意": 0.1208333333333333
+            },
+            "top_option": "有點同意",
+            "confidence": 0.3583333333333334,
+            "uncertainty": 0.6416666666666666,
+            "normalized_score": 0.5388888888888889,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "democracy",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "democracy",
+              "top1_margin": 0.05416666666666675,
+              "entropy_normalized": 0.9496530563362217,
+              "cost_latency_summary": {
+                "total_input_tokens": 3540,
+                "total_output_tokens": 348,
+                "estimated_api_cost_usd": 0.0011373600000000002,
+                "total_latency_ms": 27686.687800101936,
+                "average_latency_ms_per_request": 2307.223983341828,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.3583333333333334,
+                  "uncertainty": 0.6416666666666666,
+                  "entropy_normalized": 0.9496530563362217,
+                  "top1_margin": 0.05416666666666675
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q15a_corruption",
+            "question_text": "哪一種候選人比較可能會有貪污行為？",
+            "question_type": "single_choice",
+            "options": [
+              "具有政治家庭背景的人",
+              "不具有政治家庭背景的人"
+            ],
+            "distribution": {
+              "具有政治家庭背景的人": 0.6333333333333332,
+              "不具有政治家庭背景的人": 0.3666666666666667
+            },
+            "top_option": "具有政治家庭背景的人",
+            "confidence": 0.6333333333333332,
+            "uncertainty": 0.3666666666666668,
+            "normalized_score": 0.3666666666666667,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "corruption",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_low",
+              "theme": "corruption risk",
+              "top1_margin": 0.2666666666666665,
+              "entropy_normalized": 0.9480782435939055,
+              "cost_latency_summary": {
+                "total_input_tokens": 3432,
+                "total_output_tokens": 280,
+                "estimated_api_cost_usd": 0.0010785600000000003,
+                "total_latency_ms": 25623.83620068431,
+                "average_latency_ms_per_request": 2135.319683390359,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.6333333333333332,
+                  "uncertainty": 0.3666666666666668,
+                  "entropy_normalized": 0.9480782435939055,
+                  "top1_margin": 0.2666666666666665
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q15b_effectiveness",
+            "question_text": "哪一種候選人比較能做事？",
+            "question_type": "single_choice",
+            "options": [
+              "具有政治家庭背景的人",
+              "不具有政治家庭背景的人"
+            ],
+            "distribution": {
+              "具有政治家庭背景的人": 0.5416666666666665,
+              "不具有政治家庭背景的人": 0.4583333333333334
+            },
+            "top_option": "具有政治家庭背景的人",
+            "confidence": 0.5416666666666665,
+            "uncertainty": 0.4583333333333335,
+            "normalized_score": 0.5416666666666665,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "effectiveness",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "efficacy",
+              "top1_margin": 0.08333333333333309,
+              "entropy_normalized": 0.99498482818597,
+              "cost_latency_summary": {
+                "total_input_tokens": 3384,
+                "total_output_tokens": 280,
+                "estimated_api_cost_usd": 0.0010651200000000001,
+                "total_latency_ms": 23762.802101671696,
+                "average_latency_ms_per_request": 1980.2335084726412,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.5416666666666665,
+                  "uncertainty": 0.4583333333333335,
+                  "entropy_normalized": 0.99498482818597,
+                  "top1_margin": 0.08333333333333309
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          },
+          {
+            "question_id": "q15c_resources",
+            "question_text": "哪一種候選人比較能為地方爭取得到較多資源？",
+            "question_type": "single_choice",
+            "options": [
+              "具有政治家庭背景的人",
+              "不具有政治家庭背景的人"
+            ],
+            "distribution": {
+              "具有政治家庭背景的人": 0.6291666666666665,
+              "不具有政治家庭背景的人": 0.37083333333333335
+            },
+            "top_option": "具有政治家庭背景的人",
+            "confidence": 0.6291666666666665,
+            "uncertainty": 0.37083333333333346,
+            "normalized_score": 0.6291666666666665,
+            "requested_strategy": "deepseek_direct",
+            "actual_strategy_used": "deepseek_direct",
+            "fallback_happened": false,
+            "fallback_reason": null,
+            "tags": [
+              "resources",
+              "political_family"
+            ],
+            "diagnostics": {
+              "invalid_flag": false,
+              "decision_weight": 1.0,
+              "scoring_direction": "positive_high",
+              "theme": "local resources",
+              "top1_margin": 0.2583333333333332,
+              "entropy_normalized": 0.951309799799784,
+              "cost_latency_summary": {
+                "total_input_tokens": 3480,
+                "total_output_tokens": 280,
+                "estimated_api_cost_usd": 0.001092,
+                "total_latency_ms": 23922.876299358904,
+                "average_latency_ms_per_request": 1993.5730249465753,
+                "request_count": 12,
+                "retry_count": 0
+              },
+              "metadata": {
+                "strategy_alias_deprecated": false,
+                "model_name": "deepseek-chat",
+                "actual_model_name": "deepseek-chat",
+                "requested_model_name": "deepseek-chat",
+                "generation_config": {
+                  "provider": "openai_compatible",
+                  "model": "deepseek-chat",
+                  "base_url": "https://api.deepseek.com",
+                  "temperature_base": 0.2,
+                  "temperature_step": 0.05,
+                  "top_p": 0.95,
+                  "max_tokens": 128,
+                  "thinking_sent": false,
+                  "reasoning_effort": "none",
+                  "num_samples_per_prompt": 4,
+                  "prompt_mode": "direct_option_probabilities",
+                  "strict_json_only": true,
+                  "response_schema_mode": "exact_option_key_map"
+                },
+                "output_type": "llm",
+                "confidence_summary": {
+                  "top1_probability": 0.6291666666666665,
+                  "uncertainty": 0.37083333333333346,
+                  "entropy_normalized": 0.951309799799784,
+                  "top1_margin": 0.2583333333333332
+                },
+                "json_compliance_rate": 1.0,
+                "invalid_output_rate": 0.0,
+                "parser_failure_rate": 0.0,
+                "final_text_present_rate": 1.0,
+                "attempt_summary": {
+                  "requested_strategy": "deepseek_direct",
+                  "actual_strategy_used": "deepseek_direct",
+                  "fallback_happened": false,
+                  "fallback_reason": null,
+                  "retry_count": 0
+                }
+              }
+            }
+          }
+        ],
+        "aggregate_signals": {
+          "weighted_score": 0.531547619047619,
+          "mean_confidence": 0.4442708333333333,
+          "mean_uncertainty": 0.5557291666666667,
+          "fallback_rate": 0.0,
+          "invalid_rate": 0.0,
+          "mean_top_option_margin": 0.10260416666666661,
+          "question_count": 8
+        },
+        "diagnostics": {
+          "question_count": 8,
+          "fallback_rate": 0.0
+        }
+      }
+    ],
+    "aggregate_signals": {
+      "weighted_score": 0.531547619047619,
+      "mean_confidence": 0.4442708333333333,
+      "mean_uncertainty": 0.5557291666666667,
+      "fallback_rate": 0.0,
+      "invalid_rate": 0.0,
+      "mean_top_option_margin": 0.10260416666666661,
+      "question_count": 8
+    },
+    "diagnostics": {
+      "variant_count": 1,
+      "estimated_weight": 0.52
+    }
+  }
+]

@@ -43,6 +43,7 @@ dev = [
 
 [project.scripts]
 spbce-api = "spbce.api.app:run"
+spbce-mvp = "spbce.cli:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

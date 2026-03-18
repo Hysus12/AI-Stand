@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Prioritize 地方務實型選民",
+    "rationale": "地方務實型選民 has the strongest aggregate score (0.532) with mean confidence 0.444.",
+    "priority": "high"
+  },
+  {
+    "title": "Use q09_democracy_problem as a segmentation lever",
+    "rationale": "下面哪一個最像是我國民主制度最嚴重的問題？ shows the largest cross-segment divergence (avg JS 0.046).",
+    "priority": "medium"
+  },
+  {
+    "title": "Treat close calls as validation candidates",
+    "rationale": "Higher-uncertainty or unstable questions should be converted into focused follow-up tests before committing large spend.",
+    "priority": "medium"
+  }
+]

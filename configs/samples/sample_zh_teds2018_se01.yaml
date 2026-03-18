@@ -1,0 +1,103 @@
+project_id: sample_zh_teds2018_se01
+product_name: TEDS2018 政二代態度樣本
+product_brief: >
+  Internal end-to-end sample built from the public TEDS2018_SE01 questionnaire.
+  The goal is to test whether the Pilot MVP can ingest a real Chinese survey project,
+  run segment-level synthetic inference, and export comparison-ready artifacts against
+  public topline findings on political-family attitudes.
+category: public opinion sample
+category_hints:
+  - Taiwan politics
+  - political family attitudes
+  - survey experiment fixture
+target_segments:
+  - segment_id: reform_youth
+    segment_name: 改革導向青年選民
+    demographic_description: 20-39 歲、都市、高教育程度、較重視程序正義與公平競爭。
+    psychographic_description: 對政治世襲、權力繼承與特權結構較敏感。
+    behavioral_description: 偏好議題導向與改革語言，傾向質疑傳統地方派系政治。
+    population_struct:
+      age_band: 20-39
+      education: college+
+      region: Taiwan
+    estimated_weight: 0.48
+  - segment_id: local_pragmatists
+    segment_name: 地方務實型選民
+    demographic_description: 40 歲以上、較看重人脈、地方服務與實際資源爭取。
+    psychographic_description: 對政治家庭現象未必喜歡，但較容易以能否做事來評估候選人。
+    behavioral_description: 對地方服務、熟悉度與資源動員相對重視。
+    population_struct:
+      age_band: 40+
+      region: Taiwan
+    estimated_weight: 0.52
+survey_questions:
+  - question_id: q09_democracy_problem
+    question_text: 下面哪一個最像是我國民主制度最嚴重的問題？
+    question_type: single_choice
+    options:
+      - 街頭抗議太多
+      - 政治人物不太關心一般民眾的需求
+      - 新聞政治報導不公正
+      - 有太多政二代
+      - 貪腐問題
+      - 宗教團體對政治的影響力太大
+      - 政黨對立太嚴重
+    tags: ["democracy", "problem_ranking"]
+    theme: democratic attitudes
+    scoring_direction: neutral
+  - question_id: q11_personal_impression
+    question_text: 如果您聽到一個新的候選人來自政治家庭，您對他的觀感是好、不好，還是沒差？
+    question_type: ordinal
+    options: ["好", "不好", "沒差"]
+    tags: ["political_family", "candidate_impression"]
+    theme: political family
+    scoring_direction: positive_low
+  - question_id: q12_public_impression
+    question_text: 您覺得一般選民對來自政治家庭的新候選人，觀感是好、不好，還是沒差？
+    question_type: ordinal
+    options: ["好", "不好", "沒差"]
+    tags: ["political_family", "public_perception"]
+    theme: political family
+    scoring_direction: positive_low
+  - question_id: q13_unfair_advantage
+    question_text: 政治家庭出身的候選人在選舉上更有優勢，這是不公平的。
+    question_type: likert
+    options: ["非常不同意", "有點不同意", "有點同意", "非常同意"]
+    tags: ["fairness", "political_family"]
+    theme: fairness
+    scoring_direction: positive_low
+  - question_id: q14_democratic_expression
+    question_text: 政治家庭出身的候選人透過選舉贏得席位，也是民主的一種表現。
+    question_type: likert
+    options: ["非常不同意", "有點不同意", "有點同意", "非常同意"]
+    tags: ["democracy", "political_family"]
+    theme: democracy
+    scoring_direction: positive_high
+  - question_id: q15a_corruption
+    question_text: 哪一種候選人比較可能會有貪污行為？
+    question_type: single_choice
+    options: ["具有政治家庭背景的人", "不具有政治家庭背景的人"]
+    tags: ["corruption", "political_family"]
+    theme: corruption risk
+    scoring_direction: positive_low
+  - question_id: q15b_effectiveness
+    question_text: 哪一種候選人比較能做事？
+    question_type: single_choice
+    options: ["具有政治家庭背景的人", "不具有政治家庭背景的人"]
+    tags: ["effectiveness", "political_family"]
+    theme: efficacy
+    scoring_direction: positive_high
+  - question_id: q15c_resources
+    question_text: 哪一種候選人比較能為地方爭取得到較多資源？
+    question_type: single_choice
+    options: ["具有政治家庭背景的人", "不具有政治家庭背景的人"]
+    tags: ["resources", "political_family"]
+    theme: local resources
+    scoring_direction: positive_high
+generation_settings:
+  synthetic_respondent_count: 400
+  random_seed: 42
+inference_settings:
+  primary_strategy: deepseek_direct
+  fallback_strategy: heuristic
+  max_retry_attempts: 0

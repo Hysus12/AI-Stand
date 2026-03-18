@@ -1,0 +1,182 @@
+{
+  "project_id": "sample_zh_teds2018_se01",
+  "reference_project_id": "sample_zh_teds2018_se01",
+  "source": {
+    "questionnaire_title": "TEDS2018_SE01 questionnaire",
+    "questionnaire_url": "https://srda.sinica.edu.tw/file/b261a536-6839-4674-a101-453321badea5",
+    "metadata_url": "https://srda.sinica.edu.tw/search/metadata/detail/D00201",
+    "public_results_title": "Dynasticism and public attitudes in Taiwan",
+    "public_results_url": "https://www.fule.at/research/dynasties.pdf",
+    "notes": [
+      "Reference values are manually transcribed from public sources.",
+      "Some items are exact from Table 2 in the public paper; others are approximate topline shares described in prose.",
+      "Unmatched sample questions are intentionally left without public reference rather than back-filled from inference outputs."
+    ]
+  },
+  "summary": {
+    "matched_question_count": 6,
+    "unmatched_project_questions": [
+      "q12_public_impression",
+      "q14_democratic_expression"
+    ],
+    "unmatched_reference_questions": [],
+    "mean_js_divergence": 0.06330593421967567,
+    "mean_probability_mae": 0.24362887377173092,
+    "closest_questions": [
+      "q15b_effectiveness",
+      "q13_unfair_advantage",
+      "q15c_resources"
+    ],
+    "largest_gap_questions": [
+      "q11_personal_impression",
+      "q15a_corruption",
+      "q09_democracy_problem"
+    ]
+  },
+  "question_comparisons": [
+    {
+      "question_id": "q15b_effectiveness",
+      "question_text": "哪一種候選人比較能做事？",
+      "reference_kind": "approximate",
+      "reference_distribution": {
+        "具有政治家庭背景的人": 0.33,
+        "不具有政治家庭背景的人": 0.67
+      },
+      "ai_distribution": {
+        "具有政治家庭背景的人": 0.5,
+        "不具有政治家庭背景的人": 0.5
+      },
+      "option_differences": {
+        "具有政治家庭背景的人": 0.16999999999999998,
+        "不具有政治家庭背景的人": -0.17000000000000004
+      },
+      "probability_mae": 0.17,
+      "js_divergence": 0.014963854319685735,
+      "top_option_match": false,
+      "notes": "Public paper prose: only about one third believe legacy candidates are more capable of getting things done."
+    },
+    {
+      "question_id": "q13_unfair_advantage",
+      "question_text": "政治家庭出身的候選人在選舉上更有優勢，這是不公平的。",
+      "reference_kind": "approximate",
+      "reference_distribution": {
+        "不同意": 0.2,
+        "同意": 0.8
+      },
+      "ai_distribution": {
+        "不同意": 0.5,
+        "同意": 0.5
+      },
+      "option_differences": {
+        "不同意": 0.3,
+        "同意": -0.30000000000000004
+      },
+      "probability_mae": 0.30000000000000004,
+      "js_divergence": 0.050671836985565905,
+      "top_option_match": false,
+      "notes": "Public paper prose: almost eight out of ten voters see inherited incumbency advantage as unfair."
+    },
+    {
+      "question_id": "q15c_resources",
+      "question_text": "哪一種候選人比較能為地方爭取得到較多資源？",
+      "reference_kind": "approximate",
+      "reference_distribution": {
+        "具有政治家庭背景的人": 0.8,
+        "不具有政治家庭背景的人": 0.2
+      },
+      "ai_distribution": {
+        "具有政治家庭背景的人": 0.5,
+        "不具有政治家庭背景的人": 0.5
+      },
+      "option_differences": {
+        "具有政治家庭背景的人": -0.30000000000000004,
+        "不具有政治家庭背景的人": 0.3
+      },
+      "probability_mae": 0.30000000000000004,
+      "js_divergence": 0.050671836985565905,
+      "top_option_match": true,
+      "notes": "Public paper prose: almost 80% think legacy politicians are more likely to secure resources for their constituencies."
+    },
+    {
+      "question_id": "q09_democracy_problem",
+      "question_text": "下面哪一個最像是我國民主制度最嚴重的問題？",
+      "reference_kind": "exact",
+      "reference_distribution": {
+        "街頭抗議太多": 0.065,
+        "政治人物不太關心一般民眾的需求": 0.154,
+        "新聞政治報導不公正": 0.117,
+        "有太多政二代": 0.057,
+        "貪腐問題": 0.196,
+        "宗教團體對政治的影響力太大": 0.054,
+        "政黨對立太嚴重": 0.357
+      },
+      "ai_distribution": {
+        "街頭抗議太多": 0.14285714285714285,
+        "政治人物不太關心一般民眾的需求": 0.14285714285714285,
+        "新聞政治報導不公正": 0.14285714285714285,
+        "有太多政二代": 0.14285714285714285,
+        "貪腐問題": 0.14285714285714285,
+        "宗教團體對政治的影響力太大": 0.14285714285714285,
+        "政黨對立太嚴重": 0.14285714285714285
+      },
+      "option_differences": {
+        "街頭抗議太多": 0.07785714285714285,
+        "政治人物不太關心一般民眾的需求": -0.011142857142857149,
+        "新聞政治報導不公正": 0.025857142857142842,
+        "有太多政二代": 0.08585714285714285,
+        "貪腐問題": -0.05314285714285716,
+        "宗教團體對政治的影響力太大": 0.08885714285714286,
+        "政黨對立太嚴重": -0.21414285714285713
+      },
+      "probability_mae": 0.07955102040816327,
+      "js_divergence": 0.05393318750904967,
+      "top_option_match": false,
+      "notes": "Table 2 in Schafferer (2024), based on TEDS2018_SE01, N=1008."
+    },
+    {
+      "question_id": "q15a_corruption",
+      "question_text": "哪一種候選人比較可能會有貪污行為？",
+      "reference_kind": "approximate",
+      "reference_distribution": {
+        "具有政治家庭背景的人": 0.9,
+        "不具有政治家庭背景的人": 0.1
+      },
+      "ai_distribution": {
+        "具有政治家庭背景的人": 0.5,
+        "不具有政治家庭背景的人": 0.5
+      },
+      "option_differences": {
+        "具有政治家庭背景的人": -0.4,
+        "不具有政治家庭背景的人": 0.4
+      },
+      "probability_mae": 0.4,
+      "js_divergence": 0.10174922507919668,
+      "top_option_match": true,
+      "notes": "Public paper prose: close to 90% think political-family candidates are more likely to engage in corruption."
+    },
+    {
+      "question_id": "q11_personal_impression",
+      "question_text": "如果您聽到一個新的候選人來自政治家庭，您對他的觀感是好、不好，還是沒差？",
+      "reference_kind": "approximate",
+      "reference_distribution": {
+        "好": 0.015000000000000001,
+        "不好": 0.41300000000000003,
+        "沒差": 0.5720000000000001
+      },
+      "ai_distribution": {
+        "好": 0.33333333333333337,
+        "不好": 0.33333333333333337,
+        "沒差": 0.33333333333333337
+      },
+      "option_differences": {
+        "好": 0.31833333333333336,
+        "不好": -0.07966666666666666,
+        "沒差": -0.2386666666666667
+      },
+      "probability_mae": 0.21222222222222223,
+      "js_divergence": 0.10784566443899019,
+      "top_option_match": false,
+      "notes": "Public paper prose: 1.5% positive, 41.3% negative, the remainder indifferent."
+    }
+  ]
+}

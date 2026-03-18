@@ -401,6 +401,16 @@ class LocalLlmPersonaBaseline:
         with httpx.Client(timeout=self.request_timeout_seconds) as client:
             for _ in range(num_samples):
                 started = time.perf_counter()
+                payload = {
+                    "model": self.model_name,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "temperature": temperature,
+                    "top_p": self.top_p,
+                    "max_tokens": self.max_new_tokens,
+                    "stream": False,
+                }
+                if bool(getattr(self, "strict_json_only", False)):
+                    payload["response_format"] = {"type": "json_object"}
                 try:
                     response = client.post(
                         url,
@@ -408,14 +418,7 @@ class LocalLlmPersonaBaseline:
                             "authorization": f"Bearer {api_key}",
                             "content-type": "application/json",
                         },
-                        json={
-                            "model": self.model_name,
-                            "messages": [{"role": "user", "content": prompt}],
-                            "temperature": temperature,
-                            "top_p": self.top_p,
-                            "max_tokens": self.max_new_tokens,
-                            "stream": False,
-                        },
+                        json=payload,
                     )
                     response.raise_for_status()
                 except httpx.TimeoutException as exc:

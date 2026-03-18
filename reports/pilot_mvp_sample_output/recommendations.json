@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Prioritize Startup ops leads",
+    "rationale": "Startup ops leads has the strongest aggregate score (0.676) with mean confidence 0.426.",
+    "priority": "high"
+  },
+  {
+    "title": "Lead with Pro monthly (v_pro)",
+    "rationale": "Pro monthly (v_pro) leads on average weighted score (0.637) across segments.",
+    "priority": "high"
+  },
+  {
+    "title": "Use q_interest as a segmentation lever",
+    "rationale": "How likely would you be to try this product in the next 30 days? shows the largest cross-segment divergence (avg JS 0.028).",
+    "priority": "medium"
+  },
+  {
+    "title": "Track route reliability in pilot delivery",
+    "rationale": "Fallbacks were triggered in 6.2% of question predictions, so project logs and retry monitoring should stay on.",
+    "priority": "medium"
+  },
+  {
+    "title": "Treat close calls as validation candidates",
+    "rationale": "Higher-uncertainty or unstable questions should be converted into focused follow-up tests before committing large spend.",
+    "priority": "medium"
+  }
+]

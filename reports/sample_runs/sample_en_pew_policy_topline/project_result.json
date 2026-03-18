@@ -1,0 +1,2584 @@
+{
+  "project_id": "sample_en_pew_policy_topline",
+  "product_name": "Pew Debt Reduction Policy Sample",
+  "model_route_used": "deepseek_direct -> heuristic fallback",
+  "fallback_summary": {
+    "total_predictions": 33,
+    "fallback_count": 33,
+    "fallback_rate": 1.0,
+    "reason_breakdown": {
+      "provider_unavailable": 33
+    },
+    "actual_strategy_breakdown": {
+      "heuristic": 33
+    }
+  },
+  "per_segment_results": [
+    {
+      "segment_id": "fiscal_hawks",
+      "segment_name": "Fiscal hawks",
+      "demographic_description": "Voters who prioritize deficit reduction and are relatively open to spending cuts.",
+      "psychographic_description": "Concerned about debt levels and more accepting of painful trade-offs.",
+      "behavioral_description": "Less protective of federal programs if cuts are framed as deficit reduction.",
+      "variant_results": [
+        {
+          "variant_id": null,
+          "variant_name": "base",
+          "variant_description": null,
+          "question_results": [
+            {
+              "question_id": "q35a_low_income_programs",
+              "question_text": "Reduce federal funding for programs that help lower income Americans.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "anti_poverty"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35b_social_security_age",
+              "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "social_security"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "entitlement reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35c_education_cuts",
+              "question_text": "Reduce federal funding for education.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "education"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35d_mortgage_deduction",
+              "question_text": "Limit tax deductions for interest paid on home mortgages.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "housing"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35f_investment_income_tax",
+              "question_text": "Raise the tax rate on investment income.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "investment_income"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35g_medicare_high_income",
+              "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "medicare",
+                "means_testing"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "entitlement reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35h_defense_cuts",
+              "question_text": "Reduce military defense spending.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "defense",
+                "spending cuts"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35j_student_loans",
+              "question_text": "Reduce federal funding for college student loan programs.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "education",
+                "student_loans"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35k_corporate_deductions",
+              "question_text": "Limit tax deductions for large corporations.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "corporations"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35m_high_income_tax",
+              "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "high_income"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35n_scientific_research",
+              "question_text": "Reduce federal funding for scientific research.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "science",
+                "spending cuts"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            }
+          ],
+          "aggregate_signals": {
+            "weighted_score": 0.49108734402852044,
+            "mean_confidence": 0.43137254901960786,
+            "mean_uncertainty": 0.5686274509803921,
+            "fallback_rate": 1.0,
+            "invalid_rate": 0.0,
+            "mean_top_option_margin": 0.09803921568627448,
+            "question_count": 11
+          },
+          "diagnostics": {
+            "question_count": 11,
+            "fallback_rate": 1.0
+          }
+        }
+      ],
+      "aggregate_signals": {
+        "weighted_score": 0.49108734402852044,
+        "mean_confidence": 0.43137254901960786,
+        "mean_uncertainty": 0.5686274509803921,
+        "fallback_rate": 1.0,
+        "invalid_rate": 0.0,
+        "mean_top_option_margin": 0.09803921568627448,
+        "question_count": 11
+      },
+      "diagnostics": {
+        "variant_count": 1,
+        "estimated_weight": 0.32
+      }
+    },
+    {
+      "segment_id": "tax_and_invest_moderates",
+      "segment_name": "Tax-and-invest moderates",
+      "demographic_description": "Middle-of-the-road voters who prefer deficit reduction through higher taxes on affluent households and corporations.",
+      "psychographic_description": "Want fiscal restraint but resist sharp cuts to education and social supports.",
+      "behavioral_description": "More likely to back progressive revenue solutions than benefit cuts.",
+      "variant_results": [
+        {
+          "variant_id": null,
+          "variant_name": "base",
+          "variant_description": null,
+          "question_results": [
+            {
+              "question_id": "q35a_low_income_programs",
+              "question_text": "Reduce federal funding for programs that help lower income Americans.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "anti_poverty"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35b_social_security_age",
+              "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "social_security"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "entitlement reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35c_education_cuts",
+              "question_text": "Reduce federal funding for education.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "education"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35d_mortgage_deduction",
+              "question_text": "Limit tax deductions for interest paid on home mortgages.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "housing"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35f_investment_income_tax",
+              "question_text": "Raise the tax rate on investment income.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "investment_income"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35g_medicare_high_income",
+              "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "medicare",
+                "means_testing"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "entitlement reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35h_defense_cuts",
+              "question_text": "Reduce military defense spending.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "defense",
+                "spending cuts"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35j_student_loans",
+              "question_text": "Reduce federal funding for college student loan programs.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "education",
+                "student_loans"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35k_corporate_deductions",
+              "question_text": "Limit tax deductions for large corporations.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "corporations"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35m_high_income_tax",
+              "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "high_income"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35n_scientific_research",
+              "question_text": "Reduce federal funding for scientific research.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "science",
+                "spending cuts"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            }
+          ],
+          "aggregate_signals": {
+            "weighted_score": 0.49108734402852044,
+            "mean_confidence": 0.43137254901960786,
+            "mean_uncertainty": 0.5686274509803921,
+            "fallback_rate": 1.0,
+            "invalid_rate": 0.0,
+            "mean_top_option_margin": 0.09803921568627448,
+            "question_count": 11
+          },
+          "diagnostics": {
+            "question_count": 11,
+            "fallback_rate": 1.0
+          }
+        }
+      ],
+      "aggregate_signals": {
+        "weighted_score": 0.49108734402852044,
+        "mean_confidence": 0.43137254901960786,
+        "mean_uncertainty": 0.5686274509803921,
+        "fallback_rate": 1.0,
+        "invalid_rate": 0.0,
+        "mean_top_option_margin": 0.09803921568627448,
+        "question_count": 11
+      },
+      "diagnostics": {
+        "variant_count": 1,
+        "estimated_weight": 0.38
+      }
+    },
+    {
+      "segment_id": "social_program_defenders",
+      "segment_name": "Social program defenders",
+      "demographic_description": "Voters who strongly protect education, Medicare, student loans, and anti-poverty programs.",
+      "psychographic_description": "View deficit reduction through social cuts as unfair or harmful.",
+      "behavioral_description": "More willing to support tax increases than reductions in social spending.",
+      "variant_results": [
+        {
+          "variant_id": null,
+          "variant_name": "base",
+          "variant_description": null,
+          "question_results": [
+            {
+              "question_id": "q35a_low_income_programs",
+              "question_text": "Reduce federal funding for programs that help lower income Americans.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "anti_poverty"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35b_social_security_age",
+              "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "social_security"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "entitlement reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35c_education_cuts",
+              "question_text": "Reduce federal funding for education.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "deficit",
+                "education"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35d_mortgage_deduction",
+              "question_text": "Limit tax deductions for interest paid on home mortgages.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "housing"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35f_investment_income_tax",
+              "question_text": "Raise the tax rate on investment income.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "investment_income"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35g_medicare_high_income",
+              "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "medicare",
+                "means_testing"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "entitlement reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35h_defense_cuts",
+              "question_text": "Reduce military defense spending.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "defense",
+                "spending cuts"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35j_student_loans",
+              "question_text": "Reduce federal funding for college student loan programs.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "education",
+                "student_loans"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35k_corporate_deductions",
+              "question_text": "Limit tax deductions for large corporations.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "corporations"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35m_high_income_tax",
+              "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.5980392156862745,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "tax",
+                "high_income"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_high",
+                "theme": "tax reform",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            },
+            {
+              "question_id": "q35n_scientific_research",
+              "question_text": "Reduce federal funding for scientific research.",
+              "question_type": "single_choice",
+              "options": [
+                "Approve",
+                "Disapprove",
+                "Don't know"
+              ],
+              "distribution": {
+                "Approve": 0.4313725490196078,
+                "Disapprove": 0.3333333333333333,
+                "Don't know": 0.2352941176470588
+              },
+              "top_option": "Approve",
+              "confidence": 0.4313725490196078,
+              "uncertainty": 0.5686274509803921,
+              "normalized_score": 0.40196078431372545,
+              "requested_strategy": "deepseek_direct",
+              "actual_strategy_used": "heuristic",
+              "fallback_happened": true,
+              "fallback_reason": "provider_unavailable",
+              "tags": [
+                "science",
+                "spending cuts"
+              ],
+              "diagnostics": {
+                "invalid_flag": false,
+                "decision_weight": 1.0,
+                "scoring_direction": "positive_low",
+                "theme": "spending cuts",
+                "top1_margin": 0.0980392156862745,
+                "entropy_normalized": 0.9733610445699835,
+                "cost_latency_summary": {
+                  "total_input_tokens": 0,
+                  "total_output_tokens": 0,
+                  "estimated_api_cost_usd": 0.0,
+                  "total_latency_ms": 0.0,
+                  "average_latency_ms_per_request": 0.0,
+                  "request_count": 1,
+                  "retry_count": 0
+                },
+                "metadata": {
+                  "strategy_alias_deprecated": false,
+                  "model_name": null,
+                  "actual_model_name": null,
+                  "requested_model_name": "deepseek-chat",
+                  "generation_config": null,
+                  "output_type": "heuristic",
+                  "confidence_summary": {
+                    "top1_probability": 0.4313725490196078,
+                    "uncertainty": 0.5686274509803921,
+                    "entropy_normalized": 0.9733610445699835,
+                    "top1_margin": 0.0980392156862745
+                  },
+                  "json_compliance_rate": 0.0,
+                  "invalid_output_rate": 0.0,
+                  "parser_failure_rate": 0.0,
+                  "final_text_present_rate": 0.0,
+                  "attempt_summary": {
+                    "requested_strategy": "deepseek_direct",
+                    "actual_strategy_used": "heuristic",
+                    "fallback_happened": true,
+                    "fallback_reason": "provider_unavailable",
+                    "retry_count": 0
+                  }
+                }
+              }
+            }
+          ],
+          "aggregate_signals": {
+            "weighted_score": 0.49108734402852044,
+            "mean_confidence": 0.43137254901960786,
+            "mean_uncertainty": 0.5686274509803921,
+            "fallback_rate": 1.0,
+            "invalid_rate": 0.0,
+            "mean_top_option_margin": 0.09803921568627448,
+            "question_count": 11
+          },
+          "diagnostics": {
+            "question_count": 11,
+            "fallback_rate": 1.0
+          }
+        }
+      ],
+      "aggregate_signals": {
+        "weighted_score": 0.49108734402852044,
+        "mean_confidence": 0.43137254901960786,
+        "mean_uncertainty": 0.5686274509803921,
+        "fallback_rate": 1.0,
+        "invalid_rate": 0.0,
+        "mean_top_option_margin": 0.09803921568627448,
+        "question_count": 11
+      },
+      "diagnostics": {
+        "variant_count": 1,
+        "estimated_weight": 0.3
+      }
+    }
+  ],
+  "synthetic_respondents_path": "D:\\dev\\Gnosis\\reports\\sample_runs\\sample_en_pew_policy_topline\\synthetic_respondents.csv",
+  "executive_summary": "# Executive Summary: Pew Debt Reduction Policy Sample\n\n## Snapshot\n- Primary route: `deepseek_direct -> heuristic fallback` with 100.0% fallback usage.\n- Most promising segment: **Fiscal hawks**. Fiscal hawks has the strongest aggregate score (0.491) with mean confidence 0.431.\n- Mean confidence: 0.431; mean uncertainty: 0.569.\n\n## Segment And Question Signals\n- Largest divergence: **q35a_low_income_programs** (avg JS 0.000).\n- Least stable conclusions: q35a_low_income_programs (0.43), q35b_social_security_age (0.43), q35c_education_cuts (0.43).\n\n## Recommended Next Actions\n- Prioritize Fiscal hawks: Fiscal hawks has the strongest aggregate score (0.491) with mean confidence 0.431.\n- Use q35a_low_income_programs as a segmentation lever: Reduce federal funding for programs that help lower income Americans. shows the largest cross-segment divergence (avg JS 0.000).\n- Track route reliability in pilot delivery: Fallbacks were triggered in 100.0% of question predictions, so project logs and retry monitoring should stay on.\n- Treat close calls as validation candidates: Higher-uncertainty or unstable questions should be converted into focused follow-up tests before committing large spend.\n\n## Risks And Limits\n- Pilot MVP only supports 7 to 15 closed-ended questions and up to 3 segments / 3 variants.\n- Synthetic respondents use a lightweight latent-profile sampler rather than a learned joint respondent model.\n- Behavior validity has not been validated on customer-specific commercial outcomes; do not claim superiority over human surveys.\n- Routing / skip logic and long open-ended questionnaires are intentionally out of scope.\n",
+  "recommendations": [
+    {
+      "title": "Prioritize Fiscal hawks",
+      "rationale": "Fiscal hawks has the strongest aggregate score (0.491) with mean confidence 0.431.",
+      "priority": "high"
+    },
+    {
+      "title": "Use q35a_low_income_programs as a segmentation lever",
+      "rationale": "Reduce federal funding for programs that help lower income Americans. shows the largest cross-segment divergence (avg JS 0.000).",
+      "priority": "medium"
+    },
+    {
+      "title": "Track route reliability in pilot delivery",
+      "rationale": "Fallbacks were triggered in 100.0% of question predictions, so project logs and retry monitoring should stay on.",
+      "priority": "medium"
+    },
+    {
+      "title": "Treat close calls as validation candidates",
+      "rationale": "Higher-uncertainty or unstable questions should be converted into focused follow-up tests before committing large spend.",
+      "priority": "medium"
+    }
+  ],
+  "diagnostics": {
+    "mean_confidence": 0.4313725490196078,
+    "mean_uncertainty": 0.5686274509803921,
+    "invalid_rate": 0.0,
+    "generator_notes": [
+      "Synthetic respondents are sampled from per-question segment distributions.",
+      "Rows include a lightweight latent profile bias to create within-respondent consistency across the questionnaire.",
+      "This is a first-pass conditional sampler, not a learned joint respondent model; use diagnostics when distributions are close or uncertainty is high."
+    ],
+    "limitations": [
+      "Pilot MVP only supports 7 to 15 closed-ended questions and up to 3 segments / 3 variants.",
+      "Synthetic respondents use a lightweight latent-profile sampler rather than a learned joint respondent model.",
+      "Behavior validity has not been validated on customer-specific commercial outcomes; do not claim superiority over human surveys.",
+      "Routing / skip logic and long open-ended questionnaires are intentionally out of scope."
+    ],
+    "question_level_results": [
+      {
+        "question_id": "q35a_low_income_programs",
+        "question_text": "Reduce federal funding for programs that help lower income Americans.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35b_social_security_age",
+        "question_text": "Gradually raise the age at which people can begin receiving Social Security benefits.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35c_education_cuts",
+        "question_text": "Reduce federal funding for education.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35d_mortgage_deduction",
+        "question_text": "Limit tax deductions for interest paid on home mortgages.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35f_investment_income_tax",
+        "question_text": "Raise the tax rate on investment income.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35g_medicare_high_income",
+        "question_text": "Reduce Medicare benefits for seniors with higher incomes.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35h_defense_cuts",
+        "question_text": "Reduce military defense spending.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35j_student_loans",
+        "question_text": "Reduce federal funding for college student loan programs.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35k_corporate_deductions",
+        "question_text": "Limit tax deductions for large corporations.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35m_high_income_tax",
+        "question_text": "Raise the income tax rate on incomes over $250,000 a year.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      },
+      {
+        "question_id": "q35n_scientific_research",
+        "question_text": "Reduce federal funding for scientific research.",
+        "variant_id": null,
+        "variant_name": "base",
+        "average_pairwise_js": 0.0,
+        "score_range": 0.0,
+        "dominant_option": "Approve",
+        "mean_confidence": 0.4313725490196078,
+        "stability_label": "unstable"
+      }
+    ]
+  }
+}

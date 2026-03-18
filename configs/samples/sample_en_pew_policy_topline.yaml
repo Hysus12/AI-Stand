@@ -1,0 +1,125 @@
+project_id: sample_en_pew_policy_topline
+product_name: Pew Debt Reduction Policy Sample
+product_brief: >
+  Internal end-to-end sample built from Pew Research Center's October 2012 debt-reduction
+  topline questionnaire. The goal is to test whether the Pilot MVP can ingest a real English
+  policy-attitudes project, generate segment-level outputs, and compare AI distributions against
+  public topline percentages without turning the sample into a benchmark study.
+category: public policy opinion sample
+category_hints:
+  - U.S. public opinion
+  - policy approval
+  - debt reduction
+target_segments:
+  - segment_id: fiscal_hawks
+    segment_name: Fiscal hawks
+    demographic_description: Voters who prioritize deficit reduction and are relatively open to spending cuts.
+    psychographic_description: Concerned about debt levels and more accepting of painful trade-offs.
+    behavioral_description: Less protective of federal programs if cuts are framed as deficit reduction.
+    population_struct:
+      ideology: conservative
+      region: United States
+    estimated_weight: 0.32
+  - segment_id: tax_and_invest_moderates
+    segment_name: Tax-and-invest moderates
+    demographic_description: Middle-of-the-road voters who prefer deficit reduction through higher taxes on affluent households and corporations.
+    psychographic_description: Want fiscal restraint but resist sharp cuts to education and social supports.
+    behavioral_description: More likely to back progressive revenue solutions than benefit cuts.
+    population_struct:
+      ideology: moderate
+      region: United States
+    estimated_weight: 0.38
+  - segment_id: social_program_defenders
+    segment_name: Social program defenders
+    demographic_description: Voters who strongly protect education, Medicare, student loans, and anti-poverty programs.
+    psychographic_description: View deficit reduction through social cuts as unfair or harmful.
+    behavioral_description: More willing to support tax increases than reductions in social spending.
+    population_struct:
+      ideology: liberal
+      region: United States
+    estimated_weight: 0.30
+survey_questions:
+  - question_id: q35a_low_income_programs
+    question_text: Reduce federal funding for programs that help lower income Americans.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["deficit", "anti_poverty"]
+    theme: spending cuts
+    scoring_direction: positive_low
+  - question_id: q35b_social_security_age
+    question_text: Gradually raise the age at which people can begin receiving Social Security benefits.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["deficit", "social_security"]
+    theme: entitlement reform
+    scoring_direction: positive_low
+  - question_id: q35c_education_cuts
+    question_text: Reduce federal funding for education.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["deficit", "education"]
+    theme: spending cuts
+    scoring_direction: positive_low
+  - question_id: q35d_mortgage_deduction
+    question_text: Limit tax deductions for interest paid on home mortgages.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["tax", "housing"]
+    theme: tax reform
+    scoring_direction: positive_high
+  - question_id: q35f_investment_income_tax
+    question_text: Raise the tax rate on investment income.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["tax", "investment_income"]
+    theme: tax reform
+    scoring_direction: positive_high
+  - question_id: q35g_medicare_high_income
+    question_text: Reduce Medicare benefits for seniors with higher incomes.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["medicare", "means_testing"]
+    theme: entitlement reform
+    scoring_direction: positive_low
+  - question_id: q35h_defense_cuts
+    question_text: Reduce military defense spending.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["defense", "spending cuts"]
+    theme: spending cuts
+    scoring_direction: positive_high
+  - question_id: q35j_student_loans
+    question_text: Reduce federal funding for college student loan programs.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["education", "student_loans"]
+    theme: spending cuts
+    scoring_direction: positive_low
+  - question_id: q35k_corporate_deductions
+    question_text: Limit tax deductions for large corporations.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["tax", "corporations"]
+    theme: tax reform
+    scoring_direction: positive_high
+  - question_id: q35m_high_income_tax
+    question_text: Raise the income tax rate on incomes over $250,000 a year.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["tax", "high_income"]
+    theme: tax reform
+    scoring_direction: positive_high
+  - question_id: q35n_scientific_research
+    question_text: Reduce federal funding for scientific research.
+    question_type: single_choice
+    options: ["Approve", "Disapprove", "Don't know"]
+    tags: ["science", "spending cuts"]
+    theme: spending cuts
+    scoring_direction: positive_low
+generation_settings:
+  synthetic_respondent_count: 500
+  random_seed: 42
+inference_settings:
+  primary_strategy: deepseek_direct
+  fallback_strategy: heuristic
+  max_retry_attempts: 0
