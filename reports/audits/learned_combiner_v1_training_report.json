@@ -1,0 +1,150 @@
+{
+  "artifact_path": "data/processed/artifacts/learned_combiner_v1.joblib",
+  "split_manifest": "data/processed/gss_survey_splits/learned_combiner_v1_split.json",
+  "train_row_count": 72,
+  "dev_row_count": 24,
+  "feature_names": [
+    "heuristic_entropy",
+    "heuristic_llm_js_gap",
+    "heuristic_llm_l1_gap",
+    "heuristic_margin",
+    "heuristic_prob_rank_1",
+    "heuristic_prob_rank_2",
+    "heuristic_prob_rank_3",
+    "heuristic_prob_rank_4",
+    "heuristic_prob_rank_5",
+    "heuristic_prob_rank_6",
+    "heuristic_prob_rank_7",
+    "heuristic_top1",
+    "llm_entropy",
+    "llm_final_text_present_rate",
+    "llm_invalid_output_rate",
+    "llm_json_compliance_rate",
+    "llm_margin",
+    "llm_prob_rank_1",
+    "llm_prob_rank_2",
+    "llm_prob_rank_3",
+    "llm_prob_rank_4",
+    "llm_prob_rank_5",
+    "llm_prob_rank_6",
+    "llm_prob_rank_7",
+    "llm_top1",
+    "option_count",
+    "population_token_count",
+    "question_token_count"
+  ],
+  "baselines": {
+    "heuristic_prompt_only": {
+      "js_divergence": 0.09322374694471319,
+      "probability_mae": 0.24315378408546381,
+      "probability_rmse": 0.26919308671817826,
+      "top_option_accuracy": 0.75
+    },
+    "deepseek_direct": {
+      "js_divergence": 0.017575108550769897,
+      "probability_mae": 0.08756709517999688,
+      "probability_rmse": 0.09749165538490069,
+      "top_option_accuracy": 0.9166666666666666
+    },
+    "weighted_llm_0.25": {
+      "js_divergence": 0.06334952426478628,
+      "probability_mae": 0.19177740607366334,
+      "probability_rmse": 0.2095937094587024,
+      "top_option_accuracy": 0.75
+    },
+    "learned_combiner_v1": {
+      "js_divergence": 0.02027374318503152,
+      "probability_mae": 0.09594183914254861,
+      "probability_rmse": 0.10469148750251334,
+      "top_option_accuracy": 0.9583333333333334
+    }
+  },
+  "average_predicted_weight_on_dev": 0.8142488552457944,
+  "dev_cost_summary": {
+    "estimated_api_cost_usd": 0.0111216,
+    "average_latency_ms_per_request": 2240.7830003260947
+  },
+  "dev_results_by_question_id": {
+    "natenvir": {
+      "row_count": 8,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08602843239097861,
+        "probability_mae": 0.2241904438942664,
+        "probability_rmse": 0.24608747583179133,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_direct": {
+        "js_divergence": 0.012427097886151506,
+        "probability_mae": 0.08456119776935875,
+        "probability_rmse": 0.0937628947571701,
+        "top_option_accuracy": 1.0
+      },
+      "weighted_llm_0.25": {
+        "js_divergence": 0.05745772497858495,
+        "probability_mae": 0.17445086056093306,
+        "probability_rmse": 0.1884791493825208,
+        "top_option_accuracy": 1.0
+      },
+      "learned_combiner_v1": {
+        "js_divergence": 0.01603853633501244,
+        "probability_mae": 0.08653154521068007,
+        "probability_rmse": 0.09431837394810089,
+        "top_option_accuracy": 1.0
+      }
+    },
+    "natheal": {
+      "row_count": 8,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.10837844474500172,
+        "probability_mae": 0.261805187665326,
+        "probability_rmse": 0.2867298600681614,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_direct": {
+        "js_divergence": 0.01543005394182759,
+        "probability_mae": 0.07369577017020591,
+        "probability_rmse": 0.08151300622717329,
+        "top_option_accuracy": 1.0
+      },
+      "weighted_llm_0.25": {
+        "js_divergence": 0.07540843453817224,
+        "probability_mae": 0.2097912987764371,
+        "probability_rmse": 0.22871227455074752,
+        "top_option_accuracy": 1.0
+      },
+      "learned_combiner_v1": {
+        "js_divergence": 0.01831170601731877,
+        "probability_mae": 0.08163326555695496,
+        "probability_rmse": 0.09008011788623105,
+        "top_option_accuracy": 1.0
+      }
+    },
+    "trust": {
+      "row_count": 8,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08526436369815926,
+        "probability_mae": 0.24346572069679906,
+        "probability_rmse": 0.274761924254582,
+        "top_option_accuracy": 0.25
+      },
+      "deepseek_direct": {
+        "js_divergence": 0.024868173824330597,
+        "probability_mae": 0.10444431760042595,
+        "probability_rmse": 0.11719906517035869,
+        "top_option_accuracy": 0.75
+      },
+      "weighted_llm_0.25": {
+        "js_divergence": 0.05718241327760164,
+        "probability_mae": 0.19109005888361988,
+        "probability_rmse": 0.21158970444283892,
+        "top_option_accuracy": 0.25
+      },
+      "learned_combiner_v1": {
+        "js_divergence": 0.026470987202763353,
+        "probability_mae": 0.11966070666001083,
+        "probability_rmse": 0.12967597067320807,
+        "top_option_accuracy": 0.875
+      }
+    }
+  }
+}

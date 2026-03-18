@@ -98,6 +98,51 @@ python scripts/evaluate_prompt_benchmarks.py --input data/interim/gss_survey_rec
 - OOD and uncertainty: heuristic first pass only.
 - Prompt-only benchmarking: heuristic baseline plus local LLM zero-shot and few-shot persona evaluation.
 
+## MVP inference
+
+Minimal callable engine:
+
+```python
+from spbce.inference.mvp import MvpInferenceEngine
+
+engine = MvpInferenceEngine(env_file="api.env")
+request = engine.build_request(
+    question_text="Can most people be trusted, or do you need to be careful?",
+    options=["Can be trusted", "Depends", "Need to be careful"],
+    population_text="Adults age 30-44 in the United States",
+)
+response = engine.predict(request, strategy="heuristic")
+```
+
+CLI example:
+
+```bash
+python scripts/run_mvp_inference.py \
+  --strategy heuristic \
+  --question-text "Can most people be trusted, or do you need to be careful?" \
+  --options "Can be trusted" "Depends" "Need to be careful" \
+  --population-text "Adults age 30-44 in the United States"
+```
+
+Supported MVP strategies:
+
+- `heuristic`: current default and current honest production-safe baseline
+- `deepseek_direct`: strict-JSON DeepSeek direct probability prediction
+- `weighted_hybrid_025`: experimental weighted blend with `llm_weight=0.25`
+- `learned_hybrid`: learned combiner backed by a fitted artifact
+- `best_hybrid`: deprecated alias for `weighted_hybrid_025`; kept only for backward compatibility and not empirically best
+
+Example learned hybrid invocation:
+
+```bash
+python scripts/run_mvp_inference.py \
+  --strategy learned_hybrid \
+  --learned-combiner-artifact data/processed/artifacts/learned_combiner_v1.joblib \
+  --question-text "Can most people be trusted, or do you need to be careful?" \
+  --options "Can be trusted" "Depends" "Need to be careful" \
+  --population-text "Adults age 30-44 in the United States"
+```
+
 ## Claims policy
 
 This project does not claim general superiority over human surveys. Any performance claims must be tied to explicit held-out benchmarks, explicit split definitions, and documented domain coverage.

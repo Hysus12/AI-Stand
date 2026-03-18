@@ -30,6 +30,14 @@ def derive_contaminated_question_blacklist(
     return sorted(question_ids)
 
 
+def question_ids_from_formal_manifest(manifest_path: str | Path) -> list[str]:
+    manifest = read_json(manifest_path)
+    question_ids = {
+        str(row["question_id"]) for row in manifest.get("records", []) if row.get("question_id")
+    }
+    return sorted(question_ids)
+
+
 @dataclass(slots=True)
 class FewShotPoolSummary:
     pool_size: int
@@ -189,6 +197,86 @@ def build_formal_holdout_manifest(
         "selected_test_records": len(selected),
     }
     return payload
+
+
+def build_question_id_holdout_manifest(
+    records: list[SurveyRecord],
+    holdout_question_ids: list[str],
+    sample_size: int,
+    source_label: str,
+    excluded_question_ids: list[str],
+) -> dict[str, Any]:
+    holdout_set = set(holdout_question_ids)
+    train_records = [record for record in records if record.question_id not in holdout_set]
+    candidate_test_records = [record for record in records if record.question_id in holdout_set]
+
+    by_question: dict[str, list[SurveyRecord]] = defaultdict(list)
+    for record in candidate_test_records:
+        by_question[record.question_id].append(record)
+    for question_records in by_question.values():
+        question_records.sort(
+            key=lambda record: (
+                int(record.wave_id or "0"),
+                record.population_signature(),
+                record.record_id,
+            )
+        )
+
+    question_ids = sorted(by_question)
+    allocations = {question_id: 0 for question_id in question_ids}
+    for _ in range(min(sample_size, len(candidate_test_records))):
+        chosen_question = min(
+            question_ids,
+            key=lambda question_id: (
+                allocations[question_id] / max(1, len(by_question[question_id])),
+                allocations[question_id],
+                question_id,
+            ),
+        )
+        allocations[chosen_question] += 1
+
+    selected: list[SurveyRecord] = []
+    for question_id in question_ids:
+        selected.extend(
+            choose_evenly_spaced_records(by_question[question_id], allocations[question_id])
+        )
+    selected.sort(
+        key=lambda record: (
+            record.question_id,
+            int(record.wave_id or "0"),
+            record.population_signature(),
+            record.record_id,
+        )
+    )
+    return {
+        "strategy": "formal_prompt_holdout_v2_frozen",
+        "source_split_strategy": "held_out_question_principle",
+        "source_split_manifest": source_label,
+        "selection_policy": {
+            "sample_size_requested": sample_size,
+            "selection_method": "question-balanced-even-spacing",
+            "heldout_question_ids": holdout_question_ids,
+            "excluded_question_ids": excluded_question_ids,
+        },
+        "train_record_ids": [record.record_id for record in train_records],
+        "validation_record_ids": [],
+        "test_record_ids": [record.record_id for record in selected],
+        "records": [
+            {
+                "record_id": record.record_id,
+                "source_dataset": record.dataset_id,
+                "split": "test",
+                "question_id": record.question_id,
+                "normalized_question_text": normalize_question_text(record.question_text),
+                "population_signature": record.population_signature(),
+                "wave_id": record.wave_id,
+                "year": int(record.wave_id or "0"),
+            }
+            for record in selected
+        ],
+        "available_candidate_test_records": len(candidate_test_records),
+        "selected_test_records": len(selected),
+    }
 
 
 def validate_formal_holdout(

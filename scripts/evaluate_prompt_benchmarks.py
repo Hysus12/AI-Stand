@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import argparse
 import time
-from typing import Any
+from typing import Any, cast
 
 from spbce.baselines.direct_probability_llm import DirectProbabilityLlmBaseline
+from spbce.baselines.hybrid import HybridPredictor
+from spbce.baselines.learned_combiner import LearnedHybridCombiner
 from spbce.baselines.persona_llm import LocalLlmPersonaBaseline
 from spbce.baselines.prompt_only import PromptOnlyPersonaBaseline
 from spbce.data.datasets import load_survey_records
@@ -34,7 +36,13 @@ def filter_records(records: list[SurveyRecord], record_ids: list[str]) -> list[S
 def evaluate_prompt_model(
     records: list[SurveyRecord],
     baseline_name: str,
-    predictor: PromptOnlyPersonaBaseline | LocalLlmPersonaBaseline | DirectProbabilityLlmBaseline,
+    predictor: (
+        PromptOnlyPersonaBaseline
+        | LocalLlmPersonaBaseline
+        | DirectProbabilityLlmBaseline
+        | HybridPredictor
+        | LearnedHybridCombiner
+    ),
     few_shot: bool = False,
 ) -> dict[str, Any]:
     metrics: dict[str, list[float]] = {
@@ -56,6 +64,9 @@ def evaluate_prompt_model(
         "raw_response_diversity_by_record": [],
     }
     scored_record_ids: list[str] = []
+    hybrid_decisions: dict[str, int] = {}
+    hybrid_fallback_count = 0
+    predicted_llm_weights: list[float] = []
     total_input_tokens = 0
     total_output_tokens = 0
     total_estimated_api_cost_usd = 0.0
@@ -69,7 +80,9 @@ def evaluate_prompt_model(
             population_struct=record.population_struct,
             context=SurveyContext(product_category=record.domain),
         )
-        if isinstance(predictor, LocalLlmPersonaBaseline):
+        if isinstance(
+            predictor, (LocalLlmPersonaBaseline, HybridPredictor, LearnedHybridCombiner)
+        ):
             result = predictor.sample_distribution(request, few_shot=few_shot)
             predicted = result["distribution"]
             metrics["sampling_variance"].append(float(result["sampling_variance"]))
@@ -92,6 +105,13 @@ def evaluate_prompt_model(
             llm_examples = result["raw_response_examples"]
             llm_diversity = result["raw_response_diversity"]
             scorable = bool(result["scorable"]) and predicted is not None
+            if "hybrid_decision" in result:
+                decision = str(result["hybrid_decision"])
+                hybrid_decisions[decision] = hybrid_decisions.get(decision, 0) + 1
+            if bool(result.get("hybrid_fallback_used")):
+                hybrid_fallback_count += 1
+            if "predicted_llm_weight" in result:
+                predicted_llm_weights.append(float(result["predicted_llm_weight"]))
         else:
             predicted = predictor.predict_proba(request)
             metrics["sampling_variance"].append(0.0)
@@ -159,12 +179,23 @@ def evaluate_prompt_model(
         if request_latencies_ms
         else 0.0
     )
-    if isinstance(predictor, LocalLlmPersonaBaseline):
+    if isinstance(
+        predictor, (LocalLlmPersonaBaseline, HybridPredictor, LearnedHybridCombiner)
+    ):
         report["generation_config"] = predictor.generation_config()
         report["raw_response_examples"] = diagnostics["raw_response_examples"][:20]
         report["raw_response_diversity_by_record"] = diagnostics["raw_response_diversity_by_record"]
-        if predictor.pool_summary:
+        if hasattr(predictor, "pool_summary") and predictor.pool_summary:
             report["few_shot_pool"] = predictor.pool_summary
+    if hybrid_decisions:
+        report["hybrid_decision_counts"] = hybrid_decisions
+        report["hybrid_fallback_rate"] = (
+            float(hybrid_fallback_count / len(records)) if records else 0.0
+        )
+    if predicted_llm_weights:
+        report["average_predicted_llm_weight"] = float(
+            sum(predicted_llm_weights) / len(predicted_llm_weights)
+        )
     return report
 
 
@@ -191,6 +222,10 @@ def main() -> None:
     parser.add_argument("--llm-thinking", action="store_true")
     parser.add_argument("--llm-reasoning-effort", default="none")
     parser.add_argument("--strict-direct-json", action="store_true")
+    parser.add_argument("--include-hybrids", action="store_true")
+    parser.add_argument("--include-learned-combiner", action="store_true")
+    parser.add_argument("--learned-combiner-artifact")
+    parser.add_argument("--skip-persona", action="store_true")
     args = parser.parse_args()
 
     initialize_runtime_env(args.env_file)
@@ -248,7 +283,9 @@ def main() -> None:
         reasoning_effort=args.llm_reasoning_effort,
     ).fit(few_shot_pool_records)
     llm_few_shot.pool_summary = few_shot_pool_summary
-    direct_probability_baseline = DirectProbabilityLlmBaseline(
+    direct_probability_baseline = cast(
+        DirectProbabilityLlmBaseline,
+        DirectProbabilityLlmBaseline(
         model_name=args.llm_model,
         provider=args.llm_provider,
         env_file=args.env_file,
@@ -260,19 +297,112 @@ def main() -> None:
         thinking_enabled=args.llm_thinking,
         reasoning_effort=args.llm_reasoning_effort,
         strict_json_only=args.strict_direct_json or bool(args.formal_manifest),
-    ).fit(train_records)
+    ).fit(train_records),
+    )
 
-    results = [
-        evaluate_prompt_model(test_records, "heuristic_prompt_only", heuristic),
-        evaluate_prompt_model(test_records, "llm_zero_shot_persona", llm_zero_shot, few_shot=False),
-        evaluate_prompt_model(test_records, "llm_few_shot_persona", llm_few_shot, few_shot=True),
+    results = [evaluate_prompt_model(test_records, "heuristic_prompt_only", heuristic)]
+    if not args.skip_persona:
+        results.extend(
+            [
+                evaluate_prompt_model(
+                    test_records, "llm_zero_shot_persona", llm_zero_shot, few_shot=False
+                ),
+                evaluate_prompt_model(
+                    test_records, "llm_few_shot_persona", llm_few_shot, few_shot=True
+                ),
+            ]
+        )
+    results.append(
         evaluate_prompt_model(
             test_records,
             "llm_direct_option_probabilities",
             direct_probability_baseline,
             few_shot=False,
-        ),
-    ]
+        )
+    )
+    if args.include_hybrids:
+        hybrid_predictors = [
+            (
+                "hybrid_weighted_llm_0.25",
+                HybridPredictor(
+                    name="hybrid_weighted_llm_0.25",
+                    heuristic_predictor=heuristic,
+                    llm_predictor=direct_probability_baseline,
+                    strategy="weighted_average",
+                    config={"llm_weight": 0.25},
+                ),
+            ),
+            (
+                "hybrid_weighted_llm_0.50",
+                HybridPredictor(
+                    name="hybrid_weighted_llm_0.50",
+                    heuristic_predictor=heuristic,
+                    llm_predictor=direct_probability_baseline,
+                    strategy="weighted_average",
+                    config={"llm_weight": 0.50},
+                ),
+            ),
+            (
+                "hybrid_weighted_llm_0.75",
+                HybridPredictor(
+                    name="hybrid_weighted_llm_0.75",
+                    heuristic_predictor=heuristic,
+                    llm_predictor=direct_probability_baseline,
+                    strategy="weighted_average",
+                    config={"llm_weight": 0.75},
+                ),
+            ),
+            (
+                "hybrid_confidence_gated",
+                HybridPredictor(
+                    name="hybrid_confidence_gated",
+                    heuristic_predictor=heuristic,
+                    llm_predictor=direct_probability_baseline,
+                    strategy="confidence_gated",
+                    config={
+                        "require_json_compliance": True,
+                        "require_invalid_zero": True,
+                        "min_top1_probability": 0.60,
+                        "max_entropy": 0.72,
+                        "llm_weight_if_pass": 0.75,
+                    },
+                ),
+            ),
+            (
+                "hybrid_mixture_switch",
+                HybridPredictor(
+                    name="hybrid_mixture_switch",
+                    heuristic_predictor=heuristic,
+                    llm_predictor=direct_probability_baseline,
+                    strategy="mixture_switch",
+                    config={
+                        "min_option_count_for_llm": 3,
+                        "min_llm_top1_probability": 0.58,
+                        "max_llm_entropy": 0.78,
+                        "blend_llm_weight": 0.50,
+                    },
+                ),
+            ),
+        ]
+        results.extend(
+            [
+                evaluate_prompt_model(test_records, predictor_name, predictor)
+                for predictor_name, predictor in hybrid_predictors
+            ]
+        )
+    if args.include_learned_combiner:
+        if not args.learned_combiner_artifact:
+            raise RuntimeError(
+                "--learned-combiner-artifact is required with --include-learned-combiner"
+            )
+        learned_combiner = LearnedHybridCombiner.load(
+            path=args.learned_combiner_artifact,
+            heuristic_predictor=heuristic,
+            llm_predictor=direct_probability_baseline,
+        )
+        results.append(
+            evaluate_prompt_model(test_records, "learned_combiner_v1", learned_combiner)
+        )
     write_json(
         args.output,
         {

@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+import copy
 import json
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any
 
 import numpy as np
@@ -41,6 +42,13 @@ DIRECT_PROBABILITY_PROMPT_TEMPLATES = {
 @dataclass(slots=True)
 class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
     strict_json_only: bool = False
+    cache_enabled: bool = True
+    _result_cache: dict[str, dict[str, Any]] = field(
+        init=False, default_factory=dict, repr=False
+    )
+
+    def __post_init__(self) -> None:
+        LocalLlmPersonaBaseline.__post_init__(self)
 
     def generation_config(self) -> dict[str, Any]:
         return super(DirectProbabilityLlmBaseline, self).generation_config() | {
@@ -166,6 +174,15 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
         num_samples: int | None = None,
     ) -> dict[str, Any]:
         del few_shot
+        cache_key = "||".join(
+            [
+                request.question_text.strip().lower(),
+                " / ".join(option.strip().lower() for option in request.options),
+                request.population_text.strip().lower(),
+            ]
+        )
+        if self.cache_enabled and cache_key in self._result_cache:
+            return copy.deepcopy(self._result_cache[cache_key])
         templates = template_names or list(DIRECT_PROBABILITY_PROMPT_TEMPLATES)
         draws_per_template = num_samples or self.num_samples
         aggregate_scores = np.zeros(len(request.options), dtype=float)
@@ -288,7 +305,7 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
             else 0.0
         )
         unique_raw_responses = len({text for text in raw_responses_all if text})
-        return {
+        result = {
             "distribution": mean_distribution,
             "template_distributions": template_distributions,
             "sampling_variance": variance,
@@ -324,6 +341,9 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
             "generation_config": self.generation_config(),
             "scorable": mean_distribution is not None,
         }
+        if self.cache_enabled:
+            self._result_cache[cache_key] = copy.deepcopy(result)
+        return result
 
     def predict_proba(self, request: PredictSurveyRequest, few_shot: bool = False) -> list[float]:
         del few_shot

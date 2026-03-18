@@ -1,0 +1,705 @@
+{
+  "strategy": "learned_combiner_train_dev_frozen",
+  "selection_policy": {
+    "excluded_question_ids": [
+      "fair",
+      "helpful",
+      "natcrime",
+      "partyid",
+      "polviews"
+    ],
+    "debug_question_ids_used_for_training": [
+      "natenvir",
+      "natheal",
+      "trust"
+    ],
+    "candidate_question_ids": [
+      "natenvir",
+      "natheal",
+      "trust"
+    ],
+    "train_size_requested": 72,
+    "dev_size_requested": 24,
+    "selection_method": "per-question temporal-slice plus even-spacing"
+  },
+  "train_record_ids": [
+    "c990f18d436762f3e153f11728dac0f9e2f0d0a4",
+    "9e579c18787ed65a13be2201709bfd0b29eddd73",
+    "3ca5fadb90a864b6e57cfa89ec33bbbe458e9c5a",
+    "ad77bb7eda35e847cfd27ce8e9a70f3c08be5522",
+    "fcde377f11f99c150f212cec997ca77f8f17bf89",
+    "a0686a6375c7fff657ebbbc27bbc04d25cc89718",
+    "568e201e426e6721ccb0083fcc199e70bba7daab",
+    "2bd20f057a3c042308b53d4681721058b67a8991",
+    "31160d398fd64e235d923b4bf2775d6e57f7b5d4",
+    "6cd0453ebb7d68eb2a3228dee9402219e49e98db",
+    "3354c16f9cb85ae420b0366670e8013cedc3fee0",
+    "4c17497819195c8ba2a04cb3f022f8b97623cccb",
+    "5b6acef47d30bb1dbfc838ac51dea0f16d61f65f",
+    "1cc07c819862eee292826cfcab5770b6c436a1a5",
+    "f425dc862598ab13d118b5f214a441e13da69fc1",
+    "f3c9c3f8738c7f45b313a2a2133c8ea78f97bdf1",
+    "794baaa3a2fda37ea7e5bc1360836f52a85c023a",
+    "6c4c3ea97fe68e0f2152c36ba6078aff7f998bc0",
+    "b6eadc21aa1fbd6a487ceefd10288997f172a150",
+    "cc8808fb8aac899efcb236e07b43a951a0c6d86c",
+    "2279068c4eda186e354bca3db70a6282d3192593",
+    "5b839c9e16fe96425987a0875c90acd9c65de758",
+    "eb694e5b4aaaf6e00d7b83390c98792249983f22",
+    "c1940640b9fd2bf3c811a63435e0f6f02f72ea33",
+    "26cf8a57e63c32bde5ce0706d94329d49b4b36f2",
+    "26345d14c89b48fdef19e9e132b36a10b5a42706",
+    "b056f8114f7796c935f235c430310a4d61214b24",
+    "6a7f96d029e2ca15e3a1af1138c05cc30028e9af",
+    "77598fc6657149413a7ac37ffe570a77832df647",
+    "5ca9ccc3592c3fe1e4c1d10c5933521c0ee6df8a",
+    "8d310f89b063d251915e6c6e326cb77a0598b940",
+    "1e6b801996c285c2ac010dc024e66eb20bc7c763",
+    "ba75011b4f6704aa127b79e6b9f3f1ba453ea307",
+    "f3b681db0f858541180cf3c99aa9c56288043b18",
+    "9e163365d964e7f90fcd8eb7ebb429b9425915eb",
+    "930647cbedd5766d81f1d4b94f09a0cc5af48814",
+    "968227fcd15846358c99858aafeb42c57832941b",
+    "2dee887f11d1eb78fed214febb81c2f44d29df1c",
+    "c03050b2baa081b3a7acc692708e77e3a20aab6b",
+    "2998490452a8ae768ce029c76c012049cf32e39a",
+    "1c9d853c46879379ce95465c7a7d835c92b45d9b",
+    "116df6d1de208d9d3dc1319fc36956cf4405d9b2",
+    "cfbe1edab82733391f1e35be17cf6f41977b5120",
+    "113b547a87d667865c28ae74d0031315791824f1",
+    "714ab5756c4f8936e1ecc92e17c75122ecf168b6",
+    "3deadf3555d73043dd8c038b1cb1de6aefcbdecd",
+    "76fb8686f03c349c6110d83439dc81fbfaeceecc",
+    "adc1c08e7341407462f93463bf23bd3d418d34e9",
+    "7c507bd27316f743c9c43a94ca6881fe8b0f54f6",
+    "7485a395ca7122ebf8eb906122c9ee7ad9581df8",
+    "926d06e9c21a470a57566fd0fc553bf5b982cfb3",
+    "18d76a75680b5f224ed5e92de4fb040032e16fa6",
+    "9016e1a56f859388e87adad4b78b3d282fe8b341",
+    "4ded9201cd1b6c8a8fb653e7d0b7d9102444b041",
+    "c3f2d4eeee816a6219b4e4f33fa261709a4419b6",
+    "e301b4eed4c98b4a4c9dd855e72ab820fed69ef3",
+    "18c5440af72e5c1d20d2f738473386fb3308d963",
+    "1ee7e549fcb11c41a088ca634ccd7f3857905613",
+    "2835f1d545bc21ffce58cf3428cc8490d6e0658f",
+    "ec9d315f95bbda7744f522273c3234805416f1cb",
+    "6b6734060a9feede4b628592d44be2995550ab09",
+    "f5e967381f53483af792cf1fd5db84b97ea5bdcd",
+    "6e84111f8ee3726b9ba6251b20f98851d4724939",
+    "57e7e80a435653132b34d6b9ec79b90ccf42eb72",
+    "97088575de0df4b24ad519f3a83e4291bd4e2c98",
+    "82ad5741c6233eadc2babd47a34993cc81980d05",
+    "15e829534459e08bd26f91460248b2c5ed125491",
+    "2d0113133b715f39914e156ef6ebaa5a0a09677b",
+    "c62f2a04d17aae4121ba1553a69f2ae2f3a94871",
+    "f3196c3d9a21765f3caa94548395c381dd48da0b",
+    "40a7a440c371d965aa55dcfb72c058c2fe143fd7",
+    "b4486feee9c6a025d7c1529afe9d3079e70b8d20"
+  ],
+  "dev_record_ids": [
+    "4a1482df1fa781f064b84a9f1686d7b91e1764ae",
+    "24e58c97129d8d11c667b55586698b354fda148f",
+    "534d0b23ddbed1d14ed6f583783a6f6d175419be",
+    "e6048fb066f04986b4f1a9d429eef3fd866155ad",
+    "9568eedf1d3a51d2ae1141f66322811f8030f490",
+    "344ac8aac9f595fe08d4c2192027797a78dc838d",
+    "3f7ac703f89f205b044972e3fc3defa2bf5e334a",
+    "da0b6101eebca087c7ec362e95e63e4ee608a67a",
+    "8cc17a35e483c18a4309d299f0b9173866d29285",
+    "a0175b8e358becd6d1ba90060c97b6cf2700d4e5",
+    "38f5612b5a522acf87c6afb1f679797446903dbe",
+    "fe799a7fa919cea177bf059609b083c67e17889c",
+    "dd676b24458a377d2143bcb52e660053345dd823",
+    "bf11f112e1f6a95b9ed42266716c2628247561ad",
+    "049ba114fb282af03891d4215124b9e6a786ae26",
+    "e9ccf11948d26cbb5d99bed335d92b63f07e3a96",
+    "2297c199a74808a25e2d0034981fb9091fdc721a",
+    "31ac4a34de084dbc0cab94f47e20796c2433be0a",
+    "517e908a1233c208ef437d5027dc3feb921bf2f4",
+    "8ca455562f6424441a1e9f55262c9b1d74f4c5aa",
+    "14b0b0f65cf7da061dfe1758162379b790cfd939",
+    "96efd91907c2b2b3d7cbd37f3ee48c23400e9e10",
+    "a9fb91b3b4808e1a45f5dafd955366ea57f7a08f",
+    "bb4fa3cf828592dbb8f2e8bbed02cb1cd98e2723"
+  ],
+  "train_records": [
+    {
+      "record_id": "c990f18d436762f3e153f11728dac0f9e2f0d0a4",
+      "question_id": "natenvir",
+      "wave_id": "1973",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "9e579c18787ed65a13be2201709bfd0b29eddd73",
+      "question_id": "natenvir",
+      "wave_id": "1973",
+      "population_signature": "country=United States|45-59|male|less than high school||||"
+    },
+    {
+      "record_id": "3ca5fadb90a864b6e57cfa89ec33bbbe458e9c5a",
+      "question_id": "natenvir",
+      "wave_id": "1974",
+      "population_signature": "country=United States|45-59|female|less than high school||||"
+    },
+    {
+      "record_id": "ad77bb7eda35e847cfd27ce8e9a70f3c08be5522",
+      "question_id": "natenvir",
+      "wave_id": "1975",
+      "population_signature": "country=United States|30-44|female|less than high school||||"
+    },
+    {
+      "record_id": "fcde377f11f99c150f212cec997ca77f8f17bf89",
+      "question_id": "natenvir",
+      "wave_id": "1975",
+      "population_signature": "country=United States|60+|male|less than high school||||"
+    },
+    {
+      "record_id": "a0686a6375c7fff657ebbbc27bbc04d25cc89718",
+      "question_id": "natenvir",
+      "wave_id": "1976",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "568e201e426e6721ccb0083fcc199e70bba7daab",
+      "question_id": "natenvir",
+      "wave_id": "1977",
+      "population_signature": "country=United States|45-59|female|less than high school||||"
+    },
+    {
+      "record_id": "2bd20f057a3c042308b53d4681721058b67a8991",
+      "question_id": "natenvir",
+      "wave_id": "1978",
+      "population_signature": "country=United States|30-44|female|less than high school||||"
+    },
+    {
+      "record_id": "31160d398fd64e235d923b4bf2775d6e57f7b5d4",
+      "question_id": "natenvir",
+      "wave_id": "1980",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "6cd0453ebb7d68eb2a3228dee9402219e49e98db",
+      "question_id": "natenvir",
+      "wave_id": "1982",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "3354c16f9cb85ae420b0366670e8013cedc3fee0",
+      "question_id": "natenvir",
+      "wave_id": "1982",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "4c17497819195c8ba2a04cb3f022f8b97623cccb",
+      "question_id": "natenvir",
+      "wave_id": "1983",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    },
+    {
+      "record_id": "5b6acef47d30bb1dbfc838ac51dea0f16d61f65f",
+      "question_id": "natenvir",
+      "wave_id": "1985",
+      "population_signature": "country=United States|30-44|male|high school||||"
+    },
+    {
+      "record_id": "1cc07c819862eee292826cfcab5770b6c436a1a5",
+      "question_id": "natenvir",
+      "wave_id": "1987",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "f425dc862598ab13d118b5f214a441e13da69fc1",
+      "question_id": "natenvir",
+      "wave_id": "1989",
+      "population_signature": "country=United States|30-44|male|high school||||"
+    },
+    {
+      "record_id": "f3c9c3f8738c7f45b313a2a2133c8ea78f97bdf1",
+      "question_id": "natenvir",
+      "wave_id": "1991",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "794baaa3a2fda37ea7e5bc1360836f52a85c023a",
+      "question_id": "natenvir",
+      "wave_id": "1993",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "6c4c3ea97fe68e0f2152c36ba6078aff7f998bc0",
+      "question_id": "natenvir",
+      "wave_id": "1994",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "b6eadc21aa1fbd6a487ceefd10288997f172a150",
+      "question_id": "natenvir",
+      "wave_id": "1996",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "cc8808fb8aac899efcb236e07b43a951a0c6d86c",
+      "question_id": "natenvir",
+      "wave_id": "1998",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "2279068c4eda186e354bca3db70a6282d3192593",
+      "question_id": "natenvir",
+      "wave_id": "2000",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "5b839c9e16fe96425987a0875c90acd9c65de758",
+      "question_id": "natenvir",
+      "wave_id": "2002",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "eb694e5b4aaaf6e00d7b83390c98792249983f22",
+      "question_id": "natenvir",
+      "wave_id": "2006",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "c1940640b9fd2bf3c811a63435e0f6f02f72ea33",
+      "question_id": "natenvir",
+      "wave_id": "2008",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "26cf8a57e63c32bde5ce0706d94329d49b4b36f2",
+      "question_id": "natheal",
+      "wave_id": "1973",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "26345d14c89b48fdef19e9e132b36a10b5a42706",
+      "question_id": "natheal",
+      "wave_id": "1973",
+      "population_signature": "country=United States|45-59|male|less than high school||||"
+    },
+    {
+      "record_id": "b056f8114f7796c935f235c430310a4d61214b24",
+      "question_id": "natheal",
+      "wave_id": "1974",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    },
+    {
+      "record_id": "6a7f96d029e2ca15e3a1af1138c05cc30028e9af",
+      "question_id": "natheal",
+      "wave_id": "1975",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "77598fc6657149413a7ac37ffe570a77832df647",
+      "question_id": "natheal",
+      "wave_id": "1975",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "5ca9ccc3592c3fe1e4c1d10c5933521c0ee6df8a",
+      "question_id": "natheal",
+      "wave_id": "1976",
+      "population_signature": "country=United States|45-59|male|less than high school||||"
+    },
+    {
+      "record_id": "8d310f89b063d251915e6c6e326cb77a0598b940",
+      "question_id": "natheal",
+      "wave_id": "1977",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    },
+    {
+      "record_id": "1e6b801996c285c2ac010dc024e66eb20bc7c763",
+      "question_id": "natheal",
+      "wave_id": "1978",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "ba75011b4f6704aa127b79e6b9f3f1ba453ea307",
+      "question_id": "natheal",
+      "wave_id": "1980",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "f3b681db0f858541180cf3c99aa9c56288043b18",
+      "question_id": "natheal",
+      "wave_id": "1980",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "9e163365d964e7f90fcd8eb7ebb429b9425915eb",
+      "question_id": "natheal",
+      "wave_id": "1982",
+      "population_signature": "country=United States|45-59|male|high school||||"
+    },
+    {
+      "record_id": "930647cbedd5766d81f1d4b94f09a0cc5af48814",
+      "question_id": "natheal",
+      "wave_id": "1983",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "968227fcd15846358c99858aafeb42c57832941b",
+      "question_id": "natheal",
+      "wave_id": "1985",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "2dee887f11d1eb78fed214febb81c2f44d29df1c",
+      "question_id": "natheal",
+      "wave_id": "1986",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "c03050b2baa081b3a7acc692708e77e3a20aab6b",
+      "question_id": "natheal",
+      "wave_id": "1989",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "2998490452a8ae768ce029c76c012049cf32e39a",
+      "question_id": "natheal",
+      "wave_id": "1991",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "1c9d853c46879379ce95465c7a7d835c92b45d9b",
+      "question_id": "natheal",
+      "wave_id": "1993",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "116df6d1de208d9d3dc1319fc36956cf4405d9b2",
+      "question_id": "natheal",
+      "wave_id": "1994",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "cfbe1edab82733391f1e35be17cf6f41977b5120",
+      "question_id": "natheal",
+      "wave_id": "1996",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "113b547a87d667865c28ae74d0031315791824f1",
+      "question_id": "natheal",
+      "wave_id": "1998",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "714ab5756c4f8936e1ecc92e17c75122ecf168b6",
+      "question_id": "natheal",
+      "wave_id": "2000",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "3deadf3555d73043dd8c038b1cb1de6aefcbdecd",
+      "question_id": "natheal",
+      "wave_id": "2002",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "76fb8686f03c349c6110d83439dc81fbfaeceecc",
+      "question_id": "natheal",
+      "wave_id": "2004",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "adc1c08e7341407462f93463bf23bd3d418d34e9",
+      "question_id": "natheal",
+      "wave_id": "2006",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "7c507bd27316f743c9c43a94ca6881fe8b0f54f6",
+      "question_id": "trust",
+      "wave_id": "1972",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "7485a395ca7122ebf8eb906122c9ee7ad9581df8",
+      "question_id": "trust",
+      "wave_id": "1972",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "926d06e9c21a470a57566fd0fc553bf5b982cfb3",
+      "question_id": "trust",
+      "wave_id": "1973",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    },
+    {
+      "record_id": "18d76a75680b5f224ed5e92de4fb040032e16fa6",
+      "question_id": "trust",
+      "wave_id": "1975",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "9016e1a56f859388e87adad4b78b3d282fe8b341",
+      "question_id": "trust",
+      "wave_id": "1975",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "4ded9201cd1b6c8a8fb653e7d0b7d9102444b041",
+      "question_id": "trust",
+      "wave_id": "1976",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "c3f2d4eeee816a6219b4e4f33fa261709a4419b6",
+      "question_id": "trust",
+      "wave_id": "1978",
+      "population_signature": "country=United States|45-59|female|less than high school||||"
+    },
+    {
+      "record_id": "e301b4eed4c98b4a4c9dd855e72ab820fed69ef3",
+      "question_id": "trust",
+      "wave_id": "1980",
+      "population_signature": "country=United States|30-44|female|less than high school||||"
+    },
+    {
+      "record_id": "18c5440af72e5c1d20d2f738473386fb3308d963",
+      "question_id": "trust",
+      "wave_id": "1983",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "1ee7e549fcb11c41a088ca634ccd7f3857905613",
+      "question_id": "trust",
+      "wave_id": "1984",
+      "population_signature": "country=United States|30-44|male|bachelor's||||"
+    },
+    {
+      "record_id": "2835f1d545bc21ffce58cf3428cc8490d6e0658f",
+      "question_id": "trust",
+      "wave_id": "1986",
+      "population_signature": "country=United States|30-44|female|bachelor's||||"
+    },
+    {
+      "record_id": "ec9d315f95bbda7744f522273c3234805416f1cb",
+      "question_id": "trust",
+      "wave_id": "1987",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "6b6734060a9feede4b628592d44be2995550ab09",
+      "question_id": "trust",
+      "wave_id": "1987",
+      "population_signature": "country=United States|45-59|male|high school||||"
+    },
+    {
+      "record_id": "f5e967381f53483af792cf1fd5db84b97ea5bdcd",
+      "question_id": "trust",
+      "wave_id": "1988",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "6e84111f8ee3726b9ba6251b20f98851d4724939",
+      "question_id": "trust",
+      "wave_id": "1989",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "57e7e80a435653132b34d6b9ec79b90ccf42eb72",
+      "question_id": "trust",
+      "wave_id": "1991",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "97088575de0df4b24ad519f3a83e4291bd4e2c98",
+      "question_id": "trust",
+      "wave_id": "1993",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "82ad5741c6233eadc2babd47a34993cc81980d05",
+      "question_id": "trust",
+      "wave_id": "1994",
+      "population_signature": "country=United States|30-44|male|bachelor's||||"
+    },
+    {
+      "record_id": "15e829534459e08bd26f91460248b2c5ed125491",
+      "question_id": "trust",
+      "wave_id": "1996",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "2d0113133b715f39914e156ef6ebaa5a0a09677b",
+      "question_id": "trust",
+      "wave_id": "1996",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "c62f2a04d17aae4121ba1553a69f2ae2f3a94871",
+      "question_id": "trust",
+      "wave_id": "1998",
+      "population_signature": "country=United States|45-59|female|bachelor's||||"
+    },
+    {
+      "record_id": "f3196c3d9a21765f3caa94548395c381dd48da0b",
+      "question_id": "trust",
+      "wave_id": "2000",
+      "population_signature": "country=United States|30-44|female|bachelor's||||"
+    },
+    {
+      "record_id": "40a7a440c371d965aa55dcfb72c058c2fe143fd7",
+      "question_id": "trust",
+      "wave_id": "2002",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "b4486feee9c6a025d7c1529afe9d3079e70b8d20",
+      "question_id": "trust",
+      "wave_id": "2004",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    }
+  ],
+  "dev_records": [
+    {
+      "record_id": "4a1482df1fa781f064b84a9f1686d7b91e1764ae",
+      "question_id": "natenvir",
+      "wave_id": "2008",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "24e58c97129d8d11c667b55586698b354fda148f",
+      "question_id": "natenvir",
+      "wave_id": "2010",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "534d0b23ddbed1d14ed6f583783a6f6d175419be",
+      "question_id": "natenvir",
+      "wave_id": "2014",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    },
+    {
+      "record_id": "e6048fb066f04986b4f1a9d429eef3fd866155ad",
+      "question_id": "natenvir",
+      "wave_id": "2016",
+      "population_signature": "country=United States|60+|female|high school||||"
+    },
+    {
+      "record_id": "9568eedf1d3a51d2ae1141f66322811f8030f490",
+      "question_id": "natenvir",
+      "wave_id": "2021",
+      "population_signature": "country=United States|30-44|female|high school||||"
+    },
+    {
+      "record_id": "344ac8aac9f595fe08d4c2192027797a78dc838d",
+      "question_id": "natenvir",
+      "wave_id": "2022",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "3f7ac703f89f205b044972e3fc3defa2bf5e334a",
+      "question_id": "natenvir",
+      "wave_id": "2024",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "da0b6101eebca087c7ec362e95e63e4ee608a67a",
+      "question_id": "natenvir",
+      "wave_id": "2024",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "8cc17a35e483c18a4309d299f0b9173866d29285",
+      "question_id": "natheal",
+      "wave_id": "2006",
+      "population_signature": "country=United States|60+|female|less than high school||||"
+    },
+    {
+      "record_id": "a0175b8e358becd6d1ba90060c97b6cf2700d4e5",
+      "question_id": "natheal",
+      "wave_id": "2010",
+      "population_signature": "country=United States|45-59|male|high school||||"
+    },
+    {
+      "record_id": "38f5612b5a522acf87c6afb1f679797446903dbe",
+      "question_id": "natheal",
+      "wave_id": "2014",
+      "population_signature": "country=United States|30-44|female|bachelor's||||"
+    },
+    {
+      "record_id": "fe799a7fa919cea177bf059609b083c67e17889c",
+      "question_id": "natheal",
+      "wave_id": "2016",
+      "population_signature": "country=United States|60+|female|bachelor's||||"
+    },
+    {
+      "record_id": "dd676b24458a377d2143bcb52e660053345dd823",
+      "question_id": "natheal",
+      "wave_id": "2021",
+      "population_signature": "country=United States|30-44|female|graduate||||"
+    },
+    {
+      "record_id": "bf11f112e1f6a95b9ed42266716c2628247561ad",
+      "question_id": "natheal",
+      "wave_id": "2022",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "049ba114fb282af03891d4215124b9e6a786ae26",
+      "question_id": "natheal",
+      "wave_id": "2024",
+      "population_signature": "country=United States|18-29|female|high school||||"
+    },
+    {
+      "record_id": "e9ccf11948d26cbb5d99bed335d92b63f07e3a96",
+      "question_id": "natheal",
+      "wave_id": "2024",
+      "population_signature": "country=United States|60+|male|high school||||"
+    },
+    {
+      "record_id": "2297c199a74808a25e2d0034981fb9091fdc721a",
+      "question_id": "trust",
+      "wave_id": "2004",
+      "population_signature": "country=United States|45-59|male|high school||||"
+    },
+    {
+      "record_id": "31ac4a34de084dbc0cab94f47e20796c2433be0a",
+      "question_id": "trust",
+      "wave_id": "2006",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    },
+    {
+      "record_id": "517e908a1233c208ef437d5027dc3feb921bf2f4",
+      "question_id": "trust",
+      "wave_id": "2008",
+      "population_signature": "country=United States|45-59|male|high school||||"
+    },
+    {
+      "record_id": "8ca455562f6424441a1e9f55262c9b1d74f4c5aa",
+      "question_id": "trust",
+      "wave_id": "2012",
+      "population_signature": "country=United States|18-29|male|high school||||"
+    },
+    {
+      "record_id": "14b0b0f65cf7da061dfe1758162379b790cfd939",
+      "question_id": "trust",
+      "wave_id": "2014",
+      "population_signature": "country=United States|45-59|female|high school||||"
+    },
+    {
+      "record_id": "96efd91907c2b2b3d7cbd37f3ee48c23400e9e10",
+      "question_id": "trust",
+      "wave_id": "2016",
+      "population_signature": "country=United States|45-59|male|high school||||"
+    },
+    {
+      "record_id": "a9fb91b3b4808e1a45f5dafd955366ea57f7a08f",
+      "question_id": "trust",
+      "wave_id": "2018",
+      "population_signature": "country=United States|60+|male|bachelor's||||"
+    },
+    {
+      "record_id": "bb4fa3cf828592dbb8f2e8bbed02cb1cd98e2723",
+      "question_id": "trust",
+      "wave_id": "2024",
+      "population_signature": "country=United States|60+|male|high school||||"
+    }
+  ]
+}
