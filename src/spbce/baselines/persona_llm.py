@@ -331,11 +331,17 @@ class LocalLlmPersonaBaseline:
                         },
                     )
                     response.raise_for_status()
+                except httpx.TimeoutException as exc:
+                    raise RuntimeError("Anthropic-compatible request timed out") from exc
                 except httpx.HTTPStatusError as exc:
                     detail = exc.response.text[:400]
                     raise RuntimeError(
                         f"Anthropic-compatible request failed with status "
                         f"{exc.response.status_code}: {detail}"
+                    ) from exc
+                except httpx.RequestError as exc:
+                    raise RuntimeError(
+                        f"Anthropic-compatible request failed: {exc.__class__.__name__}"
                     ) from exc
                 payload = response.json()
                 latency_ms = (time.perf_counter() - started) * 1000.0
@@ -412,11 +418,17 @@ class LocalLlmPersonaBaseline:
                         },
                     )
                     response.raise_for_status()
+                except httpx.TimeoutException as exc:
+                    raise RuntimeError("OpenAI-compatible request timed out") from exc
                 except httpx.HTTPStatusError as exc:
                     detail = exc.response.text[:400]
                     raise RuntimeError(
                         f"OpenAI-compatible request failed with status "
                         f"{exc.response.status_code}: {detail}"
+                    ) from exc
+                except httpx.RequestError as exc:
+                    raise RuntimeError(
+                        f"OpenAI-compatible request failed: {exc.__class__.__name__}"
                     ) from exc
                 payload = response.json()
                 latency_ms = (time.perf_counter() - started) * 1000.0
@@ -486,11 +498,17 @@ class LocalLlmPersonaBaseline:
                         },
                     )
                     response.raise_for_status()
+                except httpx.TimeoutException as exc:
+                    raise RuntimeError("OpenAI request timed out") from exc
                 except httpx.HTTPStatusError as exc:
                     detail = exc.response.text[:400]
                     raise RuntimeError(
                         f"OpenAI request failed with status "
                         f"{exc.response.status_code}: {detail}"
+                    ) from exc
+                except httpx.RequestError as exc:
+                    raise RuntimeError(
+                        f"OpenAI request failed: {exc.__class__.__name__}"
                     ) from exc
                 payload = response.json()
                 latency_ms = (time.perf_counter() - started) * 1000.0

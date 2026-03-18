@@ -1,0 +1,1915 @@
+{
+  "question_id": [
+    {
+      "slice_name": "question_id",
+      "slice_value": "partyid",
+      "record_count": 102,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.041649530649947794,
+        "safe_kl_divergence": 0.25842993615192583,
+        "probability_mae": 0.06433548338207853,
+        "probability_rmse": 0.07893546981283796,
+        "top_option_accuracy": 0.22549019607843138
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03282541961608025,
+        "safe_kl_divergence": 0.2289490515775622,
+        "probability_mae": 0.056021159273067646,
+        "probability_rmse": 0.06886642414448511,
+        "top_option_accuracy": 0.3627450980392157
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 154404.0,
+        "total_output_tokens": 105666.0,
+        "estimated_api_cost_usd": 0.08761284000000001,
+        "total_latency_ms": 4836282.673601061,
+        "average_latency_ms_per_request": 3951.21133464139,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 102
+      },
+      "fallback_reason_breakdown": {
+        "none": 102
+      }
+    },
+    {
+      "slice_name": "question_id",
+      "slice_value": "polviews",
+      "record_count": 91,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08788453872195488,
+        "safe_kl_divergence": 0.8981651321522526,
+        "probability_mae": 0.09154938261605453,
+        "probability_rmse": 0.11818153976530753,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.023142679174965177,
+        "safe_kl_divergence": 0.25079571746314316,
+        "probability_mae": 0.0435665702046235,
+        "probability_rmse": 0.05437001237469293,
+        "top_option_accuracy": 0.8791208791208791
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.02197802197802198,
+        "invalid_output_rate": 0.02197802197802198,
+        "json_compliance_rate": 0.978021978021978,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 127992.0,
+        "total_output_tokens": 78978.0,
+        "estimated_api_cost_usd": 0.06900851999999999,
+        "total_latency_ms": 3785248.7018788233,
+        "average_latency_ms_per_request": 3466.3449650904977,
+        "total_retry_count": 2.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 89,
+        "heuristic": 2
+      },
+      "fallback_reason_breakdown": {
+        "none": 89,
+        "json_schema_validation_failed": 2
+      }
+    },
+    {
+      "slice_name": "question_id",
+      "slice_value": "natcrime",
+      "record_count": 57,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.09708574694202757,
+        "safe_kl_divergence": 0.6779199402393253,
+        "probability_mae": 0.24282988740302608,
+        "probability_rmse": 0.26996271017179746,
+        "top_option_accuracy": 1.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.011636317252302027,
+        "safe_kl_divergence": 0.10756176574474714,
+        "probability_mae": 0.060660559285005744,
+        "probability_rmse": 0.06682695591652711,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 69156.0,
+        "total_output_tokens": 15048.0,
+        "estimated_api_cost_usd": 0.02568384,
+        "total_latency_ms": 1417480.3862087429,
+        "average_latency_ms_per_request": 2072.3397459192147,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 57
+      },
+      "fallback_reason_breakdown": {
+        "none": 57
+      }
+    }
+  ],
+  "year_bucket": [
+    {
+      "slice_name": "year_bucket",
+      "slice_value": "1980s",
+      "record_count": 49,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08623387258082353,
+        "safe_kl_divergence": 0.8870465885913786,
+        "probability_mae": 0.1261915020618234,
+        "probability_rmse": 0.14985211625776423,
+        "top_option_accuracy": 0.24489795918367346
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03007431649185417,
+        "safe_kl_divergence": 0.28370376694852667,
+        "probability_mae": 0.0586076881353827,
+        "probability_rmse": 0.07014545631593443,
+        "top_option_accuracy": 0.6530612244897959
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 69000.0,
+        "total_output_tokens": 39056.0,
+        "estimated_api_cost_usd": 0.03572352,
+        "total_latency_ms": 1972035.1735893637,
+        "average_latency_ms_per_request": 3353.8013156281695,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 49
+      },
+      "fallback_reason_breakdown": {
+        "none": 49
+      }
+    },
+    {
+      "slice_name": "year_bucket",
+      "slice_value": "1970s",
+      "record_count": 42,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08398886347673684,
+        "safe_kl_divergence": 0.7363368960563216,
+        "probability_mae": 0.14027065285371537,
+        "probability_rmse": 0.1629020223936229,
+        "top_option_accuracy": 0.3333333333333333
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.029225392238280135,
+        "safe_kl_divergence": 0.3498465963655632,
+        "probability_mae": 0.05588555216137412,
+        "probability_rmse": 0.06681097181072335,
+        "top_option_accuracy": 0.6666666666666666
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 58284.0,
+        "total_output_tokens": 30804.0,
+        "estimated_api_cost_usd": 0.0292572,
+        "total_latency_ms": 1595611.163903959,
+        "average_latency_ms_per_request": 3165.8951664761094,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 42
+      },
+      "fallback_reason_breakdown": {
+        "none": 42
+      }
+    },
+    {
+      "slice_name": "year_bucket",
+      "slice_value": "1990s",
+      "record_count": 42,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.06974733690762196,
+        "safe_kl_divergence": 0.5742318287851126,
+        "probability_mae": 0.10968824942413062,
+        "probability_rmse": 0.12956019900361976,
+        "top_option_accuracy": 0.23809523809523808
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.024136949523548543,
+        "safe_kl_divergence": 0.1759884230609765,
+        "probability_mae": 0.052453488341531435,
+        "probability_rmse": 0.06210842274538104,
+        "top_option_accuracy": 0.5952380952380952
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 59412.0,
+        "total_output_tokens": 34058.0,
+        "estimated_api_cost_usd": 0.03093972,
+        "total_latency_ms": 1721959.5595877618,
+        "average_latency_ms_per_request": 3416.5864277534956,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 42
+      },
+      "fallback_reason_breakdown": {
+        "none": 42
+      }
+    },
+    {
+      "slice_name": "year_bucket",
+      "slice_value": "2000s",
+      "record_count": 41,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.06223705984001067,
+        "safe_kl_divergence": 0.565491245195737,
+        "probability_mae": 0.09886883342166361,
+        "probability_rmse": 0.12051860887687219,
+        "top_option_accuracy": 0.34146341463414637
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.022749255613124277,
+        "safe_kl_divergence": 0.18895600990919606,
+        "probability_mae": 0.0503574421697147,
+        "probability_rmse": 0.060539568211899694,
+        "top_option_accuracy": 0.6829268292682927
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.024390243902439025,
+        "invalid_output_rate": 0.024390243902439025,
+        "json_compliance_rate": 0.975609756097561,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 58128.0,
+        "total_output_tokens": 34204.0,
+        "estimated_api_cost_usd": 0.03064152,
+        "total_latency_ms": 1698858.7657110766,
+        "average_latency_ms_per_request": 3452.964970957473,
+        "total_retry_count": 1.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 40,
+        "heuristic": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 40,
+        "json_schema_validation_failed": 1
+      }
+    },
+    {
+      "slice_name": "year_bucket",
+      "slice_value": "2010s",
+      "record_count": 40,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.05849160268816024,
+        "safe_kl_divergence": 0.32408207057736804,
+        "probability_mae": 0.10089340951885875,
+        "probability_rmse": 0.12162478853109268,
+        "top_option_accuracy": 0.375
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.016591842850285993,
+        "safe_kl_divergence": 0.08646811847936256,
+        "probability_mae": 0.04479557711782497,
+        "probability_rmse": 0.05433262916503477,
+        "top_option_accuracy": 0.825
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 56316.0,
+        "total_output_tokens": 32668.0,
+        "estimated_api_cost_usd": 0.029489039999999998,
+        "total_latency_ms": 1620565.5461996794,
+        "average_latency_ms_per_request": 3376.178221249332,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 40
+      },
+      "fallback_reason_breakdown": {
+        "none": 40
+      }
+    },
+    {
+      "slice_name": "year_bucket",
+      "slice_value": "2020s",
+      "record_count": 36,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.061274138669940865,
+        "safe_kl_divergence": 0.33546455407097897,
+        "probability_mae": 0.1100972404795562,
+        "probability_rmse": 0.13226086163430023,
+        "top_option_accuracy": 0.4166666666666667
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.02239426758044551,
+        "safe_kl_divergence": 0.14204882376844283,
+        "probability_mae": 0.05160759389699661,
+        "probability_rmse": 0.06316704116528149,
+        "top_option_accuracy": 0.7777777777777778
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.027777777777777776,
+        "invalid_output_rate": 0.027777777777777776,
+        "json_compliance_rate": 0.9722222222222222,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 50412.0,
+        "total_output_tokens": 28902.0,
+        "estimated_api_cost_usd": 0.0262542,
+        "total_latency_ms": 1429981.5526967868,
+        "average_latency_ms_per_request": 3310.142483094414,
+        "total_retry_count": 1.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 35,
+        "heuristic": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 35,
+        "json_schema_validation_failed": 1
+      }
+    }
+  ],
+  "population_signature_bucket": [
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "18-29|female|high school",
+      "record_count": 21,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08307517873957097,
+        "safe_kl_divergence": 0.8428659298942546,
+        "probability_mae": 0.12543894008252576,
+        "probability_rmse": 0.15380398438800938,
+        "top_option_accuracy": 0.42857142857142855
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.02523787637520448,
+        "safe_kl_divergence": 0.28457274033166113,
+        "probability_mae": 0.050347595250911474,
+        "probability_rmse": 0.06094706988027623,
+        "top_option_accuracy": 0.8095238095238095
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 29088.0,
+        "total_output_tokens": 16048.0,
+        "estimated_api_cost_usd": 0.014884799999999998,
+        "total_latency_ms": 812512.564602308,
+        "average_latency_ms_per_request": 3224.2562087393176,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 21
+      },
+      "fallback_reason_breakdown": {
+        "none": 21
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|female|high school",
+      "record_count": 20,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07685692629120498,
+        "safe_kl_divergence": 0.39152577625694185,
+        "probability_mae": 0.1342084485299611,
+        "probability_rmse": 0.1599029704855192,
+        "top_option_accuracy": 0.4
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.024008994207448883,
+        "safe_kl_divergence": 0.1108984795766835,
+        "probability_mae": 0.06280829586547824,
+        "probability_rmse": 0.07368991623265081,
+        "top_option_accuracy": 0.7
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 27792.0,
+        "total_output_tokens": 14808.0,
+        "estimated_api_cost_usd": 0.014001119999999999,
+        "total_latency_ms": 784608.7161898613,
+        "average_latency_ms_per_request": 3269.202984124422,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 20
+      },
+      "fallback_reason_breakdown": {
+        "none": 20
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|female|high school",
+      "record_count": 19,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.06274874602136882,
+        "safe_kl_divergence": 0.3094355225174478,
+        "probability_mae": 0.11374146685400079,
+        "probability_rmse": 0.1314315477270534,
+        "top_option_accuracy": 0.21052631578947367
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.020165976073157444,
+        "safe_kl_divergence": 0.0883457931158872,
+        "probability_mae": 0.055868548253785524,
+        "probability_rmse": 0.06440904089336857,
+        "top_option_accuracy": 0.5263157894736842
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 26976.0,
+        "total_output_tokens": 15918.0,
+        "estimated_api_cost_usd": 0.014238840000000001,
+        "total_latency_ms": 767991.7502859607,
+        "average_latency_ms_per_request": 3368.3848696752666,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 19
+      },
+      "fallback_reason_breakdown": {
+        "none": 19
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|male|high school",
+      "record_count": 18,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.058419934296783924,
+        "safe_kl_divergence": 0.3889592235480379,
+        "probability_mae": 0.11635900605157051,
+        "probability_rmse": 0.13636790754750613,
+        "top_option_accuracy": 0.5555555555555556
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.018386652036416727,
+        "safe_kl_divergence": 0.22000236728970474,
+        "probability_mae": 0.04318934574089496,
+        "probability_rmse": 0.051418055446084604,
+        "top_option_accuracy": 0.8333333333333334
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 24876.0,
+        "total_output_tokens": 13286.0,
+        "estimated_api_cost_usd": 0.0125454,
+        "total_latency_ms": 703883.6406180635,
+        "average_latency_ms_per_request": 3258.7205584169606,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 18
+      },
+      "fallback_reason_breakdown": {
+        "none": 18
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|male|high school",
+      "record_count": 16,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07006554411912243,
+        "safe_kl_divergence": 0.3503596386510678,
+        "probability_mae": 0.12177174538045563,
+        "probability_rmse": 0.14533867321167193,
+        "top_option_accuracy": 0.4375
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.01764071280301349,
+        "safe_kl_divergence": 0.08205505705045944,
+        "probability_mae": 0.04379730341589198,
+        "probability_rmse": 0.0522980783770883,
+        "top_option_accuracy": 0.6875
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 22044.0,
+        "total_output_tokens": 11904.0,
+        "estimated_api_cost_usd": 0.011172,
+        "total_latency_ms": 616436.4294912666,
+        "average_latency_ms_per_request": 3210.6064036003468,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 16
+      },
+      "fallback_reason_breakdown": {
+        "none": 16
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|female|high school",
+      "record_count": 15,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.09233258254028341,
+        "safe_kl_divergence": 0.5924502311669635,
+        "probability_mae": 0.15893599293731528,
+        "probability_rmse": 0.18793432410242034,
+        "top_option_accuracy": 0.4
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.017915882637999272,
+        "safe_kl_divergence": 0.12038663097980658,
+        "probability_mae": 0.054014921890459096,
+        "probability_rmse": 0.06437635665373181,
+        "top_option_accuracy": 0.8
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 20232.0,
+        "total_output_tokens": 10056.0,
+        "estimated_api_cost_usd": 0.00988848,
+        "total_latency_ms": 536068.6542028561,
+        "average_latency_ms_per_request": 2978.1591900158674,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 15
+      },
+      "fallback_reason_breakdown": {
+        "none": 15
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|male|high school",
+      "record_count": 15,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07400521543795667,
+        "safe_kl_divergence": 0.8685525976334335,
+        "probability_mae": 0.1445524141933463,
+        "probability_rmse": 0.16253973642140465,
+        "top_option_accuracy": 0.4
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.015242657206165243,
+        "safe_kl_divergence": 0.24197856752213637,
+        "probability_mae": 0.0489724416148151,
+        "probability_rmse": 0.056835214551290356,
+        "top_option_accuracy": 0.8666666666666667
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 20268.0,
+        "total_output_tokens": 10312.0,
+        "estimated_api_cost_usd": 0.01000608,
+        "total_latency_ms": 553315.3839055449,
+        "average_latency_ms_per_request": 3073.974355030805,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 15
+      },
+      "fallback_reason_breakdown": {
+        "none": 15
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|male|less than high school",
+      "record_count": 15,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07472143344211238,
+        "safe_kl_divergence": 0.4824765958371672,
+        "probability_mae": 0.10211018532197516,
+        "probability_rmse": 0.12680706153234886,
+        "top_option_accuracy": 0.2
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.026585026602674606,
+        "safe_kl_divergence": 0.13520007727034333,
+        "probability_mae": 0.05324832429317592,
+        "probability_rmse": 0.06573618115541092,
+        "top_option_accuracy": 0.9333333333333333
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 21288.0,
+        "total_output_tokens": 11916.0,
+        "estimated_api_cost_usd": 0.010965359999999999,
+        "total_latency_ms": 584792.2035930678,
+        "average_latency_ms_per_request": 3248.8455755170435,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 15
+      },
+      "fallback_reason_breakdown": {
+        "none": 15
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|female|less than high school",
+      "record_count": 12,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08373285886007187,
+        "safe_kl_divergence": 0.4020491690530632,
+        "probability_mae": 0.14833036700654775,
+        "probability_rmse": 0.17257993421757645,
+        "top_option_accuracy": 0.3333333333333333
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.019545713398246196,
+        "safe_kl_divergence": 0.08352650006340619,
+        "probability_mae": 0.04744384350221164,
+        "probability_rmse": 0.05974135439954245,
+        "top_option_accuracy": 0.8333333333333334
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 16764.0,
+        "total_output_tokens": 8548.0,
+        "estimated_api_cost_usd": 0.008284080000000001,
+        "total_latency_ms": 452438.90171684325,
+        "average_latency_ms_per_request": 3141.936817478078,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 12
+      },
+      "fallback_reason_breakdown": {
+        "none": 12
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "18-29|male|high school",
+      "record_count": 11,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.053781376875200834,
+        "safe_kl_divergence": 0.4420509292501302,
+        "probability_mae": 0.08736129175057415,
+        "probability_rmse": 0.1050067598896852,
+        "top_option_accuracy": 0.45454545454545453
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03005635377662856,
+        "safe_kl_divergence": 0.20301373998337072,
+        "probability_mae": 0.06320632748444893,
+        "probability_rmse": 0.07404446574209066,
+        "top_option_accuracy": 0.7272727272727273
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 15708.0,
+        "total_output_tokens": 9516.0,
+        "estimated_api_cost_usd": 0.00839496,
+        "total_latency_ms": 482881.5208990127,
+        "average_latency_ms_per_request": 3658.1933401440356,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 11
+      },
+      "fallback_reason_breakdown": {
+        "none": 11
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|female|bachelor's",
+      "record_count": 9,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.060512902013771824,
+        "safe_kl_divergence": 0.7481835480546677,
+        "probability_mae": 0.08343765963016629,
+        "probability_rmse": 0.10245854853095603,
+        "top_option_accuracy": 0.1111111111111111
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.030209964133538394,
+        "safe_kl_divergence": 0.2922673201592711,
+        "probability_mae": 0.056145230291772846,
+        "probability_rmse": 0.06732023736615471,
+        "top_option_accuracy": 0.3333333333333333
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 12876.0,
+        "total_output_tokens": 8200.0,
+        "estimated_api_cost_usd": 0.00704928,
+        "total_latency_ms": 383355.4946873337,
+        "average_latency_ms_per_request": 3549.5879137716083,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 9
+      },
+      "fallback_reason_breakdown": {
+        "none": 9
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|female|less than high school",
+      "record_count": 9,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07456177662605817,
+        "safe_kl_divergence": 0.7575065075307319,
+        "probability_mae": 0.09900320800024684,
+        "probability_rmse": 0.12634790385252623,
+        "top_option_accuracy": 0.4444444444444444
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03686528836502651,
+        "safe_kl_divergence": 0.407397035742064,
+        "probability_mae": 0.0522553877108494,
+        "probability_rmse": 0.06695422917991552,
+        "top_option_accuracy": 0.5555555555555556
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 13092.0,
+        "total_output_tokens": 8024.0,
+        "estimated_api_cost_usd": 0.007035839999999999,
+        "total_latency_ms": 380831.09698817134,
+        "average_latency_ms_per_request": 3526.2138610015863,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 9
+      },
+      "fallback_reason_breakdown": {
+        "none": 9
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|male|bachelor's",
+      "record_count": 7,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.06326905474277492,
+        "safe_kl_divergence": 1.1338995753044272,
+        "probability_mae": 0.12547040931788972,
+        "probability_rmse": 0.14291270766243167,
+        "top_option_accuracy": 0.42857142857142855
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.028030210754174955,
+        "safe_kl_divergence": 0.44280090380427367,
+        "probability_mae": 0.05886468030020893,
+        "probability_rmse": 0.06911841558125743,
+        "top_option_accuracy": 0.42857142857142855
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 9468.0,
+        "total_output_tokens": 4628.0,
+        "estimated_api_cost_usd": 0.0045948,
+        "total_latency_ms": 252141.42909646034,
+        "average_latency_ms_per_request": 3001.683679719766,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 7
+      },
+      "fallback_reason_breakdown": {
+        "none": 7
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|female|graduate",
+      "record_count": 6,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.055661639175251985,
+        "safe_kl_divergence": 0.5619044754401336,
+        "probability_mae": 0.07326806678425915,
+        "probability_rmse": 0.09786993403168616,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.019437661707120052,
+        "safe_kl_divergence": 0.17253035834210995,
+        "probability_mae": 0.04384790610987909,
+        "probability_rmse": 0.0547790419933796,
+        "top_option_accuracy": 0.8333333333333334
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 8784.0,
+        "total_output_tokens": 6168.0,
+        "estimated_api_cost_usd": 0.00505008,
+        "total_latency_ms": 276748.1366042048,
+        "average_latency_ms_per_request": 3843.724119502844,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 6
+      },
+      "fallback_reason_breakdown": {
+        "none": 6
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|female|less than high school",
+      "record_count": 6,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.1135786787485858,
+        "safe_kl_divergence": 1.1682085594183256,
+        "probability_mae": 0.1402569439760966,
+        "probability_rmse": 0.1660581874997973,
+        "top_option_accuracy": 0.16666666666666666
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03290722356023453,
+        "safe_kl_divergence": 0.3144275925127474,
+        "probability_mae": 0.057684965677921966,
+        "probability_rmse": 0.07188971222498029,
+        "top_option_accuracy": 0.8333333333333334
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 8700.0,
+        "total_output_tokens": 4760.0,
+        "estimated_api_cost_usd": 0.0044352,
+        "total_latency_ms": 249602.20700409263,
+        "average_latency_ms_per_request": 3466.6973195012865,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 6
+      },
+      "fallback_reason_breakdown": {
+        "none": 6
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|female|associate/junior college",
+      "record_count": 5,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.060824240392463425,
+        "safe_kl_divergence": 1.2541196328283655,
+        "probability_mae": 0.10119617639676518,
+        "probability_rmse": 0.11605955199928983,
+        "top_option_accuracy": 0.6
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03856694029789143,
+        "safe_kl_divergence": 0.4922895210206223,
+        "probability_mae": 0.0670679979029688,
+        "probability_rmse": 0.07571499713608018,
+        "top_option_accuracy": 0.2
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 7440.0,
+        "total_output_tokens": 4400.0,
+        "estimated_api_cost_usd": 0.0039312,
+        "total_latency_ms": 224844.06808950007,
+        "average_latency_ms_per_request": 3747.401134825001,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 5
+      },
+      "fallback_reason_breakdown": {
+        "none": 5
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|female|graduate",
+      "record_count": 5,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.09211600533636162,
+        "safe_kl_divergence": 1.2325168084987526,
+        "probability_mae": 0.12361811356221557,
+        "probability_rmse": 0.14425734692890785,
+        "top_option_accuracy": 0.2
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.036398131188581796,
+        "safe_kl_divergence": 0.47029425206695763,
+        "probability_mae": 0.059300094274644034,
+        "probability_rmse": 0.07467293293359384,
+        "top_option_accuracy": 0.4
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 6876.0,
+        "total_output_tokens": 3708.0,
+        "estimated_api_cost_usd": 0.00348264,
+        "total_latency_ms": 194152.51449961215,
+        "average_latency_ms_per_request": 3235.8752416602024,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 5
+      },
+      "fallback_reason_breakdown": {
+        "none": 5
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|male|less than high school",
+      "record_count": 5,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07161658810133616,
+        "safe_kl_divergence": 0.7373690292329887,
+        "probability_mae": 0.10977260906075963,
+        "probability_rmse": 0.13245621729870666,
+        "top_option_accuracy": 0.4
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.031656496536385983,
+        "safe_kl_divergence": 0.21292570135652125,
+        "probability_mae": 0.05331970105359239,
+        "probability_rmse": 0.06442410201807126,
+        "top_option_accuracy": 0.8
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 7164.0,
+        "total_output_tokens": 4144.0,
+        "estimated_api_cost_usd": 0.0037463999999999996,
+        "total_latency_ms": 209017.64360256493,
+        "average_latency_ms_per_request": 3483.627393376082,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 5
+      },
+      "fallback_reason_breakdown": {
+        "none": 5
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|female|bachelor's",
+      "record_count": 5,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.05732062200615884,
+        "safe_kl_divergence": 0.6653290732939611,
+        "probability_mae": 0.07325462312475273,
+        "probability_rmse": 0.08642066773242585,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.019975919541489178,
+        "safe_kl_divergence": 0.19035734013146421,
+        "probability_mae": 0.040618423419893204,
+        "probability_rmse": 0.04932942723281643,
+        "top_option_accuracy": 0.6
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 7236.0,
+        "total_output_tokens": 5028.0,
+        "estimated_api_cost_usd": 0.004137839999999999,
+        "total_latency_ms": 220191.63650181144,
+        "average_latency_ms_per_request": 3669.860608363524,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 5
+      },
+      "fallback_reason_breakdown": {
+        "none": 5
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|male|bachelor's",
+      "record_count": 5,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.03395005370533556,
+        "safe_kl_divergence": 0.16416798511068426,
+        "probability_mae": 0.06161691974278325,
+        "probability_rmse": 0.06988961606142498,
+        "top_option_accuracy": 0.2
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.017303770652098913,
+        "safe_kl_divergence": 0.07379103168406552,
+        "probability_mae": 0.04393360394864509,
+        "probability_rmse": 0.050296947253472536,
+        "top_option_accuracy": 0.6
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 7344.0,
+        "total_output_tokens": 4496.0,
+        "estimated_api_cost_usd": 0.00394464,
+        "total_latency_ms": 218480.5443091318,
+        "average_latency_ms_per_request": 3641.3424051521965,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 5
+      },
+      "fallback_reason_breakdown": {
+        "none": 5
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|male|bachelor's",
+      "record_count": 5,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.060426564853762035,
+        "safe_kl_divergence": 0.27911357967393086,
+        "probability_mae": 0.08158285555963948,
+        "probability_rmse": 0.09691965392711424,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.025406992112905404,
+        "safe_kl_divergence": 0.11596834959508813,
+        "probability_mae": 0.046262041875045415,
+        "probability_rmse": 0.06050503139458154,
+        "top_option_accuracy": 0.6
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 7284.0,
+        "total_output_tokens": 4936.0,
+        "estimated_api_cost_usd": 0.00411264,
+        "total_latency_ms": 232740.15280697495,
+        "average_latency_ms_per_request": 3879.002546782916,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 5
+      },
+      "fallback_reason_breakdown": {
+        "none": 5
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|male|less than high school",
+      "record_count": 4,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08824747586176555,
+        "safe_kl_divergence": 0.8435076337553926,
+        "probability_mae": 0.09914180738381063,
+        "probability_rmse": 0.12386761174044869,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.06934016720456164,
+        "safe_kl_divergence": 0.9855377086308515,
+        "probability_mae": 0.0802882424691298,
+        "probability_rmse": 0.10209117706470187,
+        "top_option_accuracy": 0.5
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 5928.0,
+        "total_output_tokens": 3704.0,
+        "estimated_api_cost_usd": 0.0032155199999999995,
+        "total_latency_ms": 177849.6885970235,
+        "average_latency_ms_per_request": 3705.2018457713225,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 4
+      },
+      "fallback_reason_breakdown": {
+        "none": 4
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "18-29|female|bachelor's",
+      "record_count": 3,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07208322627064385,
+        "safe_kl_divergence": 1.0147861001881946,
+        "probability_mae": 0.07861182087679998,
+        "probability_rmse": 0.09429162190191942,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.019136991394532805,
+        "safe_kl_divergence": 0.2633581430553503,
+        "probability_mae": 0.03615797181223094,
+        "probability_rmse": 0.04315327412371972,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 4212.0,
+        "total_output_tokens": 2652.0,
+        "estimated_api_cost_usd": 0.0022931999999999996,
+        "total_latency_ms": 140239.02119603008,
+        "average_latency_ms_per_request": 3895.528366556391,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 3
+      },
+      "fallback_reason_breakdown": {
+        "none": 3
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "18-29|male|less than high school",
+      "record_count": 2,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08916010548599745,
+        "safe_kl_divergence": 0.47495854091225165,
+        "probability_mae": 0.1760919549386309,
+        "probability_rmse": 0.19429337245282263,
+        "top_option_accuracy": 0.5
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03647168345828336,
+        "safe_kl_divergence": 0.1945844904188566,
+        "probability_mae": 0.07053639938307532,
+        "probability_rmse": 0.07839573134198086,
+        "top_option_accuracy": 0.5
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.5,
+        "invalid_output_rate": 0.5,
+        "json_compliance_rate": 0.5,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 2664.0,
+        "total_output_tokens": 1152.0,
+        "estimated_api_cost_usd": 0.0012297600000000003,
+        "total_latency_ms": 69365.24429824203,
+        "average_latency_ms_per_request": 2890.218512426751,
+        "total_retry_count": 1.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 1,
+        "heuristic": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 1,
+        "json_schema_validation_failed": 1
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|male|graduate",
+      "record_count": 2,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.05526507567926467,
+        "safe_kl_divergence": 0.28310118082436564,
+        "probability_mae": 0.07232218241666598,
+        "probability_rmse": 0.08591443039393482,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.02677591481202766,
+        "safe_kl_divergence": 0.1250527417827508,
+        "probability_mae": 0.04170029424961494,
+        "probability_rmse": 0.05763506056693046,
+        "top_option_accuracy": 0.5
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 2892.0,
+        "total_output_tokens": 1962.0,
+        "estimated_api_cost_usd": 0.0016338,
+        "total_latency_ms": 91253.10910120606,
+        "average_latency_ms_per_request": 3802.212879216919,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 2
+      },
+      "fallback_reason_breakdown": {
+        "none": 2
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|female|bachelor's",
+      "record_count": 2,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.04132994664138835,
+        "safe_kl_divergence": 0.1626835372779154,
+        "probability_mae": 0.06324981589072076,
+        "probability_rmse": 0.09517473879701707,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.007940185894667667,
+        "safe_kl_divergence": 0.03283173611795367,
+        "probability_mae": 0.031926441541044036,
+        "probability_rmse": 0.03827425444479851,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 3000.0,
+        "total_output_tokens": 2112.0,
+        "estimated_api_cost_usd": 0.0017270400000000002,
+        "total_latency_ms": 93896.17379568517,
+        "average_latency_ms_per_request": 3912.3405748202154,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 2
+      },
+      "fallback_reason_breakdown": {
+        "none": 2
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|female|graduate",
+      "record_count": 2,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07052216114564717,
+        "safe_kl_divergence": 0.33891820792867183,
+        "probability_mae": 0.08539054175887223,
+        "probability_rmse": 0.10769358088487327,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.027891500462291774,
+        "safe_kl_divergence": 0.1228521022716024,
+        "probability_mae": 0.05318396033112039,
+        "probability_rmse": 0.0679998179176321,
+        "top_option_accuracy": 0.5
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 2868.0,
+        "total_output_tokens": 1940.0,
+        "estimated_api_cost_usd": 0.0016178399999999997,
+        "total_latency_ms": 83398.89400266111,
+        "average_latency_ms_per_request": 3474.953916777546,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 2
+      },
+      "fallback_reason_breakdown": {
+        "none": 2
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "18-29|female|less than high school",
+      "record_count": 1,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.032844924545047116,
+        "safe_kl_divergence": 0.1372471362234189,
+        "probability_mae": 0.06817004586635549,
+        "probability_rmse": 0.07407651633588641,
+        "top_option_accuracy": 1.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.04834580239234715,
+        "safe_kl_divergence": 0.22104252592015225,
+        "probability_mae": 0.07769385539016505,
+        "probability_rmse": 0.09205297244011847,
+        "top_option_accuracy": 0.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 1536.0,
+        "total_output_tokens": 968.0,
+        "estimated_api_cost_usd": 0.0008366400000000001,
+        "total_latency_ms": 43392.49969832599,
+        "average_latency_ms_per_request": 3616.041641527166,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 1
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "18-29|male|bachelor's",
+      "record_count": 1,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.03099037769371297,
+        "safe_kl_divergence": 0.12652569536147634,
+        "probability_mae": 0.062212369008870165,
+        "probability_rmse": 0.07143966964587575,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.04175567886283196,
+        "safe_kl_divergence": 0.17652283949431882,
+        "probability_mae": 0.07010187680326112,
+        "probability_rmse": 0.08306509063855352,
+        "top_option_accuracy": 0.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 1512.0,
+        "total_output_tokens": 1056.0,
+        "estimated_api_cost_usd": 0.00086688,
+        "total_latency_ms": 47846.238802187145,
+        "average_latency_ms_per_request": 3987.1865668489286,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 1
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "30-44|male|associate/junior college",
+      "record_count": 1,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08276795432944006,
+        "safe_kl_divergence": 0.46758376965572557,
+        "probability_mae": 0.09047084068223109,
+        "probability_rmse": 0.10269189268185543,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.01784004459302254,
+        "safe_kl_divergence": 0.08170902460535263,
+        "probability_mae": 0.03640276913478787,
+        "probability_rmse": 0.04521088433800466,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 1440.0,
+        "total_output_tokens": 774.0,
+        "estimated_api_cost_usd": 0.00072828,
+        "total_latency_ms": 37713.23330234736,
+        "average_latency_ms_per_request": 3142.76944186228,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 1
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "45-59|male|graduate",
+      "record_count": 1,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.01649002122017286,
+        "safe_kl_divergence": 0.07218706135996579,
+        "probability_mae": 0.03996598639455782,
+        "probability_rmse": 0.04780469763157444,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.01649002122017286,
+        "safe_kl_divergence": 0.07218706135996579,
+        "probability_mae": 0.03996598639455782,
+        "probability_rmse": 0.04780469763157444,
+        "top_option_accuracy": 0.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 1.0,
+        "invalid_output_rate": 1.0,
+        "json_compliance_rate": 0.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 1392.0,
+        "total_output_tokens": 888.0,
+        "estimated_api_cost_usd": 0.0007627199999999999,
+        "total_latency_ms": 39818.408901803195,
+        "average_latency_ms_per_request": 3318.200741816933,
+        "total_retry_count": 1.0
+      },
+      "actual_strategy_breakdown": {
+        "heuristic": 1
+      },
+      "fallback_reason_breakdown": {
+        "json_schema_validation_failed": 1
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|female|associate/junior college",
+      "record_count": 1,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07056871442641396,
+        "safe_kl_divergence": 0.3401622684126428,
+        "probability_mae": 0.0785405071119357,
+        "probability_rmse": 0.11591712414715052,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.014440885076482075,
+        "safe_kl_divergence": 0.061227667159853866,
+        "probability_mae": 0.03567099567099567,
+        "probability_rmse": 0.0386402255942706,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 1428.0,
+        "total_output_tokens": 796.0,
+        "estimated_api_cost_usd": 0.00073416,
+        "total_latency_ms": 37212.264999747276,
+        "average_latency_ms_per_request": 3101.022083312273,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 1
+      }
+    },
+    {
+      "slice_name": "population_signature_bucket",
+      "slice_value": "60+|male|graduate",
+      "record_count": 1,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.050079902569228577,
+        "safe_kl_divergence": 0.26429628378030645,
+        "probability_mae": 0.06482593037214887,
+        "probability_rmse": 0.07372004100659264,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.017282809778354273,
+        "safe_kl_divergence": 0.06977445106716729,
+        "probability_mae": 0.041582633053221296,
+        "probability_rmse": 0.04959144058498078,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 1380.0,
+        "total_output_tokens": 884.0,
+        "estimated_api_cost_usd": 0.0007576799999999999,
+        "total_latency_ms": 39992.29529872537,
+        "average_latency_ms_per_request": 3332.6912748937807,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 1
+      },
+      "fallback_reason_breakdown": {
+        "none": 1
+      }
+    }
+  ],
+  "option_count": [
+    {
+      "slice_name": "option_count",
+      "slice_value": "7",
+      "record_count": 193,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.0634494567357128,
+        "safe_kl_divergence": 0.5600667384111473,
+        "probability_mae": 0.07716690737322784,
+        "probability_rmse": 0.09744009346918373,
+        "top_option_accuracy": 0.11917098445595854
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.0282599824132747,
+        "safe_kl_divergence": 0.23924981114019364,
+        "probability_mae": 0.050148788261521436,
+        "probability_rmse": 0.06203132843955719,
+        "top_option_accuracy": 0.6062176165803109
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.010362694300518135,
+        "invalid_output_rate": 0.010362694300518135,
+        "json_compliance_rate": 0.9896373056994818,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 282396.0,
+        "total_output_tokens": 184644.0,
+        "estimated_api_cost_usd": 0.15662136,
+        "total_latency_ms": 8621531.375479884,
+        "average_latency_ms_per_request": 3722.595585267653,
+        "total_retry_count": 2.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 191,
+        "heuristic": 2
+      },
+      "fallback_reason_breakdown": {
+        "none": 191,
+        "json_schema_validation_failed": 2
+      }
+    },
+    {
+      "slice_name": "option_count",
+      "slice_value": "3",
+      "record_count": 57,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.09708574694202757,
+        "safe_kl_divergence": 0.6779199402393253,
+        "probability_mae": 0.24282988740302608,
+        "probability_rmse": 0.26996271017179746,
+        "top_option_accuracy": 1.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.011636317252302027,
+        "safe_kl_divergence": 0.10756176574474714,
+        "probability_mae": 0.060660559285005744,
+        "probability_rmse": 0.06682695591652711,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 69156.0,
+        "total_output_tokens": 15048.0,
+        "estimated_api_cost_usd": 0.02568384,
+        "total_latency_ms": 1417480.3862087429,
+        "average_latency_ms_per_request": 2072.3397459192147,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 57
+      },
+      "fallback_reason_breakdown": {
+        "none": 57
+      }
+    }
+  ],
+  "question_length_bucket": [
+    {
+      "slice_name": "question_length_bucket",
+      "slice_value": "short_1_3",
+      "record_count": 102,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.041649530649947794,
+        "safe_kl_divergence": 0.25842993615192583,
+        "probability_mae": 0.06433548338207853,
+        "probability_rmse": 0.07893546981283796,
+        "top_option_accuracy": 0.22549019607843138
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03282541961608025,
+        "safe_kl_divergence": 0.2289490515775622,
+        "probability_mae": 0.056021159273067646,
+        "probability_rmse": 0.06886642414448511,
+        "top_option_accuracy": 0.3627450980392157
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 154404.0,
+        "total_output_tokens": 105666.0,
+        "estimated_api_cost_usd": 0.08761284000000001,
+        "total_latency_ms": 4836282.673601061,
+        "average_latency_ms_per_request": 3951.21133464139,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 102
+      },
+      "fallback_reason_breakdown": {
+        "none": 102
+      }
+    },
+    {
+      "slice_name": "question_length_bucket",
+      "slice_value": "long_7_plus",
+      "record_count": 91,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.08788453872195488,
+        "safe_kl_divergence": 0.8981651321522526,
+        "probability_mae": 0.09154938261605453,
+        "probability_rmse": 0.11818153976530753,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.023142679174965177,
+        "safe_kl_divergence": 0.25079571746314316,
+        "probability_mae": 0.0435665702046235,
+        "probability_rmse": 0.05437001237469293,
+        "top_option_accuracy": 0.8791208791208791
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.02197802197802198,
+        "invalid_output_rate": 0.02197802197802198,
+        "json_compliance_rate": 0.978021978021978,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 127992.0,
+        "total_output_tokens": 78978.0,
+        "estimated_api_cost_usd": 0.06900851999999999,
+        "total_latency_ms": 3785248.7018788233,
+        "average_latency_ms_per_request": 3466.3449650904977,
+        "total_retry_count": 2.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 89,
+        "heuristic": 2
+      },
+      "fallback_reason_breakdown": {
+        "none": 89,
+        "json_schema_validation_failed": 2
+      }
+    },
+    {
+      "slice_name": "question_length_bucket",
+      "slice_value": "medium_4_6",
+      "record_count": 57,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.09708574694202757,
+        "safe_kl_divergence": 0.6779199402393253,
+        "probability_mae": 0.24282988740302608,
+        "probability_rmse": 0.26996271017179746,
+        "top_option_accuracy": 1.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.011636317252302027,
+        "safe_kl_divergence": 0.10756176574474714,
+        "probability_mae": 0.060660559285005744,
+        "probability_rmse": 0.06682695591652711,
+        "top_option_accuracy": 1.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 69156.0,
+        "total_output_tokens": 15048.0,
+        "estimated_api_cost_usd": 0.02568384,
+        "total_latency_ms": 1417480.3862087429,
+        "average_latency_ms_per_request": 2072.3397459192147,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 57
+      },
+      "fallback_reason_breakdown": {
+        "none": 57
+      }
+    }
+  ],
+  "fallback_happened": [
+    {
+      "slice_name": "fallback_happened",
+      "slice_value": "fallback_no",
+      "record_count": 248,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07137090725787838,
+        "safe_kl_divergence": 0.5899923487168455,
+        "probability_mae": 0.11539959009851215,
+        "probability_rmse": 0.13733730225086577,
+        "top_option_accuracy": 0.3225806451612903
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.024345963562132786,
+        "safe_kl_divergence": 0.20923394988827698,
+        "probability_mae": 0.05250382924655049,
+        "probability_rmse": 0.0630928278828483,
+        "top_option_accuracy": 0.7016129032258065
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 348732.0,
+        "total_output_tokens": 197916.0,
+        "estimated_api_cost_usd": 0.18076968,
+        "total_latency_ms": 9955228.558487259,
+        "average_latency_ms_per_request": 3345.1708865884607,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 248
+      },
+      "fallback_reason_breakdown": {
+        "none": 248
+      }
+    },
+    {
+      "slice_name": "fallback_happened",
+      "slice_value": "fallback_yes",
+      "record_count": 2,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.03982386286715072,
+        "safe_kl_divergence": 0.2081073126076335,
+        "probability_mae": 0.05770918028722208,
+        "probability_rmse": 0.06708078056510228,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03982386286715072,
+        "safe_kl_divergence": 0.2081073126076335,
+        "probability_mae": 0.05770918028722208,
+        "probability_rmse": 0.06708078056510228,
+        "top_option_accuracy": 0.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 1.0,
+        "invalid_output_rate": 1.0,
+        "json_compliance_rate": 0.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 2820.0,
+        "total_output_tokens": 1776.0,
+        "estimated_api_cost_usd": 0.00153552,
+        "total_latency_ms": 83783.20320136845,
+        "average_latency_ms_per_request": 3490.9668000570186,
+        "total_retry_count": 2.0
+      },
+      "actual_strategy_breakdown": {
+        "heuristic": 2
+      },
+      "fallback_reason_breakdown": {
+        "json_schema_validation_failed": 2
+      }
+    }
+  ],
+  "strict_json_success": [
+    {
+      "slice_name": "strict_json_success",
+      "slice_value": "json_success",
+      "record_count": 248,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.07137090725787838,
+        "safe_kl_divergence": 0.5899923487168455,
+        "probability_mae": 0.11539959009851215,
+        "probability_rmse": 0.13733730225086577,
+        "top_option_accuracy": 0.3225806451612903
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.024345963562132786,
+        "safe_kl_divergence": 0.20923394988827698,
+        "probability_mae": 0.05250382924655049,
+        "probability_rmse": 0.0630928278828483,
+        "top_option_accuracy": 0.7016129032258065
+      },
+      "deepseek_operational": {
+        "fallback_rate": 0.0,
+        "invalid_output_rate": 0.0,
+        "json_compliance_rate": 1.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 348732.0,
+        "total_output_tokens": 197916.0,
+        "estimated_api_cost_usd": 0.18076968,
+        "total_latency_ms": 9955228.558487259,
+        "average_latency_ms_per_request": 3345.1708865884607,
+        "total_retry_count": 0.0
+      },
+      "actual_strategy_breakdown": {
+        "deepseek_direct": 248
+      },
+      "fallback_reason_breakdown": {
+        "none": 248
+      }
+    },
+    {
+      "slice_name": "strict_json_success",
+      "slice_value": "json_failure",
+      "record_count": 2,
+      "heuristic_prompt_only": {
+        "js_divergence": 0.03982386286715072,
+        "safe_kl_divergence": 0.2081073126076335,
+        "probability_mae": 0.05770918028722208,
+        "probability_rmse": 0.06708078056510228,
+        "top_option_accuracy": 0.0
+      },
+      "llm_direct_option_probabilities": {
+        "js_divergence": 0.03982386286715072,
+        "safe_kl_divergence": 0.2081073126076335,
+        "probability_mae": 0.05770918028722208,
+        "probability_rmse": 0.06708078056510228,
+        "top_option_accuracy": 0.0
+      },
+      "deepseek_operational": {
+        "fallback_rate": 1.0,
+        "invalid_output_rate": 1.0,
+        "json_compliance_rate": 0.0,
+        "served_invalid_flag_rate": 0.0,
+        "total_input_tokens": 2820.0,
+        "total_output_tokens": 1776.0,
+        "estimated_api_cost_usd": 0.00153552,
+        "total_latency_ms": 83783.20320136845,
+        "average_latency_ms_per_request": 3490.9668000570186,
+        "total_retry_count": 2.0
+      },
+      "actual_strategy_breakdown": {
+        "heuristic": 2
+      },
+      "fallback_reason_breakdown": {
+        "json_schema_validation_failed": 2
+      }
+    }
+  ]
+}

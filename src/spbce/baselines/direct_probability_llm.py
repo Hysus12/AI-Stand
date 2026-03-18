@@ -56,6 +56,9 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
             "temperature_step": 0.05,
             "prompt_mode": "direct_option_probabilities",
             "strict_json_only": self.strict_json_only,
+            "response_schema_mode": (
+                "exact_option_key_map" if self.strict_json_only else "best_effort"
+            ),
         }
 
     def _build_probability_prompt(self, request: PredictSurveyRequest, template_name: str) -> str:
@@ -120,11 +123,39 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
             return scored[0][1]
         return None
 
+    def _parse_strict_json_distribution(
+        self,
+        final_text: str,
+        options: list[str],
+    ) -> tuple[list[float] | None, str, bool, bool]:
+        for candidate in self._extract_json_candidates(final_text):
+            try:
+                payload = json.loads(candidate)
+            except json.JSONDecodeError:
+                payload = None
+            if isinstance(payload, dict):
+                if set(payload) != set(options) or len(payload) != len(options):
+                    return None, "json_schema_mismatch", False, False
+                probabilities: list[float] = []
+                for option in options:
+                    probability = self._coerce_probability(payload.get(option))
+                    if probability is None or probability < 0:
+                        return None, "json_invalid_probability_value", False, False
+                    probabilities.append(probability)
+                if sum(probabilities) <= 0:
+                    return None, "json_zero_mass", False, False
+                distribution = normalize_distribution(probabilities).tolist()
+                return distribution, "json_schema_exact", True, True
+        return None, "invalid_json", False, False
+
     def _parse_distribution_response(
         self,
         final_text: str,
         options: list[str],
     ) -> tuple[list[float] | None, str, bool, bool]:
+        if self.strict_json_only:
+            return self._parse_strict_json_distribution(final_text, options)
+
         for candidate in self._extract_json_candidates(final_text):
             try:
                 payload = json.loads(candidate)
@@ -143,9 +174,6 @@ class DirectProbabilityLlmBaseline(LocalLlmPersonaBaseline):
                     ).tolist()
                     return distribution, "json", True, True
                 return None, "json_invalid_option_payload", False, True
-
-        if self.strict_json_only:
-            return None, "invalid_json", False, False
 
         regex_scores = {option: 0.0 for option in options}
         for option in options:

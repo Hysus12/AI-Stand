@@ -1,0 +1,43 @@
+{
+  "heuristic_prompt_only": {
+    "predictor": "heuristic_prompt_only",
+    "js_divergence": 0.07111853090275255,
+    "safe_kl_divergence": 0.5869372684279719,
+    "probability_mae": 0.11493806682002183,
+    "probability_rmse": 0.13677525007737967,
+    "top_option_accuracy": 0.32,
+    "invalid_output_rate": 0.0,
+    "json_compliance_rate": 0.0,
+    "fallback_rate": 0.0,
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "estimated_api_cost_usd": 0.0,
+    "total_latency_ms": 0.0,
+    "average_latency_ms_per_request": 0.0,
+    "total_retry_count": 0.0
+  },
+  "llm_direct_option_probabilities": {
+    "predictor": "llm_direct_option_probabilities",
+    "js_divergence": 0.02446978675657293,
+    "safe_kl_divergence": 0.20922493679003182,
+    "probability_mae": 0.052545472054875864,
+    "probability_rmse": 0.06312473150430634,
+    "top_option_accuracy": 0.696,
+    "fallback_rate": 0.008,
+    "invalid_output_rate": 0.008,
+    "json_compliance_rate": 0.992,
+    "served_invalid_flag_rate": 0.0,
+    "total_input_tokens": 351552.0,
+    "total_output_tokens": 199692.0,
+    "estimated_api_cost_usd": 0.1823052,
+    "total_latency_ms": 10039011.761688627,
+    "average_latency_ms_per_request": 3346.337253896209,
+    "total_retry_count": 2.0
+  },
+  "delta_js_deepseek_minus_heuristic": -0.04664874414617962,
+  "delta_mae_deepseek_minus_heuristic": -0.06239259476514597,
+  "delta_rmse_deepseek_minus_heuristic": -0.07365051857307334,
+  "delta_top1_deepseek_minus_heuristic": 0.37599999999999995,
+  "recommendation": "A",
+  "stop_combiner_research": true
+}

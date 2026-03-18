@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "formal_manifest_record_count": 250,
+  "missing_test_record_ids": [],
+  "blacklisted_test_record_ids": [],
+  "few_shot_pool": {
+    "pool_size": 1738,
+    "excluded_records": 0,
+    "exclusion_reason_counts": {},
+    "test_question_ids": [
+      "natcrime",
+      "partyid",
+      "polviews"
+    ],
+    "test_normalized_question_texts": [
+      "halting rising crime rate",
+      "political party affiliation",
+      "think of self as liberal or conservative"
+    ]
+  },
+  "few_shot_overlap_failures": {
+    "same_question_id": [],
+    "same_normalized_question_text": []
+  },
+  "test_question_counts": {
+    "natcrime": 57,
+    "partyid": 102,
+    "polviews": 91
+  },
+  "test_year_min": 1972,
+  "test_year_max": 2024
+}

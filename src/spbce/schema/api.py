@@ -39,6 +39,36 @@ class PredictSurveyResponse(BaseModel):
     calibration_notes: list[str]
 
 
+class MvpCostLatencySummary(BaseModel):
+    total_input_tokens: int = 0
+    total_output_tokens: int = 0
+    estimated_api_cost_usd: float = 0.0
+    total_latency_ms: float = 0.0
+    average_latency_ms_per_request: float = 0.0
+    request_count: int = 0
+    retry_count: int = 0
+
+
+class MvpPredictSurveyRequest(PredictSurveyRequest):
+    strategy: str | None = None
+
+
+class MvpPredictSurveyResponse(BaseModel):
+    distribution: dict[str, float]
+    top_option: str
+    confidence: float
+    uncertainty: float
+    invalid_flag: bool
+    requested_strategy: str
+    actual_strategy_used: str
+    fallback_happened: bool
+    fallback_reason: str | None = None
+    metadata: dict[str, Any] = Field(default_factory=dict)
+    cost_latency_summary: MvpCostLatencySummary = Field(
+        default_factory=MvpCostLatencySummary
+    )
+
+
 class PredictBehaviorRequest(BaseModel):
     survey_payload: PredictSurveyRequest
     context: SurveyContext = Field(default_factory=SurveyContext)

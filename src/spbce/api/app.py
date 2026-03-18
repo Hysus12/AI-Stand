@@ -5,8 +5,11 @@ from functools import lru_cache
 import uvicorn
 from fastapi import FastAPI
 
+from spbce.inference.mvp import MvpInferenceEngine
 from spbce.inference.pipeline import SurveyInferencePipeline
 from spbce.schema.api import (
+    MvpPredictSurveyRequest,
+    MvpPredictSurveyResponse,
     PredictBehaviorRequest,
     PredictBehaviorResponse,
     PredictSurveyRequest,
@@ -28,6 +31,11 @@ def get_pipeline() -> SurveyInferencePipeline:
     )
 
 
+@lru_cache
+def get_mvp_engine() -> MvpInferenceEngine:
+    return MvpInferenceEngine()
+
+
 @app.get("/healthz")
 def healthcheck() -> dict[str, str]:
     return {"status": "ok"}
@@ -36,6 +44,18 @@ def healthcheck() -> dict[str, str]:
 @app.post("/predict-survey", response_model=PredictSurveyResponse)
 def predict_survey(payload: PredictSurveyRequest) -> PredictSurveyResponse:
     return get_pipeline().predict_survey(payload)
+
+
+@app.post("/mvp/predict-survey", response_model=MvpPredictSurveyResponse)
+def predict_survey_mvp(payload: MvpPredictSurveyRequest) -> MvpPredictSurveyResponse:
+    request = PredictSurveyRequest(
+        question_text=payload.question_text,
+        options=payload.options,
+        population_text=payload.population_text,
+        population_struct=payload.population_struct,
+        context=payload.context,
+    )
+    return get_mvp_engine().predict(request, strategy=payload.strategy)
 
 
 @app.post("/predict-behavior", response_model=PredictBehaviorResponse)

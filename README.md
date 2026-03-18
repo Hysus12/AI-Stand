@@ -111,14 +111,13 @@ request = engine.build_request(
     options=["Can be trusted", "Depends", "Need to be careful"],
     population_text="Adults age 30-44 in the United States",
 )
-response = engine.predict(request, strategy="heuristic")
+response = engine.predict(request)
 ```
 
 CLI example:
 
 ```bash
 python scripts/run_mvp_inference.py \
-  --strategy heuristic \
   --question-text "Can most people be trusted, or do you need to be careful?" \
   --options "Can be trusted" "Depends" "Need to be careful" \
   --population-text "Adults age 30-44 in the United States"
@@ -126,13 +125,41 @@ python scripts/run_mvp_inference.py \
 
 Supported MVP strategies:
 
-- `heuristic`: current default and current honest production-safe baseline
-- `deepseek_direct`: strict-JSON DeepSeek direct probability prediction
+- `deepseek_direct`: current default MVP path with strict JSON validation
+- `heuristic`: fallback path and manual override
 - `weighted_hybrid_025`: experimental weighted blend with `llm_weight=0.25`
-- `learned_hybrid`: learned combiner backed by a fitted artifact
+- `learned_hybrid`: experimental learned combiner backed by a fitted artifact
 - `best_hybrid`: deprecated alias for `weighted_hybrid_025`; kept only for backward compatibility and not empirically best
 
-Example learned hybrid invocation:
+DeepSeek direct will automatically fall back to `heuristic` when any of these happen:
+
+- provider error
+- timeout
+- empty output
+- JSON schema validation failure
+- invalid output / parser failure
+
+CLI with explicit fallback-related controls:
+
+```bash
+python scripts/run_mvp_inference.py \
+  --strategy deepseek_direct \
+  --request-timeout-seconds 30 \
+  --max-retry-attempts 1 \
+  --question-text "Can most people be trusted, or do you need to be careful?" \
+  --options "Can be trusted" "Depends" "Need to be careful" \
+  --population-text "Adults age 30-44 in the United States"
+```
+
+FastAPI MVP endpoint:
+
+```bash
+curl -X POST http://127.0.0.1:8000/mvp/predict-survey \
+  -H "Content-Type: application/json" \
+  -d "{\"question_text\":\"Can most people be trusted, or do you need to be careful?\",\"options\":[\"Can be trusted\",\"Depends\",\"Need to be careful\"],\"population_text\":\"Adults age 30-44 in the United States\",\"strategy\":\"deepseek_direct\"}"
+```
+
+Example experimental learned hybrid invocation:
 
 ```bash
 python scripts/run_mvp_inference.py \
