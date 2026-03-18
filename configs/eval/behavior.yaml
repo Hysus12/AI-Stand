@@ -1,0 +1,12 @@
+metrics:
+  - mae
+  - rmse
+  - r2
+  - spearman
+required_models:
+  - human_only
+  - ai_only
+  - hybrid
+split_strategies:
+  - behavior_group_aware
+  - behavior_temporal

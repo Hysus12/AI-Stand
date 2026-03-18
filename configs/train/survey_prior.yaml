@@ -1,0 +1,10 @@
+model_name: simple_supervised
+random_state: 42
+text_max_features: 8000
+population_keys:
+  - country
+  - population_struct.age_band
+  - population_struct.gender
+calibration:
+  enabled: true
+  method: temperature_scaling

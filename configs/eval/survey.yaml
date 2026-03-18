@@ -1,0 +1,10 @@
+primary_split: group_aware
+metrics:
+  - js_divergence
+  - safe_kl_divergence
+  - probability_mae
+  - probability_rmse
+  - top_option_accuracy
+ood:
+  enabled: true
+  text_distance_quantile: 0.95

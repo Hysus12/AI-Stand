@@ -1,0 +1,4 @@
+dataset_id: llm_global_opinions
+source_hf_id: Anthropic/llm_global_opinions
+output_path: data/interim/llm_global_opinions.jsonl
+max_records: null

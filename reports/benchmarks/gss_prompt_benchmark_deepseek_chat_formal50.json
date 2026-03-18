@@ -1,0 +1,5483 @@
+{
+  "split": "held_out_question",
+  "num_test_records": 50,
+  "env_file_used": "D:\\dev\\Gnosis\\api.env",
+  "env_providers_available": [
+    "anthropic",
+    "deepseek",
+    "openai"
+  ],
+  "llm_provider": "openai_compatible",
+  "llm_model": "deepseek-chat",
+  "base_url": "https://api.deepseek.com",
+  "formal_manifest": "data/processed/gss_survey_splits/formal_prompt_holdout_50.json",
+  "anti_leakage_audit_output": "reports/audits/formal_prompt_holdout_50_audit.json",
+  "anti_leakage_audit_status": "pass",
+  "generation_parameters": {
+    "top_p": 0.95,
+    "max_tokens": 128,
+    "thinking_sent": false,
+    "reasoning_effort": "none",
+    "strict_direct_json": true,
+    "persona_num_samples_per_prompt": 4,
+    "persona_temperature_base": 0.9,
+    "persona_temperature_step": 0.05,
+    "direct_probability_temperature_base": 0.2,
+    "direct_probability_temperature_step": 0.05
+  },
+  "results": [
+    {
+      "predictor": "heuristic_prompt_only",
+      "js_divergence": 0.03401377952155724,
+      "safe_kl_divergence": 0.15041957611672535,
+      "probability_mae": 0.14123188680026164,
+      "probability_rmse": 0.15604118542792375,
+      "top_option_accuracy": 0.44,
+      "sampling_variance": 0.0,
+      "prompt_sensitivity_js": 0.0,
+      "final_text_present_rate": 1.0,
+      "used_thinking_fallback_rate": 0.0,
+      "invalid_output_rate": 0.0,
+      "json_compliance_rate": 0.0,
+      "parser_failure_rate": 0.0,
+      "scored_record_count": 50,
+      "scored_record_rate": 1.0,
+      "total_input_tokens": 0,
+      "total_output_tokens": 0,
+      "estimated_api_cost_usd": 0.0,
+      "estimated_cost_per_valid_record_usd": 0.0,
+      "total_runtime_seconds": 0.008570600301027298,
+      "average_latency_ms_per_request": 0.0,
+      "p50_latency_ms": 0.0,
+      "p95_latency_ms": 0.0
+    },
+    {
+      "predictor": "llm_zero_shot_persona",
+      "js_divergence": 0.31763592575069405,
+      "safe_kl_divergence": 1.6543425718234233,
+      "probability_mae": 0.41298263064141216,
+      "probability_rmse": 0.452992474009837,
+      "top_option_accuracy": 0.18,
+      "sampling_variance": 0.10055555555555556,
+      "prompt_sensitivity_js": 0.32901256256413136,
+      "final_text_present_rate": 1.0,
+      "used_thinking_fallback_rate": 0.0,
+      "invalid_output_rate": 0.0,
+      "json_compliance_rate": 0.0,
+      "parser_failure_rate": 0.0,
+      "scored_record_count": 50,
+      "scored_record_rate": 1.0,
+      "total_input_tokens": 38236,
+      "total_output_tokens": 1705,
+      "estimated_api_cost_usd": 0.011422179999999997,
+      "estimated_cost_per_valid_record_usd": 0.00022844359999999993,
+      "total_runtime_seconds": 652.7189341997728,
+      "average_latency_ms_per_request": 1014.6038014891868,
+      "p50_latency_ms": 985.6516001746058,
+      "p95_latency_ms": 1330.9218995273113,
+      "generation_config": {
+        "provider": "openai_compatible",
+        "model": "deepseek-chat",
+        "base_url": "https://api.deepseek.com",
+        "temperature_base": 0.9,
+        "temperature_step": 0.05,
+        "top_p": 0.95,
+        "max_tokens": 128,
+        "thinking_sent": false,
+        "reasoning_effort": "none",
+        "num_samples_per_prompt": 4
+      },
+      "raw_response_examples": [
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 0,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 1,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 2,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 3,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 0,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 1,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 2,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 3,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 0,
+          "temperature": 1.0,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 1,
+          "temperature": 1.0,
+          "raw_response": "try to be helpful",
+          "final_text": "try to be helpful",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "try to be helpful"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 2,
+          "temperature": 1.0,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 3,
+          "temperature": 1.0,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 0,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 1,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 2,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 3,
+          "temperature": 0.9,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 0,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 1,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 2,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 3,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        }
+      ],
+      "raw_response_diversity_by_record": [
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "713c19e86ab468376cf7ea13094c63c3592317c2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "41a7b79b59450feccd4fab590eeab2f4629fba34",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "d2b938bb3f97dfa84fd5aea944ba4a224a3be210",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "6a50a936534ad64af76d50242df7ecaa3606c6b6",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "a896d779a56af8b8d6e3b30cccb1a056fe2b0e34",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "af9b24b510024fad7d3696d825d721e6a665a284",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9059b83a506c8734c0a8465b49f0343ae8ce779b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9e4a6bcf2352aa1e7334ec7a9462669e9949cfab",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "6aebdfd0724ec192ab1f7b242c6cfd19f94dc81b",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "79e735c6dd2a99a714b011bd6db4bd2e11859cdd",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "34afaf68fe628f09809432e670c582a67a22a1d0",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "f44438078e6d84110acc33fa899d74ddfa787d57",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "1813fbd24f6ab7b4e23c8b687f3f88a8c4be498d",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "dbc3f6a01523607bf20dbfa454e35eb244a71242",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "ec320d8346046cba9b39e259bb461549229ecb37",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "377c912730c006c039cf3339664855995b31bf34",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "07197ca7054cf1aa203f11a4509cd42e912517c2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "cc92be86d8886b66c82d1a06fa96226d7b8a1109",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "d06b8e213bf9733ef43b96aa59cfccff159a1140",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "702e0cefe4bb1040203f925fc409f40bf49ef35c",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "5d1b01d3741c3837ca55e639a2b84a09f95728f2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "3168121518b46bf49a81601a5dfaccee61d299e5",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "8e6bd6a5fc156f04bb331c20b8ab6b4240f6c33b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "35d74187138f2fedd0612e8ee8695ec56acc8592",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9ac21c6e2e88af5b0e708536bdfecc26df9ebca2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "bdbf69dfe1dc7d4cb9c6a8da45501ea5f9950b66",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "7b38a3658630684d8d33e45fa4f2573720d285c3",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "06863b7eba605b40c8e73b01d5bfb4853d9aa321",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "bc6fb5171048d7e689a8b04d4734b7575f899fed",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 3,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "59d916f0f4165884fb2f4bbf895181c14fe9fb4c",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "130e70b07bd20f2ff81f9b42f70c86e20cab5858",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "869c1ab468b3a8394f73fe08ebe94624d115c601",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "957f837203c046d85a5d7abce4f4a6471c220a8f",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "4038f94e273e36ac22d2202eae53267ab072739b",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "877f1e8ec38699ddc75beb391c363ca262d5b170",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "555d25c534e7d045709551a6330c70ac558a34f3",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "a9a4f3de915e38ff9261274f4013356a3319d8f2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "67e7f8786299ba13f444ac25b403e78913ea2397",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "09b5b9e338f2e99147dda75c1b39fca4eb824536",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "fd38ac4f17fec99a4971cc05707af192ff97acc6",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "67ebd0b4c1da5c7308e78adeeabe2e476d7ad235",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 3,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "f05fea59d0f4d2c4c746006cdfd28776554d9c96",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "34642f95715e2955dd359bce799daec48109b92f",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "37da568404947495731282f4773738eaabecd973",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "4da96383b81c411c8cad59028405e66e5cf5fd7a",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "289038a59c1ba570b000eae2d035eea3a0028d6a",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "ed7524108e453d99bf077e0d18172b016e94fe9b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "48cdd7abf0fc511dac2cdaaab387068471f49648",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predictor": "llm_few_shot_persona",
+      "js_divergence": 0.19528788271770686,
+      "safe_kl_divergence": 0.7402892449564452,
+      "probability_mae": 0.29310444977841926,
+      "probability_rmse": 0.33564376127217044,
+      "top_option_accuracy": 0.46,
+      "sampling_variance": 0.047037037037037044,
+      "prompt_sensitivity_js": 0.15843659658504627,
+      "final_text_present_rate": 1.0,
+      "used_thinking_fallback_rate": 0.0,
+      "invalid_output_rate": 0.0,
+      "json_compliance_rate": 0.0,
+      "parser_failure_rate": 0.0,
+      "scored_record_count": 50,
+      "scored_record_rate": 1.0,
+      "total_input_tokens": 96148,
+      "total_output_tokens": 2503,
+      "estimated_api_cost_usd": 0.027972700000000003,
+      "estimated_cost_per_valid_record_usd": 0.000559454,
+      "total_runtime_seconds": 677.5141886994243,
+      "average_latency_ms_per_request": 1055.8164359955117,
+      "p50_latency_ms": 1027.2498996928334,
+      "p95_latency_ms": 1408.46629999578,
+      "generation_config": {
+        "provider": "openai_compatible",
+        "model": "deepseek-chat",
+        "base_url": "https://api.deepseek.com",
+        "temperature_base": 0.9,
+        "temperature_step": 0.05,
+        "top_p": 0.95,
+        "max_tokens": 128,
+        "thinking_sent": false,
+        "reasoning_effort": "none",
+        "num_samples_per_prompt": 4
+      },
+      "raw_response_examples": [
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 0,
+          "temperature": 0.9,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 1,
+          "temperature": 0.9,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 2,
+          "temperature": 0.9,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "direct",
+          "sample_index": 3,
+          "temperature": 0.9,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 0,
+          "temperature": 0.9500000000000001,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 1,
+          "temperature": 0.9500000000000001,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 2,
+          "temperature": 0.9500000000000001,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "deliberative",
+          "sample_index": 3,
+          "temperature": 0.9500000000000001,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 0,
+          "temperature": 1.0,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 1,
+          "temperature": 1.0,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 2,
+          "temperature": 1.0,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "strict",
+          "sample_index": 3,
+          "temperature": 1.0,
+          "raw_response": "looking out for themselves",
+          "final_text": "looking out for themselves",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "looking out for themselves"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 0,
+          "temperature": 0.9,
+          "raw_response": "would try to be fair",
+          "final_text": "would try to be fair",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "would try to be fair"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 1,
+          "temperature": 0.9,
+          "raw_response": "would try to be fair",
+          "final_text": "would try to be fair",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "would try to be fair"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 2,
+          "temperature": 0.9,
+          "raw_response": "would try to be fair",
+          "final_text": "would try to be fair",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "would try to be fair"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "direct",
+          "sample_index": 3,
+          "temperature": 0.9,
+          "raw_response": "would try to be fair",
+          "final_text": "would try to be fair",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "would try to be fair"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 0,
+          "temperature": 0.9500000000000001,
+          "raw_response": "would take advantage of you",
+          "final_text": "would take advantage of you",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "would take advantage of you"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 1,
+          "temperature": 0.9500000000000001,
+          "raw_response": "would try to be fair",
+          "final_text": "would try to be fair",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "would try to be fair"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 2,
+          "temperature": 0.9500000000000001,
+          "raw_response": "depends",
+          "final_text": "depends",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "depends"
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "deliberative",
+          "sample_index": 3,
+          "temperature": 0.9500000000000001,
+          "raw_response": "would take advantage of you",
+          "final_text": "would take advantage of you",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "exact",
+          "invalid_output": false,
+          "parsed_option": "would take advantage of you"
+        }
+      ],
+      "raw_response_diversity_by_record": [
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 3,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "713c19e86ab468376cf7ea13094c63c3592317c2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "41a7b79b59450feccd4fab590eeab2f4629fba34",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "d2b938bb3f97dfa84fd5aea944ba4a224a3be210",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "6a50a936534ad64af76d50242df7ecaa3606c6b6",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 3,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "a896d779a56af8b8d6e3b30cccb1a056fe2b0e34",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "af9b24b510024fad7d3696d825d721e6a665a284",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9059b83a506c8734c0a8465b49f0343ae8ce779b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9e4a6bcf2352aa1e7334ec7a9462669e9949cfab",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "6aebdfd0724ec192ab1f7b242c6cfd19f94dc81b",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "79e735c6dd2a99a714b011bd6db4bd2e11859cdd",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "34afaf68fe628f09809432e670c582a67a22a1d0",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "f44438078e6d84110acc33fa899d74ddfa787d57",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "1813fbd24f6ab7b4e23c8b687f3f88a8c4be498d",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "dbc3f6a01523607bf20dbfa454e35eb244a71242",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "ec320d8346046cba9b39e259bb461549229ecb37",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "377c912730c006c039cf3339664855995b31bf34",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "07197ca7054cf1aa203f11a4509cd42e912517c2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "cc92be86d8886b66c82d1a06fa96226d7b8a1109",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "d06b8e213bf9733ef43b96aa59cfccff159a1140",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "702e0cefe4bb1040203f925fc409f40bf49ef35c",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "5d1b01d3741c3837ca55e639a2b84a09f95728f2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "3168121518b46bf49a81601a5dfaccee61d299e5",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "8e6bd6a5fc156f04bb331c20b8ab6b4240f6c33b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "35d74187138f2fedd0612e8ee8695ec56acc8592",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9ac21c6e2e88af5b0e708536bdfecc26df9ebca2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "bdbf69dfe1dc7d4cb9c6a8da45501ea5f9950b66",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "7b38a3658630684d8d33e45fa4f2573720d285c3",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "06863b7eba605b40c8e73b01d5bfb4853d9aa321",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "bc6fb5171048d7e689a8b04d4734b7575f899fed",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "59d916f0f4165884fb2f4bbf895181c14fe9fb4c",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "130e70b07bd20f2ff81f9b42f70c86e20cab5858",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "869c1ab468b3a8394f73fe08ebe94624d115c601",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "957f837203c046d85a5d7abce4f4a6471c220a8f",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "4038f94e273e36ac22d2202eae53267ab072739b",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "877f1e8ec38699ddc75beb391c363ca262d5b170",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "555d25c534e7d045709551a6330c70ac558a34f3",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "a9a4f3de915e38ff9261274f4013356a3319d8f2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "67e7f8786299ba13f444ac25b403e78913ea2397",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "09b5b9e338f2e99147dda75c1b39fca4eb824536",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "fd38ac4f17fec99a4971cc05707af192ff97acc6",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "67ebd0b4c1da5c7308e78adeeabe2e476d7ad235",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "f05fea59d0f4d2c4c746006cdfd28776554d9c96",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "34642f95715e2955dd359bce799daec48109b92f",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 3,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "37da568404947495731282f4773738eaabecd973",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "4da96383b81c411c8cad59028405e66e5cf5fd7a",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "289038a59c1ba570b000eae2d035eea3a0028d6a",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "ed7524108e453d99bf077e0d18172b016e94fe9b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "48cdd7abf0fc511dac2cdaaab387068471f49648",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "direct": {
+              "temperature": 0.9,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "deliberative": {
+              "temperature": 0.9500000000000001,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "strict": {
+              "temperature": 1.0,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        }
+      ],
+      "few_shot_pool": {
+        "pool_size": 1922,
+        "excluded_records": 0,
+        "exclusion_reason_counts": {},
+        "test_question_ids": [
+          "fair",
+          "helpful"
+        ],
+        "test_normalized_question_texts": [
+          "people fair or try to take advantage",
+          "people helpful or looking out for selves"
+        ]
+      }
+    },
+    {
+      "predictor": "llm_direct_option_probabilities",
+      "js_divergence": 0.05315715434555884,
+      "safe_kl_divergence": 0.2898608608100991,
+      "probability_mae": 0.15635890066240138,
+      "probability_rmse": 0.17549958105263389,
+      "top_option_accuracy": 0.56,
+      "sampling_variance": 0.0026101851851851854,
+      "prompt_sensitivity_js": 0.007320906088535398,
+      "final_text_present_rate": 1.0,
+      "used_thinking_fallback_rate": 0.0,
+      "invalid_output_rate": 0.0,
+      "json_compliance_rate": 1.0,
+      "parser_failure_rate": 0.0,
+      "scored_record_count": 50,
+      "scored_record_rate": 1.0,
+      "total_input_tokens": 64236,
+      "total_output_tokens": 16230,
+      "estimated_api_cost_usd": 0.02480267999999999,
+      "estimated_cost_per_valid_record_usd": 0.0004960535999999998,
+      "total_runtime_seconds": 1005.3756015002728,
+      "average_latency_ms_per_request": 1603.4268910313647,
+      "p50_latency_ms": 1569.1472999751568,
+      "p95_latency_ms": 1995.954000391066,
+      "generation_config": {
+        "provider": "openai_compatible",
+        "model": "deepseek-chat",
+        "base_url": "https://api.deepseek.com",
+        "temperature_base": 0.2,
+        "temperature_step": 0.05,
+        "top_p": 0.95,
+        "max_tokens": 128,
+        "thinking_sent": false,
+        "reasoning_effort": "none",
+        "num_samples_per_prompt": 4,
+        "prompt_mode": "direct_option_probabilities",
+        "strict_json_only": true
+      },
+      "raw_response_examples": [
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v1",
+          "sample_index": 0,
+          "temperature": 0.2,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v1",
+          "sample_index": 1,
+          "temperature": 0.2,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v1",
+          "sample_index": 2,
+          "temperature": 0.2,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.40}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.40}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v1",
+          "sample_index": 3,
+          "temperature": 0.2,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v2",
+          "sample_index": 0,
+          "temperature": 0.25,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.45,
+            0.2
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v2",
+          "sample_index": 1,
+          "temperature": 0.25,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.45,
+            0.2
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v2",
+          "sample_index": 2,
+          "temperature": 0.25,
+          "raw_response": "{\"try to be helpful\":0.45,\"looking out for themselves\":0.35,\"depends\":0.20}",
+          "final_text": "{\"try to be helpful\":0.45,\"looking out for themselves\":0.35,\"depends\":0.20}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.45,
+            0.35,
+            0.2
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v2",
+          "sample_index": 3,
+          "temperature": 0.25,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.45,
+            0.2
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v3",
+          "sample_index": 0,
+          "temperature": 0.30000000000000004,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v3",
+          "sample_index": 1,
+          "temperature": 0.30000000000000004,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.45,
+            0.2
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v3",
+          "sample_index": 2,
+          "temperature": 0.30000000000000004,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.25,\"depends\":0.4}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "template_name": "probability_json_v3",
+          "sample_index": 3,
+          "temperature": 0.30000000000000004,
+          "raw_response": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "final_text": "{\"try to be helpful\":0.35,\"looking out for themselves\":0.45,\"depends\":0.20}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.45,
+            0.2
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v1",
+          "sample_index": 0,
+          "temperature": 0.2,
+          "raw_response": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.45,\"depends\":0.3}",
+          "final_text": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.45,\"depends\":0.3}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.25,
+            0.45,
+            0.3
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v1",
+          "sample_index": 1,
+          "temperature": 0.2,
+          "raw_response": "{\"would take advantage of you\":0.15,\"would try to be fair\":0.55,\"depends\":0.3}",
+          "final_text": "{\"would take advantage of you\":0.15,\"would try to be fair\":0.55,\"depends\":0.3}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.15,
+            0.55,
+            0.3
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v1",
+          "sample_index": 2,
+          "temperature": 0.2,
+          "raw_response": "{\"would take advantage of you\":0.15,\"would try to be fair\":0.55,\"depends\":0.3}",
+          "final_text": "{\"would take advantage of you\":0.15,\"would try to be fair\":0.55,\"depends\":0.3}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.15,
+            0.55,
+            0.3
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v1",
+          "sample_index": 3,
+          "temperature": 0.2,
+          "raw_response": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.45,\"depends\":0.3}",
+          "final_text": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.45,\"depends\":0.3}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.25,
+            0.45,
+            0.3
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v2",
+          "sample_index": 0,
+          "temperature": 0.25,
+          "raw_response": "{\"would take advantage of you\":0.35,\"would try to be fair\":0.45,\"depends\":0.20}",
+          "final_text": "{\"would take advantage of you\":0.35,\"would try to be fair\":0.45,\"depends\":0.20}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.45,
+            0.2
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v2",
+          "sample_index": 1,
+          "temperature": 0.25,
+          "raw_response": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.35,\"depends\":0.40}",
+          "final_text": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.35,\"depends\":0.40}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.25,
+            0.35,
+            0.4
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v2",
+          "sample_index": 2,
+          "temperature": 0.25,
+          "raw_response": "{\"would take advantage of you\":0.35,\"would try to be fair\":0.25,\"depends\":0.40}",
+          "final_text": "{\"would take advantage of you\":0.35,\"would try to be fair\":0.25,\"depends\":0.40}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "template_name": "probability_json_v2",
+          "sample_index": 3,
+          "temperature": 0.25,
+          "raw_response": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.45,\"depends\":0.3}",
+          "final_text": "{\"would take advantage of you\":0.25,\"would try to be fair\":0.45,\"depends\":0.3}",
+          "thinking_text": null,
+          "final_text_present": true,
+          "used_thinking_fallback": false,
+          "payload_summary": {
+            "finish_reason": "stop",
+            "has_reasoning_content": false
+          },
+          "parser_method": "json",
+          "json_compliant": true,
+          "invalid_output": false,
+          "parsed_distribution": [
+            0.25,
+            0.45,
+            0.3
+          ]
+        }
+      ],
+      "raw_response_diversity_by_record": [
+        {
+          "record_id": "e72c68d7d9c467515dc5021400181153009523ab",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "52a689d3398c4ca207c8c81c14b20c1072b79936",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 5,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 4,
+              "all_samples_unique": true
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "713c19e86ab468376cf7ea13094c63c3592317c2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "41a7b79b59450feccd4fab590eeab2f4629fba34",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "d2b938bb3f97dfa84fd5aea944ba4a224a3be210",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "6a50a936534ad64af76d50242df7ecaa3606c6b6",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 3,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "a896d779a56af8b8d6e3b30cccb1a056fe2b0e34",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "af9b24b510024fad7d3696d825d721e6a665a284",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9059b83a506c8734c0a8465b49f0343ae8ce779b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9e4a6bcf2352aa1e7334ec7a9462669e9949cfab",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "6aebdfd0724ec192ab1f7b242c6cfd19f94dc81b",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "79e735c6dd2a99a714b011bd6db4bd2e11859cdd",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "34afaf68fe628f09809432e670c582a67a22a1d0",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "f44438078e6d84110acc33fa899d74ddfa787d57",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "1813fbd24f6ab7b4e23c8b687f3f88a8c4be498d",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "dbc3f6a01523607bf20dbfa454e35eb244a71242",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "ec320d8346046cba9b39e259bb461549229ecb37",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "377c912730c006c039cf3339664855995b31bf34",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "07197ca7054cf1aa203f11a4509cd42e912517c2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "cc92be86d8886b66c82d1a06fa96226d7b8a1109",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "d06b8e213bf9733ef43b96aa59cfccff159a1140",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "702e0cefe4bb1040203f925fc409f40bf49ef35c",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "5d1b01d3741c3837ca55e639a2b84a09f95728f2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "3168121518b46bf49a81601a5dfaccee61d299e5",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "8e6bd6a5fc156f04bb331c20b8ab6b4240f6c33b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "35d74187138f2fedd0612e8ee8695ec56acc8592",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "9ac21c6e2e88af5b0e708536bdfecc26df9ebca2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "bdbf69dfe1dc7d4cb9c6a8da45501ea5f9950b66",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "7b38a3658630684d8d33e45fa4f2573720d285c3",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "06863b7eba605b40c8e73b01d5bfb4853d9aa321",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "bc6fb5171048d7e689a8b04d4734b7575f899fed",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "59d916f0f4165884fb2f4bbf895181c14fe9fb4c",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 5,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "130e70b07bd20f2ff81f9b42f70c86e20cab5858",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "869c1ab468b3a8394f73fe08ebe94624d115c601",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "957f837203c046d85a5d7abce4f4a6471c220a8f",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "4038f94e273e36ac22d2202eae53267ab072739b",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "877f1e8ec38699ddc75beb391c363ca262d5b170",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "555d25c534e7d045709551a6330c70ac558a34f3",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "a9a4f3de915e38ff9261274f4013356a3319d8f2",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "67e7f8786299ba13f444ac25b403e78913ea2397",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "09b5b9e338f2e99147dda75c1b39fca4eb824536",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "fd38ac4f17fec99a4971cc05707af192ff97acc6",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "67ebd0b4c1da5c7308e78adeeabe2e476d7ad235",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "f05fea59d0f4d2c4c746006cdfd28776554d9c96",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 4,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "34642f95715e2955dd359bce799daec48109b92f",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "37da568404947495731282f4773738eaabecd973",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 6,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 2,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "4da96383b81c411c8cad59028405e66e5cf5fd7a",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 1,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "289038a59c1ba570b000eae2d035eea3a0028d6a",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "ed7524108e453d99bf077e0d18172b016e94fe9b",
+          "question_text": "people helpful or looking out for selves",
+          "total_samples": 12,
+          "unique_raw_responses": 2,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        },
+        {
+          "record_id": "48cdd7abf0fc511dac2cdaaab387068471f49648",
+          "question_text": "people fair or try to take advantage",
+          "total_samples": 12,
+          "unique_raw_responses": 3,
+          "all_samples_unique": false,
+          "per_template": {
+            "probability_json_v1": {
+              "temperature": 0.2,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v2": {
+              "temperature": 0.25,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            },
+            "probability_json_v3": {
+              "temperature": 0.30000000000000004,
+              "total_samples": 4,
+              "unique_raw_responses": 1,
+              "all_samples_unique": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

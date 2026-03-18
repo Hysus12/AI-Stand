@@ -1,0 +1,18 @@
+dataset_id: gss_7224_r3
+zip_url: https://gss.norc.org/content/dam/gss/get-the-data/documents/stata/GSS_stata.zip
+survey_output: data/interim/gss_survey_records.jsonl
+behavior_output: data/interim/gss_behavior_proxy_records.jsonl
+survey_variables:
+  - trust
+  - helpful
+  - fair
+  - partyid
+  - polviews
+  - natheal
+  - natcrime
+  - natenvir
+behavior_outcomes:
+  - boycott
+  - signpet
+  - conoffcl
+  - polfunds

@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "formal_manifest_record_count": 50,
+  "missing_test_record_ids": [],
+  "blacklisted_test_record_ids": [],
+  "few_shot_pool": {
+    "pool_size": 1922,
+    "excluded_records": 0,
+    "exclusion_reason_counts": {},
+    "test_question_ids": [
+      "fair",
+      "helpful"
+    ],
+    "test_normalized_question_texts": [
+      "people fair or try to take advantage",
+      "people helpful or looking out for selves"
+    ]
+  },
+  "few_shot_overlap_failures": {
+    "same_question_id": [],
+    "same_normalized_question_text": []
+  },
+  "test_question_counts": {
+    "fair": 25,
+    "helpful": 25
+  },
+  "test_year_min": 1972,
+  "test_year_max": 2024
+}

@@ -1,0 +1,433 @@
+{
+  "dataflow": [
+    "load survey records from JSONL",
+    "load split manifest and resolve train/validation/test record_ids",
+    "fit few-shot retriever on train_records only",
+    "slice test_records by original record order and max_records",
+    "build request from question/options/population/context only",
+    "generate LLM outputs and parse final_text only for scoring",
+    "compare parsed prediction against observed_distribution after prediction"
+  ],
+  "summary": {
+    "split_strategy": "group_aware",
+    "counts": {
+      "train_records": 2125,
+      "validation_records": 565,
+      "test_records": 549,
+      "used_test_records_max_records": 6
+    },
+    "disjointness": {
+      "record_ids_train_validation_disjoint": true,
+      "record_ids_train_test_disjoint": true,
+      "record_ids_validation_test_disjoint": true,
+      "group_ids_train_validation_disjoint": true,
+      "group_ids_train_test_disjoint": true,
+      "group_ids_validation_test_disjoint": true
+    },
+    "overlap_summary": {
+      "question_id_train_test_overlap_count": 8,
+      "question_id_validation_test_overlap_count": 8,
+      "wave_id_train_test_overlap_count": 25,
+      "wave_id_validation_test_overlap_count": 16,
+      "population_signature_train_test_overlap_count": 34,
+      "population_signature_validation_test_overlap_count": 34,
+      "question_population_train_test_overlap_count": 170,
+      "question_population_validation_test_overlap_count": 143,
+      "normalized_question_text_train_test_overlap_count": 8,
+      "normalized_question_text_validation_test_overlap_count": 8,
+      "question_id_train_test_overlap_values": [
+        "fair",
+        "helpful",
+        "natcrime",
+        "natenvir",
+        "natheal",
+        "partyid",
+        "polviews",
+        "trust"
+      ]
+    },
+    "lookahead_overlap": {
+      "train_year_min": 1972,
+      "train_year_max": 2024,
+      "test_year_min": 1973,
+      "test_year_max": 2024,
+      "test_records": 549,
+      "test_records_with_same_question_population_in_train": 536,
+      "test_records_with_future_same_question_population_in_train": 487,
+      "test_records_with_past_same_question_population_in_train": 468,
+      "test_records_with_future_same_question_in_train": 515
+    }
+  },
+  "used_test_record_provenance": [
+    {
+      "record_id": "0fb4fc3a4ce21f240103c0676197f6df3087f992",
+      "dataset_id": "gss_7224_r3",
+      "study_id": "gss_public_use",
+      "split": "test_used_in_max_records",
+      "question_id": "trust",
+      "question_text": "can people be trusted",
+      "wave_id": "1973",
+      "time_start": "1973-01-01",
+      "population_text": "Adults male 30-44 less than high school in the United States",
+      "population_signature": "country=United States|30-44|male|less than high school||||",
+      "same_question_train_count": 259,
+      "same_wave_train_count": 44,
+      "same_population_train_count": 26,
+      "same_question_and_population_train_count": 4,
+      "exact_question_text_train_count": 259,
+      "few_shot_exemplars": [
+        {
+          "record_id": "b17efb9c91ffc6864977739aaf90fb58113ce7a9",
+          "question_id": "trust",
+          "question_text": "can people be trusted",
+          "wave_id": "1987",
+          "time_start": "1987-01-01",
+          "population_signature": "country=United States|30-44|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        },
+        {
+          "record_id": "18df017e72221045f5c8a5f385b97bc9083f1876",
+          "question_id": "trust",
+          "question_text": "can people be trusted",
+          "wave_id": "2006",
+          "time_start": "2006-01-01",
+          "population_signature": "country=United States|30-44|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        }
+      ]
+    },
+    {
+      "record_id": "cb602b6ed8fa04c0e080ef17806e85cb007154d5",
+      "dataset_id": "gss_7224_r3",
+      "study_id": "gss_public_use",
+      "split": "test_used_in_max_records",
+      "question_id": "natheal",
+      "question_text": "improving & protecting nations health",
+      "wave_id": "1973",
+      "time_start": "1973-01-01",
+      "population_text": "Adults male 30-44 less than high school in the United States",
+      "population_signature": "country=United States|30-44|male|less than high school||||",
+      "same_question_train_count": 234,
+      "same_wave_train_count": 44,
+      "same_population_train_count": 26,
+      "same_question_and_population_train_count": 1,
+      "exact_question_text_train_count": 234,
+      "few_shot_exemplars": [
+        {
+          "record_id": "67c2c9568209caddb37b7b3628365c6af0814d7d",
+          "question_id": "natheal",
+          "question_text": "improving & protecting nations health",
+          "wave_id": "1977",
+          "time_start": "1977-01-01",
+          "population_signature": "country=United States|30-44|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        },
+        {
+          "record_id": "b7a584ae7377f8536350132e567465e1dd536035",
+          "question_id": "natheal",
+          "question_text": "improving & protecting nations health",
+          "wave_id": "1982",
+          "time_start": "1982-01-01",
+          "population_signature": "country=United States|30-44|female|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": false,
+          "same_wave_as_test": false
+        }
+      ]
+    },
+    {
+      "record_id": "04220a03f2c6b8ea09aacb48e452de18244099b0",
+      "dataset_id": "gss_7224_r3",
+      "study_id": "gss_public_use",
+      "split": "test_used_in_max_records",
+      "question_id": "natenvir",
+      "question_text": "improving & protecting environment",
+      "wave_id": "1973",
+      "time_start": "1973-01-01",
+      "population_text": "Adults male 30-44 less than high school in the United States",
+      "population_signature": "country=United States|30-44|male|less than high school||||",
+      "same_question_train_count": 273,
+      "same_wave_train_count": 44,
+      "same_population_train_count": 26,
+      "same_question_and_population_train_count": 2,
+      "exact_question_text_train_count": 273,
+      "few_shot_exemplars": [
+        {
+          "record_id": "04b30eb97420cd7b2dc51a8f391a1437b6c3ced0",
+          "question_id": "natenvir",
+          "question_text": "improving & protecting environment",
+          "wave_id": "1977",
+          "time_start": "1977-01-01",
+          "population_signature": "country=United States|30-44|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        },
+        {
+          "record_id": "d3c24bcb2007fe8851d157b11ffc27f5e840bbf8",
+          "question_id": "natenvir",
+          "question_text": "improving & protecting environment",
+          "wave_id": "1975",
+          "time_start": "1975-01-01",
+          "population_signature": "country=United States|30-44|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        }
+      ]
+    },
+    {
+      "record_id": "fb2c604c72c965473d749c8b39ee65283b54148f",
+      "dataset_id": "gss_7224_r3",
+      "study_id": "gss_public_use",
+      "split": "test_used_in_max_records",
+      "question_id": "trust",
+      "question_text": "can people be trusted",
+      "wave_id": "1973",
+      "time_start": "1973-01-01",
+      "population_text": "Adults male 45-59 less than high school in the United States",
+      "population_signature": "country=United States|45-59|male|less than high school||||",
+      "same_question_train_count": 259,
+      "same_wave_train_count": 44,
+      "same_population_train_count": 50,
+      "same_question_and_population_train_count": 6,
+      "exact_question_text_train_count": 259,
+      "few_shot_exemplars": [
+        {
+          "record_id": "67feb70ed6f291b47584ec7a1de5591daa59e501",
+          "question_id": "trust",
+          "question_text": "can people be trusted",
+          "wave_id": "1975",
+          "time_start": "1975-01-01",
+          "population_signature": "country=United States|45-59|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        },
+        {
+          "record_id": "d1568938fc1ce36901129f0c95c877a39da32ad2",
+          "question_id": "trust",
+          "question_text": "can people be trusted",
+          "wave_id": "1978",
+          "time_start": "1978-01-01",
+          "population_signature": "country=United States|45-59|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        }
+      ]
+    },
+    {
+      "record_id": "26345d14c89b48fdef19e9e132b36a10b5a42706",
+      "dataset_id": "gss_7224_r3",
+      "study_id": "gss_public_use",
+      "split": "test_used_in_max_records",
+      "question_id": "natheal",
+      "question_text": "improving & protecting nations health",
+      "wave_id": "1973",
+      "time_start": "1973-01-01",
+      "population_text": "Adults male 45-59 less than high school in the United States",
+      "population_signature": "country=United States|45-59|male|less than high school||||",
+      "same_question_train_count": 234,
+      "same_wave_train_count": 44,
+      "same_population_train_count": 50,
+      "same_question_and_population_train_count": 4,
+      "exact_question_text_train_count": 234,
+      "few_shot_exemplars": [
+        {
+          "record_id": "4a6abc6e6c09d2ad77ddab5616b368adcd42542f",
+          "question_id": "natheal",
+          "question_text": "improving & protecting nations health",
+          "wave_id": "1974",
+          "time_start": "1974-01-01",
+          "population_signature": "country=United States|45-59|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        },
+        {
+          "record_id": "bc2bfe5e0587956ccc1b5988c1c60a63d5942479",
+          "question_id": "natheal",
+          "question_text": "improving & protecting nations health",
+          "wave_id": "1982",
+          "time_start": "1982-01-01",
+          "population_signature": "country=United States|45-59|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        }
+      ]
+    },
+    {
+      "record_id": "9e579c18787ed65a13be2201709bfd0b29eddd73",
+      "dataset_id": "gss_7224_r3",
+      "study_id": "gss_public_use",
+      "split": "test_used_in_max_records",
+      "question_id": "natenvir",
+      "question_text": "improving & protecting environment",
+      "wave_id": "1973",
+      "time_start": "1973-01-01",
+      "population_text": "Adults male 45-59 less than high school in the United States",
+      "population_signature": "country=United States|45-59|male|less than high school||||",
+      "same_question_train_count": 273,
+      "same_wave_train_count": 44,
+      "same_population_train_count": 50,
+      "same_question_and_population_train_count": 7,
+      "exact_question_text_train_count": 273,
+      "few_shot_exemplars": [
+        {
+          "record_id": "5867f253a67b6b96d587c98afb11b4af6eef7965",
+          "question_id": "natenvir",
+          "question_text": "improving & protecting environment",
+          "wave_id": "1980",
+          "time_start": "1980-01-01",
+          "population_signature": "country=United States|45-59|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        },
+        {
+          "record_id": "a3e24a21ade955df1ab495830bb4906e2b101072",
+          "question_id": "natenvir",
+          "question_text": "improving & protecting environment",
+          "wave_id": "1982",
+          "time_start": "1982-01-01",
+          "population_signature": "country=United States|45-59|male|less than high school||||",
+          "same_question_as_test": true,
+          "same_population_as_test": true,
+          "same_wave_as_test": false
+        }
+      ]
+    }
+  ],
+  "train_question_counter_top10": [
+    [
+      "partyid",
+      415
+    ],
+    [
+      "polviews",
+      315
+    ],
+    [
+      "natenvir",
+      273
+    ],
+    [
+      "trust",
+      259
+    ],
+    [
+      "natheal",
+      234
+    ],
+    [
+      "natcrime",
+      222
+    ],
+    [
+      "fair",
+      219
+    ],
+    [
+      "helpful",
+      188
+    ]
+  ],
+  "test_question_counter_top10": [
+    [
+      "polviews",
+      151
+    ],
+    [
+      "natcrime",
+      76
+    ],
+    [
+      "partyid",
+      72
+    ],
+    [
+      "trust",
+      63
+    ],
+    [
+      "helpful",
+      59
+    ],
+    [
+      "natenvir",
+      48
+    ],
+    [
+      "fair",
+      43
+    ],
+    [
+      "natheal",
+      37
+    ]
+  ],
+  "benchmark_report_inventory": [
+    {
+      "report_path": "reports\\benchmarks\\gss_prompt_benchmark.json",
+      "num_test_records": 6,
+      "llm_provider": null,
+      "llm_model": null,
+      "result_predictors": [
+        "heuristic_prompt_only",
+        "llm_zero_shot_persona",
+        "llm_few_shot_persona"
+      ]
+    },
+    {
+      "report_path": "reports\\benchmarks\\gss_prompt_benchmark_deepseek_chat.json",
+      "num_test_records": 6,
+      "llm_provider": "openai_compatible",
+      "llm_model": "deepseek-chat",
+      "result_predictors": [
+        "heuristic_prompt_only",
+        "llm_zero_shot_persona",
+        "llm_few_shot_persona",
+        "llm_direct_option_probabilities"
+      ]
+    },
+    {
+      "report_path": "reports\\benchmarks\\gss_prompt_benchmark_minimax_m25.json",
+      "num_test_records": 6,
+      "llm_provider": "anthropic_compatible",
+      "llm_model": "MiniMax-M2.5",
+      "result_predictors": [
+        "heuristic_prompt_only",
+        "llm_zero_shot_persona",
+        "llm_few_shot_persona",
+        "llm_direct_option_probabilities"
+      ]
+    },
+    {
+      "report_path": "reports\\benchmarks\\gss_prompt_benchmark_model_comparison.json",
+      "num_test_records": null,
+      "llm_provider": null,
+      "llm_model": null,
+      "result_predictors": []
+    },
+    {
+      "report_path": "reports\\benchmarks\\gss_prompt_benchmark_openai_gpt51.json",
+      "num_test_records": 6,
+      "llm_provider": "openai",
+      "llm_model": "gpt-5.1",
+      "result_predictors": [
+        "heuristic_prompt_only",
+        "llm_zero_shot_persona",
+        "llm_few_shot_persona",
+        "llm_direct_option_probabilities"
+      ]
+    }
+  ]
+}

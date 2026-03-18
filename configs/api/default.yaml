@@ -1,0 +1,3 @@
+model_artifact: data/processed/artifacts/demo_survey_model.joblib
+prompt_artifact: data/processed/artifacts/demo_prompt_baseline.joblib
+ood_artifact: data/processed/artifacts/demo_ood.joblib

@@ -1,0 +1,56 @@
+[
+  {
+    "report_path": "reports\\benchmarks\\gss_prompt_benchmark.json",
+    "num_test_records": 6,
+    "llm_provider": null,
+    "llm_model": null,
+    "result_predictors": [
+      "heuristic_prompt_only",
+      "llm_zero_shot_persona",
+      "llm_few_shot_persona"
+    ]
+  },
+  {
+    "report_path": "reports\\benchmarks\\gss_prompt_benchmark_deepseek_chat.json",
+    "num_test_records": 6,
+    "llm_provider": "openai_compatible",
+    "llm_model": "deepseek-chat",
+    "result_predictors": [
+      "heuristic_prompt_only",
+      "llm_zero_shot_persona",
+      "llm_few_shot_persona",
+      "llm_direct_option_probabilities"
+    ]
+  },
+  {
+    "report_path": "reports\\benchmarks\\gss_prompt_benchmark_minimax_m25.json",
+    "num_test_records": 6,
+    "llm_provider": "anthropic_compatible",
+    "llm_model": "MiniMax-M2.5",
+    "result_predictors": [
+      "heuristic_prompt_only",
+      "llm_zero_shot_persona",
+      "llm_few_shot_persona",
+      "llm_direct_option_probabilities"
+    ]
+  },
+  {
+    "report_path": "reports\\benchmarks\\gss_prompt_benchmark_model_comparison.json",
+    "num_test_records": null,
+    "llm_provider": null,
+    "llm_model": null,
+    "result_predictors": []
+  },
+  {
+    "report_path": "reports\\benchmarks\\gss_prompt_benchmark_openai_gpt51.json",
+    "num_test_records": 6,
+    "llm_provider": "openai",
+    "llm_model": "gpt-5.1",
+    "result_predictors": [
+      "heuristic_prompt_only",
+      "llm_zero_shot_persona",
+      "llm_few_shot_persona",
+      "llm_direct_option_probabilities"
+    ]
+  }
+]
